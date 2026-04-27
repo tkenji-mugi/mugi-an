@@ -16,7 +16,7 @@ jobs:
         with:
           switches: -avzr --delete --exclude='.git*' --exclude='.DS_Store'
           path: ./
-          remote_path: /home/phc22573/mugi-an.com/public_html/
+          remote_path: /home/nami-55/mugi-an.com/public_html/
           remote_host: ${{ secrets.SSH_HOST }}
           remote_port: 10022
           remote_user: ${{ secrets.SSH_USERNAME }}
