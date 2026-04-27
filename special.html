@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特集一覧 | mugi-an むぎあんワールド</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --warm-white: #FFFDF9;
+      --ink: #1C1714;
+      --ink-light: #4A3F38;
+      --ink-muted: #8C7B72;
+      --gold: #C9A96E;
+      --gold-light: #E8D5B0;
+      --border: rgba(28,23,20,0.08);
+      --border-warm: rgba(201,169,110,0.2);
+      --shadow-md: 0 4px 20px rgba(28,23,20,0.1);
+      --radius-lg: 16px;
+      --font-serif: 'Shippori Mincho', serif;
+      --font-sans: 'Zen Kaku Gothic New', sans-serif;
+      --font-en: 'Cormorant Garamond', serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--font-sans); font-weight: 300; -webkit-font-smoothing: antialiased; }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,246,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; height: 60px;
+    }
+    .nav-logo { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+    .nav-logo-en { font-family: var(--font-en); font-size: 22px; font-weight: 300; font-style: italic; color: var(--ink); }
+    .nav-logo-ja { font-family: var(--font-serif); font-size: 11px; color: var(--ink-muted); letter-spacing: 0.15em; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-family: var(--font-en); font-size: 13px; font-style: italic; color: var(--ink-muted); text-decoration: none; }
+    .nav-link:hover { color: var(--ink); }
+    .lang-toggle { display: flex; border: 1px solid var(--border-warm); border-radius: 20px; overflow: hidden; }
+    .lang-btn { padding: 4px 10px; font-size: 11px; border: none; background: transparent; color: var(--ink-muted); cursor: pointer; }
+    .lang-btn.active { background: var(--gold); color: white; }
+
+    .page-header {
+      padding: 48px 32px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb {
+      font-family: var(--font-en);
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--gold); }
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .page-title-en {
+      font-family: var(--font-en);
+      font-size: 14px;
+      font-style: italic;
+      color: var(--ink-muted);
+    }
+
+    .special-list {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .special-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--warm-white);
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .special-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .special-img {
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    .special-body { padding: 16px 18px; }
+    .special-badge {
+      font-size: 9px;
+      padding: 2px 8px;
+      background: var(--gold);
+      color: white;
+      border-radius: 10px;
+      font-family: var(--font-en);
+      letter-spacing: 0.05em;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .special-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .special-title-en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--ink-muted);
+      margin-bottom: 8px;
+    }
+    .special-desc {
+      font-size: 12px;
+      color: var(--ink-light);
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .special-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .special-count { font-size: 11px; color: var(--ink-muted); }
+    .special-date { font-family: var(--font-en); font-size: 11px; color: var(--ink-muted); font-style: italic; }
+    .special-arrow {
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--gold);
+      margin-top: 10px;
+      display: block;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-en);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 10px 24px;
+      border: 1px solid var(--border-warm);
+      border-radius: 30px;
+      margin: 0 32px 40px;
+      transition: all 0.2s;
+    }
+    .back-btn:hover { border-color: var(--gold); color: var(--ink); }
+
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo { font-family: var(--font-en); font-size: 16px; font-style: italic; color: var(--ink-muted); }
+    .footer-copy { font-size: 11px; color: var(--ink-muted); font-family: var(--font-en); }
+
+    @media (max-width: 900px) {
+      .special-list { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .special-list { grid-template-columns: 1fr; padding: 20px 16px; }
+      .page-header { padding: 32px 16px; }
+      .nav { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-en">mugi-an</span>
+    <span class="nav-logo-ja">むぎあんワールド</span>
+  </a>
+  <div class="nav-right">
+    <a href="index.html#gallery" class="nav-link">gallery</a>
+    <a href="#" class="nav-link">photo book</a>
+    <a href="#" class="nav-link">youtube</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active">JP</button>
+      <button class="lang-btn">EN</button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="index.html">mugi-an</a> / 特集一覧
+  </div>
+  <div class="page-title">特集一覧</div>
+  <div class="page-title-en">Featured Collections</div>
+</div>
+
+<div class="special-list">
+
+  <a href="#" class="special-card">
+    <div class="special-img" style="background:linear-gradient(135deg,#fce8f0,#f5d5e5)">🌸</div>
+    <div class="special-body">
+      <span class="special-badge">New</span>
+      <div class="special-title">春の和むぎちゃん</div>
+      <div class="special-title-en">Mugi in Japanese Spring</div>
+      <div class="special-desc">神社・縁側・庭園など、日本の春の風景とむぎちゃんのコレクション。</div>
+      <div class="special-meta">
+        <span class="special-count">8枚</span>
+        <span class="special-date">2026.04</span>
+      </div>
+      <span class="special-arrow">特集を見る →</span>
+    </div>
+  </a>
+
+  <a href="#" class="special-card">
+    <div class="special-img" style="background:linear-gradient(135deg,#fce8e8,#f5d0d0)">🎎</div>
+    <div class="special-body">
+      <span class="special-badge">New</span>
+      <div class="special-title">春の行事コレクション</div>
+      <div class="special-title-en">Japanese Seasonal Events</div>
+      <div class="special-desc">ひな祭り・お花見・茶道など、日本の春の行事とむぎちゃんの特集。</div>
+      <div class="special-meta">
+        <span class="special-count">6枚</span>
+        <span class="special-date">2026.04</span>
+      </div>
+      <span class="special-arrow">特集を見る →</span>
+    </div>
+  </a>
+
+  <a href="#" class="special-card">
+    <div class="special-img" style="background:linear-gradient(135deg,#e8f5e8,#d5e8d5)">😴</div>
+    <div class="special-body">
+      <span class="special-badge">New</span>
+      <div class="special-title">くつろぎむぎちゃん</div>
+      <div class="special-title-en">Relaxed Mugi</div>
+      <div class="special-desc">寝そべり・うとうとなど、むぎちゃんのリラックスした姿を集めました。</div>
+      <div class="special-meta">
+        <span class="special-count">5枚</span>
+        <span class="special-date">2026.04</span>
+      </div>
+      <span class="special-arrow">特集を見る →</span>
+    </div>
+  </a>
+
+  <a href="#" class="special-card">
+    <div class="special-img" style="background:linear-gradient(135deg,#e0ecf8,#cde0f0)">🌍</div>
+    <div class="special-body">
+      <span class="special-badge">New</span>
+      <div class="special-title">海外に伝えたい日本</div>
+      <div class="special-title-en">Japan Through Mugi's Eyes</div>
+      <div class="special-desc">鳥居・錦鯉・和菓子屋など、世界に発信したい日本の美しさとむぎちゃん。</div>
+      <div class="special-meta">
+        <span class="special-count">7枚</span>
+        <span class="special-date">2026.04</span>
+      </div>
+      <span class="special-arrow">特集を見る →</span>
+    </div>
+  </a>
+
+  <!-- 今後の特集はここに追加していく -->
+
+</div>
+
+<a href="index.html" class="back-btn">← ギャラリーに戻る</a>
+
+<div class="footer">
+  <div class="footer-logo">mugi-an</div>
+  <div class="footer-copy">© 2026 mugi-an · All rights reserved</div>
+</div>
+
+</body>
+</html>

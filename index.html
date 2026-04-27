@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mugi-an｜むぎあんワールド</title>
+  <meta name="description" content="茶トラのブリティッシュショートヘア、むぎちゃんの世界へようこそ。">
+  <meta property="og:title" content="mugi-an｜むぎあんワールド">
+  <meta property="og:description" content="茶トラのブリティッシュショートヘア、むぎちゃんの世界へようこそ。">
+  <meta property="og:image" content="https://mugi-an.com/images/og.jpg">
+  <meta property="og:url" content="https://mugi-an.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --warm-white: #FFFDF9;
+      --ink: #1C1714;
+      --ink-light: #4A3F38;
+      --ink-muted: #8C7B72;
+      --gold: #C9A96E;
+      --gold-light: #E8D5B0;
+      --border: rgba(28,23,20,0.08);
+      --border-warm: rgba(201,169,110,0.2);
+      --shadow-sm: 0 1px 3px rgba(28,23,20,0.06);
+      --shadow-md: 0 4px 20px rgba(28,23,20,0.1);
+      --shadow-lg: 0 12px 40px rgba(28,23,20,0.15);
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --font-serif: 'Shippori Mincho', 'Georgia', serif;
+      --font-sans: 'Zen Kaku Gothic New', sans-serif;
+      --font-en: 'Cormorant Garamond', serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== NAV ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,246,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 60px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-en {
+      font-family: var(--font-en);
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      letter-spacing: 0.05em;
+    }
+    .nav-logo-ja {
+      font-family: var(--font-serif);
+      font-size: 11px;
+      color: var(--ink-muted);
+      letter-spacing: 0.15em;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-link {
+      font-family: var(--font-en);
+      font-size: 13px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-muted);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--ink); }
+    .lang-toggle {
+      display: flex;
+      border: 1px solid var(--border-warm);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      padding: 4px 10px;
+      font-size: 11px;
+      font-family: var(--font-en);
+      letter-spacing: 0.08em;
+      border: none;
+      background: transparent;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--gold);
+      color: white;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 480px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-left {
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .hero-title span {
+      display: block;
+      font-family: var(--font-en);
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-muted);
+      margin-top: 8px;
+    }
+    .hero-desc {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--ink-light);
+      margin-bottom: 32px;
+      max-width: 340px;
+    }
+    .hero-desc-en {
+      font-family: var(--font-en);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      max-width: 340px;
+    }
+    .hero-right {
+      position: relative;
+      background: var(--gold-light);
+      overflow: hidden;
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f5e8d0 0%, #e8d5b0 50%, #f0e4c8 100%);
+      color: var(--ink-muted);
+      font-family: var(--font-serif);
+      font-size: 14px;
+      gap: 12px;
+    }
+    .hero-img-placeholder::before {
+      content: '🐱';
+      font-size: 64px;
+    }
+
+    /* ===== NEWS ===== */
+    .news-bar {
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+    }
+    .news-inner {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+    .news-label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      font-style: italic;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      padding: 14px 20px 14px 0;
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      min-width: 80px;
+    }
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      gap: 4px;
+      flex: 1;
+    }
+    .news-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+    }
+    .news-date {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--ink-muted);
+      min-width: 40px;
+    }
+    .news-badge {
+      font-size: 9px;
+      padding: 1px 6px;
+      background: var(--gold);
+      color: white;
+      border-radius: 10px;
+      letter-spacing: 0.05em;
+      font-family: var(--font-en);
+    }
+    .news-text {
+      color: var(--ink-light);
+    }
+
+    /* ===== SEARCH ===== */
+    .search-wrap {
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--warm-white);
+      border: 1px solid var(--border-warm);
+      border-radius: 40px;
+      padding: 10px 20px;
+      max-width: 480px;
+    }
+    .search-icon { color: var(--ink-muted); font-size: 14px; }
+    .search-input {
+      border: none;
+      background: transparent;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--ink);
+      outline: none;
+      flex: 1;
+      font-weight: 300;
+    }
+    .search-input::placeholder { color: var(--ink-muted); }
+
+    /* ===== SPECIAL ===== */
+    .section {
+      padding: 40px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: 0.05em;
+    }
+    .section-title-en {
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-style: italic;
+      color: var(--ink-muted);
+      letter-spacing: 0.1em;
+    }
+    .special-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .special-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: var(--warm-white);
+    }
+    .special-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .special-img {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+    .special-body { padding: 12px 14px; }
+    .special-title {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .special-count {
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+    .more-btn {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-en);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ink-muted);
+      text-decoration: none;
+      padding: 10px 28px;
+      border: 1px solid var(--border-warm);
+      border-radius: 30px;
+      transition: all 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .more-btn:hover { border-color: var(--gold); color: var(--ink); }
+
+    /* ===== TAGS ===== */
+    .tag-scroll {
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 16px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tag-scroll::-webkit-scrollbar { display: none; }
+    .tag-row { display: flex; gap: 8px; width: max-content; }
+    .tag {
+      font-size: 12px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border-warm);
+      background: var(--warm-white);
+      color: var(--ink-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      transition: all 0.2s;
+    }
+    .tag:hover { border-color: var(--gold); color: var(--ink); }
+    .tag.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: white;
+    }
+
+    /* ===== GALLERY MASONRY ===== */
+    .gallery-section { padding: 32px; }
+    .gallery-meta {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-bottom: 20px;
+      font-family: var(--font-en);
+      font-style: italic;
+    }
+    .masonry {
+      columns: 3;
+      column-gap: 14px;
+    }
+    @media (min-width: 1200px) {
+      .masonry { columns: 4; }
+    }
+    @media (max-width: 900px) {
+      .masonry { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .masonry { columns: 2; column-gap: 8px; }
+    }
+    .card {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--warm-white);
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .card:hover .card-overlay { opacity: 1; }
+    .card-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28,23,20,0.3);
+      opacity: 0;
+      transition: opacity 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-overlay-txt {
+      font-family: var(--font-en);
+      font-size: 12px;
+      font-style: italic;
+      color: white;
+      background: rgba(28,23,20,0.5);
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+    .new-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-size: 9px;
+      padding: 2px 7px;
+      background: var(--gold);
+      color: white;
+      border-radius: 10px;
+      font-family: var(--font-en);
+      letter-spacing: 0.05em;
+      z-index: 1;
+    }
+    .card-img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      overflow: hidden;
+    }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-img.v { aspect-ratio: 2/3; }
+    .card-img.h { aspect-ratio: 3/2; }
+    .card-img.s { aspect-ratio: 1/1; }
+    .card-body { padding: 8px 10px 10px; }
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 12px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .card-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    .card-tag { font-size: 10px; color: var(--ink-muted); }
+
+    /* ===== KINDLE BANNER ===== */
+    .kindle-banner {
+      margin: 0 32px 32px;
+      padding: 24px 32px;
+      background: linear-gradient(135deg, #2C1F16 0%, #3D2B1E 100%);
+      border-radius: var(--radius-lg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .kindle-text-en {
+      font-family: var(--font-en);
+      font-size: 11px;
+      font-style: italic;
+      color: var(--gold-light);
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .kindle-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .kindle-desc { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .kindle-btn {
+      font-family: var(--font-en);
+      font-size: 13px;
+      font-style: italic;
+      padding: 10px 24px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      background: transparent;
+      color: var(--gold);
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .kindle-btn:hover { background: var(--gold); color: white; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-logo {
+      font-family: var(--font-en);
+      font-size: 16px;
+      font-style: italic;
+      color: var(--ink-muted);
+    }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .footer-links { display: flex; gap: 16px; }
+    .footer-link {
+      font-size: 12px;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-link:hover { color: var(--ink); }
+    .footer-share {
+      font-size: 12px;
+      color: var(--gold);
+      font-family: var(--font-serif);
+    }
+    .footer-copy { font-size: 11px; color: var(--ink-muted); font-family: var(--font-en); }
+
+    /* ===== MODAL ===== */
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(28,23,20,0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .modal-bg.open { display: flex; }
+    .modal {
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 520px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      animation: modalIn 0.25s ease;
+      margin: auto;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal-img {
+      width: 100%;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      background: var(--gold-light);
+    }
+    .modal-img.v { aspect-ratio: 2/3; }
+    .modal-img.h { aspect-ratio: 3/2; }
+    .modal-img.s { aspect-ratio: 1/1; }
+    .modal-body { padding: 20px 24px; }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: var(--ink);
+    }
+    .modal-close {
+      font-size: 12px;
+      color: var(--ink-muted);
+      cursor: pointer;
+      font-family: var(--font-en);
+      font-style: italic;
+    }
+    .modal-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .modal-tag {
+      font-size: 11px;
+      padding: 2px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border-warm);
+      color: var(--ink-muted);
+    }
+    .modal-desc { font-size: 13px; color: var(--ink-light); line-height: 1.8; margin-bottom: 18px; }
+    .modal-actions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+    .action-btn {
+      padding: 9px 6px;
+      font-size: 11px;
+      border: 1px solid var(--border-warm);
+      border-radius: var(--radius-md);
+      background: var(--warm-white);
+      color: var(--ink);
+      cursor: pointer;
+      text-align: center;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      transition: all 0.2s;
+      line-height: 1.4;
+    }
+    .action-btn:hover { border-color: var(--gold); }
+    .action-btn.primary { background: var(--gold); border-color: var(--gold); color: white; }
+    .action-btn.primary:hover { background: #B8924A; }
+    .modal-share-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .share-label { font-size: 11px; color: var(--ink-muted); font-family: var(--font-serif); }
+    .share-btns { display: flex; gap: 6px; flex: 1; }
+    .share-btn {
+      font-size: 11px;
+      padding: 5px 12px;
+      border: 1px solid var(--border-warm);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font-sans);
+    }
+    .share-btn:hover { border-color: var(--gold); color: var(--ink); }
+    .share-invite {
+      font-family: var(--font-serif);
+      font-size: 11px;
+      color: var(--gold);
+      margin-left: auto;
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 0 16px; }
+      .nav-link { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { height: 260px; }
+      .hero-left { padding: 40px 24px; }
+      .hero-title { font-size: 28px; }
+      .special-grid { grid-template-columns: 1fr 1fr; }
+      .masonry { columns: 2; }
+      .section, .gallery-section { padding: 24px 16px; }
+      .tag-scroll { padding: 12px 16px; }
+      .search-wrap { padding: 14px 16px; }
+      .news-bar { padding: 0 16px; }
+      .kindle-banner { flex-direction: column; gap: 16px; margin: 0 16px 24px; padding: 20px; }
+      .footer { flex-direction: column; gap: 20px; padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-en">mugi-an</span>
+    <span class="nav-logo-ja">むぎあんワールド</span>
+  </a>
+  <div class="nav-right">
+    <a href="#gallery" class="nav-link">gallery</a>
+    <a href="#" class="nav-link">photo book</a>
+    <a href="#" class="nav-link">youtube</a>
+    <a href="#" class="nav-link">profile</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('ja', this)">JP</button>
+      <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow" data-ja="茶トラのむぎちゃんの世界へ" data-en="Welcome to Mugi's World">茶トラのむぎちゃんの世界へ</div>
+    <div class="hero-title" data-ja="むぎあん<span>— Mugi's gentle world —</span>" data-en="mugi-an<span>— A world of warmth & wonder —</span>">
+      むぎあん<span>— Mugi's gentle world —</span>
+    </div>
+    <p class="hero-desc" data-ja="ブリティッシュショートヘアの茶トラ、むぎちゃんの日常と日本の四季をお届けします。" data-en="A British Shorthair cream tabby cat, exploring the seasons of Japan.">
+      ブリティッシュショートヘアの茶トラ、むぎちゃんの日常と日本の四季をお届けします。
+    </p>
+    <p class="hero-desc-en" data-ja="" data-en="">
+      A rare female tea-tabby British Shorthair — meet Mugi.
+    </p>
+  </div>
+  <div class="hero-right">
+    <!-- 代表写真をここに入れる: <img src="images/hero.jpg" alt="むぎちゃん" class="hero-img"> -->
+    <div class="hero-img-placeholder">
+      <span data-ja="むぎちゃんのベスト写真を<br>ここに表示" data-en="Mugi's best photo<br>goes here">むぎちゃんの写真</span>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<div class="news-bar">
+  <div class="news-inner">
+    <div class="news-label">News</div>
+    <div class="news-list">
+      <div class="news-item">
+        <span class="news-date">4/27</span>
+        <span class="news-badge">New</span>
+        <span class="news-text" data-ja="春の日差しシリーズ 3枚を追加しました" data-en="Added 3 new photos — Spring Sunlight series">春の日差しシリーズ 3枚を追加しました</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">4/26</span>
+        <span class="news-badge">New</span>
+        <span class="news-text" data-ja="和の春景色シリーズ 8枚を追加しました" data-en="Added 8 new photos — Japanese Spring series">和の春景色シリーズ 8枚を追加しました</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">4/25</span>
+        <span class="news-badge">New</span>
+        <span class="news-text" data-ja="YouTube「春のむぎちゃん」公開しました" data-en="New YouTube video — Mugi in Spring">YouTube「春のむぎちゃん」公開しました</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" type="text" placeholder="写真を検索... 例：桜、縁側、神社" data-ja-placeholder="写真を検索... 例：桜、縁側、神社" data-en-placeholder="Search photos... e.g. sakura, shrine, garden">
+  </div>
+</div>
+
+<!-- SPECIAL -->
+<section class="section">
+  <div class="section-head">
+    <span class="section-title" data-ja="特集" data-en="Features">特集</span>
+    <span class="section-title-en">Featured Collections</span>
+  </div>
+  <div class="special-grid">
+    <div class="special-card">
+      <div class="special-img" style="background: linear-gradient(135deg,#fce8f0,#f5d5e5)">🌸</div>
+      <div class="special-body">
+        <div class="special-title" data-ja="春の和むぎちゃん" data-en="Mugi in Japanese Spring">春の和むぎちゃん</div>
+        <div class="special-count" data-ja="神社・縁側・庭園 8枚" data-en="Shrine, Garden, Engawa — 8 photos">神社・縁側・庭園 8枚</div>
+      </div>
+    </div>
+    <div class="special-card">
+      <div class="special-img" style="background: linear-gradient(135deg,#fce8e8,#f5d0d0)">🎎</div>
+      <div class="special-body">
+        <div class="special-title" data-ja="春の行事コレクション" data-en="Japanese Seasonal Events">春の行事コレクション</div>
+        <div class="special-count" data-ja="ひな祭り・お花見・茶道 6枚" data-en="Hinamatsuri, Hanami, Tea — 6 photos">ひな祭り・お花見・茶道 6枚</div>
+      </div>
+    </div>
+    <div class="special-card">
+      <div class="special-img" style="background: linear-gradient(135deg,#e8f5e8,#d5e8d5)">😴</div>
+      <div class="special-body">
+        <div class="special-title" data-ja="くつろぎむぎちゃん" data-en="Relaxed Mugi">くつろぎむぎちゃん</div>
+        <div class="special-count" data-ja="寝そべり・うとうとポーズ 5枚" data-en="Lounging & Dozing — 5 photos">寝そべり・うとうとポーズ 5枚</div>
+      </div>
+    </div>
+    <div class="special-card">
+      <div class="special-img" style="background: linear-gradient(135deg,#e0ecf8,#cde0f0)">🌍</div>
+      <div class="special-body">
+        <div class="special-title" data-ja="海外に伝えたい日本" data-en="Japan Through Mugi's Eyes">海外に伝えたい日本</div>
+        <div class="special-count" data-ja="鳥居・錦鯉・和菓子屋 7枚" data-en="Torii, Koi, Wagashi — 7 photos">鳥居・錦鯉・和菓子屋 7枚</div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:24px">
+    <a href="special.html" class="more-btn" data-ja="特集をもっと見る →" data-en="View all features →">特集をもっと見る →</a>
+  </div>
+</section>
+
+<!-- TAGS -->
+<div class="tag-scroll">
+  <div class="tag-row">
+    <span class="tag active" onclick="filterTag(this, 'all')" data-ja="すべて" data-en="All">すべて</span>
+    <span class="tag" onclick="filterTag(this, '春')" data-ja="🌸 春" data-en="🌸 Spring">🌸 春</span>
+    <span class="tag" onclick="filterTag(this, '和の景色')" data-ja="和の景色" data-en="Japanese Scenery">和の景色</span>
+    <span class="tag" onclick="filterTag(this, '行事')" data-ja="行事・暮らし" data-en="Events & Life">行事・暮らし</span>
+    <span class="tag" onclick="filterTag(this, '自然')" data-ja="自然・屋外" data-en="Nature & Outdoors">自然・屋外</span>
+    <span class="tag" onclick="filterTag(this, '座り')" data-ja="座りポーズ" data-en="Sitting">座りポーズ</span>
+    <span class="tag" onclick="filterTag(this, '寝そべり')" data-ja="寝そべり" data-en="Lounging">寝そべり</span>
+    <span class="tag" onclick="filterTag(this, '歩き')" data-ja="歩き" data-en="Walking">歩き</span>
+    <span class="tag" onclick="filterTag(this, '毛繕い')" data-ja="毛繕い" data-en="Grooming">毛繕い</span>
+    <span class="tag" onclick="filterTag(this, '神社')" data-ja="神社" data-en="Shrine">神社</span>
+    <span class="tag" onclick="filterTag(this, '桜')" data-ja="桜" data-en="Sakura">桜</span>
+    <span class="tag" onclick="filterTag(this, '庭園')" data-ja="庭園" data-en="Garden">庭園</span>
+    <span class="tag" onclick="filterTag(this, '縁側')" data-ja="縁側" data-en="Engawa">縁側</span>
+    <span class="tag" onclick="filterTag(this, '和室')" data-ja="和室" data-en="Japanese Room">和室</span>
+    <span class="tag" onclick="filterTag(this, 'お花見')" data-ja="お花見" data-en="Hanami">お花見</span>
+    <span class="tag" onclick="filterTag(this, '茶道')" data-ja="茶道" data-en="Tea Ceremony">茶道</span>
+    <span class="tag" onclick="filterTag(this, '行事')" data-ja="ひな祭り" data-en="Hinamatsuri">ひな祭り</span>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-section" id="gallery">
+  <div class="gallery-meta" id="gallery-count">23 photos</div>
+  <div class="masonry" id="masonry">
+
+    <div class="card" onclick="openModal(this)" data-tags="縁側,春,和の景色,座り,うとうと" data-title="縁側でうとうと" data-title-en="Dozing on the Engawa" data-desc="春の縁側で気持ちよさそうにうとうとするむぎちゃん。障子から差し込む柔らかい光が美しい一枚。" data-desc-en="Mugi dozing peacefully on a traditional Japanese engawa, bathed in soft spring light filtering through shoji screens." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#f5ede0,#e8d5b8)"><img src="images/20260425_縁側_006.png" alt="縁側でうとうと" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="縁側でうとうと" data-en="Dozing on the Engawa">縁側でうとうと</div>
+        <div class="card-tags"><span class="card-tag">#縁側</span><span class="card-tag">#春</span><span class="card-tag">#うとうと</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="庭園,石畳,歩き,和の景色" data-title="庭園石畳を歩く" data-title-en="Walking the Garden Path" data-desc="日本庭園の石畳をゆっくり歩くむぎちゃん。石灯籠と松の木が美しい背景。" data-desc-en="Mugi strolling along a mossy stone garden path, with stone lanterns and pine trees in the background." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#e8f0e0,#d5e5c5)"><img src="images/20260426_庭園石畳_007.png" alt="庭園石畳" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="庭園石畳を歩く" data-en="Walking the Garden Path">庭園石畳を歩く</div>
+        <div class="card-tags"><span class="card-tag">#庭園</span><span class="card-tag">#歩き</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="たんぽぽ,春,自然" data-title="たんぽぽと遊ぶ" data-title-en="Playing with Dandelions" data-desc="春の野原でたんぽぽに前足を伸ばすむぎちゃん。好奇心旺盛な一面が出た一枚。" data-desc-en="Mugi curiously reaching out to a bright yellow dandelion in a spring meadow." data-ratio="s" data-new="false">
+      <div class="card-img s" style="background:linear-gradient(160deg,#f5f0d0,#e8e0a0)"><img src="images/20260426_たんぽぽ_004.png" alt="たんぽぽ" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="たんぽぽと遊ぶ" data-en="Playing with Dandelions">たんぽぽと遊ぶ</div>
+        <div class="card-tags"><span class="card-tag">#たんぽぽ</span><span class="card-tag">#春</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="桜,春,自然,座り" data-title="桜の下で" data-title-en="Under the Cherry Blossoms" data-desc="満開の桜並木の下、川沿いで春を感じるむぎちゃん。花びらが静かに舞う美しい一枚。" data-desc-en="Mugi sitting peacefully beneath full-bloom cherry blossom trees along a river bank." data-ratio="v" data-new="false">
+      <div class="card-img v" style="background:linear-gradient(160deg,#fce8f0,#f0c8d8)"><img src="images/20260425_桜_001.png" alt="桜" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="桜の下で" data-en="Under the Cherry Blossoms">桜の下で</div>
+        <div class="card-tags"><span class="card-tag">#桜</span><span class="card-tag">#春</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="神社,鳥居,春,座り,和の景色" data-title="稲荷神社の春" data-title-en="Spring at the Shrine" data-desc="朱色の鳥居を見上げるむぎちゃん。春の神社の凛とした空気感が伝わる一枚。" data-desc-en="Mugi gazing up at a vermillion torii gate at a Japanese shrine in spring." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#f0e0f5,#d8c0e8)"><img src="images/20260426_神社鳥居_009.png" alt="神社鳥居" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="稲荷神社の春" data-en="Spring at the Shrine">稲荷神社の春</div>
+        <div class="card-tags"><span class="card-tag">#神社</span><span class="card-tag">#鳥居</span><span class="card-tag">#春</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="ひな祭り,行事,座り" data-title="ひな祭りのむぎちゃん" data-title-en="Mugi at Hinamatsuri" data-desc="お内裏様・お雛様と並んで鎮座するむぎちゃん。第三のひな人形のような堂々たる存在感。" data-desc-en="Mugi sitting proudly between traditional hina dolls, as if she were the third doll in the set." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#fce8e8,#f0c0c0)"><img src="images/20260426_ひな祭り_012.png" alt="ひな祭り" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="ひな祭りのむぎちゃん" data-en="Mugi at Hinamatsuri">ひな祭りのむぎちゃん</div>
+        <div class="card-tags"><span class="card-tag">#ひな祭り</span><span class="card-tag">#行事</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="和室,障子,寝そべり,和の景色" data-title="和室でくつろぐ" data-title-en="Relaxing in the Japanese Room" data-desc="畳の上に寝そべるむぎちゃん。障子の格子模様の影が美しく落ちた、静寂の一枚。" data-desc-en="Mugi lounging on tatami, with beautiful grid shadows cast by shoji screens in golden light." data-ratio="v" data-new="false">
+      <div class="card-img v" style="background:linear-gradient(160deg,#faf0e0,#e8d8b0)"><img src="images/20260425_和室障子_002.png" alt="和室障子" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="和室でくつろぐ" data-en="Relaxing in the Japanese Room">和室でくつろぐ</div>
+        <div class="card-tags"><span class="card-tag">#和室</span><span class="card-tag">#寝そべり</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="お花見,桜,毛繕い,自然" data-title="お花見でひとやすみ" data-title-en="Grooming at Hanami" data-desc="桜の下のレジャーシートの上でマイペースに顔を洗うむぎちゃん。お花見など我関せず。" data-desc-en="Mugi grooming herself beside a bento box during a cherry blossom viewing party, completely unbothered." data-ratio="h" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img h" style="background:linear-gradient(160deg,#fce8f0,#f0c8d5)"><img src="images/20260426_お花見_014.png" alt="お花見" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="お花見でひとやすみ" data-en="Grooming at Hanami">お花見でひとやすみ</div>
+        <div class="card-tags"><span class="card-tag">#お花見</span><span class="card-tag">#毛繕い</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="庭園,錦鯉,自然,和の景色" data-title="庭園池の錦鯉" data-title-en="Koi Pond Curiosity" data-desc="苔むした石の上から錦鯉を覗き込むむぎちゃん。好奇心と庭園の美しさが共存する一枚。" data-desc-en="Mugi perching on mossy rocks to peek at colorful koi fish in a Japanese garden pond." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#e0f0f5,#b8d8e8)"><img src="images/20260426_庭園池_011.png" alt="庭園池" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="庭園池の錦鯉" data-en="Koi Pond Curiosity">庭園池の錦鯉</div>
+        <div class="card-tags"><span class="card-tag">#庭園</span><span class="card-tag">#錦鯉</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="和菓子,夕方,和の景色,座り" data-title="和菓子屋の夕暮れ" data-title-en="Sunset at the Wagashi Shop" data-desc="夕暮れの和菓子屋の縁台でおばあちゃんに頭を撫でられるむぎちゃん。温かな日本の日常。" data-desc-en="Mugi being gently petted by an elderly woman at a traditional wagashi shop in the golden hour." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#f5e8d0,#e0c898)"><img src="images/20260426_和菓子屋_016.png" alt="和菓子屋" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="和菓子屋の夕暮れ" data-en="Sunset at the Wagashi Shop">和菓子屋の夕暮れ</div>
+        <div class="card-tags"><span class="card-tag">#和菓子</span><span class="card-tag">#夕方</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="神社,鳥居,春,和の景色" data-title="参道の鳥居" data-title-en="The Torii Corridor" data-desc="朱色の鳥居が連なる参道に佇むむぎちゃん。幻想的な光景が広がる一枚。" data-desc-en="Mugi sitting in a corridor of vermillion torii gates — an iconic Japanese landscape." data-ratio="h" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img h" style="background:linear-gradient(160deg,#f8e0e0,#e8c0c0)"><img src="images/20260426_神社鳥居_横_010.png" alt="参道" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="参道の鳥居" data-en="The Torii Corridor">参道の鳥居</div>
+        <div class="card-tags"><span class="card-tag">#神社</span><span class="card-tag">#参道</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="茶道,行事,寝そべり" data-title="茶道のお稽古に乱入" data-title-en="Crashing the Tea Ceremony" data-desc="着物姿の方々のお稽古の輪の中心で堂々と寝そべるむぎちゃん。我関せずの貫禄。" data-desc-en="Mugi sprawling in the center of a tea ceremony circle, completely at ease among kimono-clad practitioners." data-ratio="s" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img s" style="background:linear-gradient(160deg,#e8f5e0,#c8e8b0)"><img src="images/20260426_茶道_017.png" alt="茶道" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="茶道のお稽古に乱入" data-en="Crashing the Tea Ceremony">茶道のお稽古に乱入</div>
+        <div class="card-tags"><span class="card-tag">#茶道</span><span class="card-tag">#行事</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="お花見,桜,春,毛繕い" data-title="お花見 縦バージョン" data-title-en="Hanami Portrait" data-desc="桜の木の下でマイペースに顔を洗うむぎちゃん。奥に花見客の賑わいが見える。" data-desc-en="Mugi grooming herself under cherry blossoms while hanami crowds enjoy the spring festival behind her." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#fce8f0,#f0c8d8)"><img src="images/20260426_お花見_写真集_015.png" alt="お花見縦" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="お花見 縦バージョン" data-en="Hanami Portrait">お花見 縦バージョン</div>
+        <div class="card-tags"><span class="card-tag">#お花見</span><span class="card-tag">#桜</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="奈良,お弁当,行事,自然" data-title="奈良公園のお弁当" data-title-en="Bento in Nara Park" data-desc="奈良公園でピクニック中の家族のお弁当を狙うむぎちゃん。背景に鹿が歩いている。" data-desc-en="Mugi eyeing an open bento box at a family picnic in Nara Park, with deer grazing in the background." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#f0f5e0,#d8e8b0)"><img src="images/20260426_奈良お弁当_018.png" alt="奈良お弁当" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="奈良公園のお弁当" data-en="Bento in Nara Park">奈良公園のお弁当</div>
+        <div class="card-tags"><span class="card-tag">#奈良</span><span class="card-tag">#お弁当</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="春,自然,すずめ,歩き" data-title="春の日差しとすずめ" data-title-en="Spring Light & Sparrows" data-desc="木漏れ日の中を歩くむぎちゃんのそばで、すずめたちが日向ぼっこしている春の一枚。" data-desc-en="Mugi walking through dappled sunlight while sparrows bask nearby — a peaceful spring scene." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#f0fce0,#d5e8b0)"><img src="images/20260426_春の日差しすずめ_019.png" alt="春の日差し" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="春の日差しとすずめ" data-en="Spring Light & Sparrows">春の日差しとすずめ</div>
+        <div class="card-tags"><span class="card-tag">#春</span><span class="card-tag">#すずめ</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="春風,自然,野球,歩き" data-title="春風と野球グラウンド" data-title-en="Spring Wind & Baseball" data-desc="春の土手でそよ風を受けて立つむぎちゃん。背景には野球の練習風景が広がる日本の春。" data-desc-en="Mugi standing in a spring breeze on a riverbank, with a baseball practice ground in the background." data-ratio="v" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img v" style="background:linear-gradient(160deg,#e8f5e8,#c8e0c0)"><img src="images/20260426_春風野球_020.png" alt="春風野球" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="春風と野球グラウンド" data-en="Spring Wind & Baseball">春風と野球グラウンド</div>
+        <div class="card-tags"><span class="card-tag">#春風</span><span class="card-tag">#自然</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="川沿い,春風,自然" data-title="川沿いの春風" data-title-en="Spring Breeze by the River" data-desc="桜並木の川沿いでそよ風を受けるむぎちゃん。散歩の女性と柴犬、ランナーが行き交う春の情景。" data-desc-en="Mugi enjoying a spring breeze along a cherry-blossom-lined river, with a woman walking her Shiba Inu and a jogger passing by." data-ratio="h" data-new="true">
+      <span class="new-badge">New</span>
+      <div class="card-img h" style="background:linear-gradient(160deg,#e8f0f8,#c0d5e8)"><img src="images/20260426_川沿い春風_021.png" alt="川沿い春風" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="川沿いの春風" data-en="Spring Breeze by the River">川沿いの春風</div>
+        <div class="card-tags"><span class="card-tag">#川</span><span class="card-tag">#春風</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="ひな祭り,行事" data-title="ひな祭りあられ" data-title-en="Hinamatsuri Sweets" data-desc="雛あられに興味津々のむぎちゃん。ひな飾りの前でじっと覗き込む姿が愛らしい。" data-desc-en="Mugi curiously inspecting a bowl of hina-arare rice crackers among the beautiful hina doll display." data-ratio="s" data-new="false">
+      <div class="card-img s" style="background:linear-gradient(160deg,#fce8e8,#f0c0c8)"><img src="images/20260426_ひな祭りあられ_013.png" alt="ひな祭りあられ" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="ひな祭りあられ" data-en="Hinamatsuri Sweets">ひな祭りあられ</div>
+        <div class="card-tags"><span class="card-tag">#ひな祭り</span><span class="card-tag">#和菓子</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="庭園,石畳,和の景色" data-title="庭園石畳 横" data-title-en="Garden Path — Wide View" data-desc="石畳の小道の真ん中に座り、カメラ目線のむぎちゃん。左右に広がる日本庭園の美しさ。" data-desc-en="Mugi sitting in the center of a stone garden path, flanked by lush Japanese garden scenery." data-ratio="h" data-new="false">
+      <div class="card-img h" style="background:linear-gradient(160deg,#e5f0e0,#c8e0b8)"><img src="images/20260426_庭園石畳_横_008.png" alt="庭園石畳横" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="庭園石畳 横" data-en="Garden Path — Wide View">庭園石畳 横</div>
+        <div class="card-tags"><span class="card-tag">#庭園</span><span class="card-tag">#石畳</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="和室,障子,座り,和の景色" data-title="和室と障子の光" data-title-en="Light Through Shoji" data-desc="障子から差し込む春の光の中で座るむぎちゃん。畳に落ちる格子模様の影が美しい。" data-desc-en="Mugi sitting in a traditional Japanese room, with beautiful grid shadows from shoji screens falling on the tatami." data-ratio="v" data-new="false">
+      <div class="card-img v" style="background:linear-gradient(160deg,#faf0e0,#e8d5b0)"><img src="images/20260425_和室障子_001.png" alt="和室障子座り" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="和室と障子の光" data-en="Light Through Shoji">和室と障子の光</div>
+        <div class="card-tags"><span class="card-tag">#和室</span><span class="card-tag">#障子</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="菜の花,春,自然,座り" data-title="菜の花畑で" data-title-en="In the Rapeseed Fields" data-desc="黄色い菜の花が一面に広がる春の畑でたたずむむぎちゃん。春の色彩が美しい一枚。" data-desc-en="Mugi standing among vibrant yellow rapeseed flowers in full spring bloom." data-ratio="v" data-new="false">
+      <div class="card-img v" style="background:linear-gradient(160deg,#f5f0c0,#e8e090)"><img src="images/20260425_菜の花_002.png" alt="菜の花" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="菜の花畑で" data-en="In the Rapeseed Fields">菜の花畑で</div>
+        <div class="card-tags"><span class="card-tag">#菜の花</span><span class="card-tag">#春</span></div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openModal(this)" data-tags="梅,春,自然,座り" data-title="梅の花と" data-title-en="With Plum Blossoms" data-desc="春の梅の花の前でたたずむむぎちゃん。桜より早く咲く梅と春の訪れを感じる一枚。" data-desc-en="Mugi beside early-blooming plum blossoms, a sign of spring's first arrival in Japan." data-ratio="s" data-new="false">
+      <div class="card-img s" style="background:linear-gradient(160deg,#fce0e8,#f0b8c8)"><img src="images/20260425_梅_003.png" alt="梅" onerror="this.style.display='none';this.parentNode.innerHTML='🐱'"></div>
+      <div class="card-body">
+        <div class="card-title" data-ja="梅の花と" data-en="With Plum Blossoms">梅の花と</div>
+        <div class="card-tags"><span class="card-tag">#梅</span><span class="card-tag">#春</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- KINDLE BANNER -->
+<div class="kindle-banner">
+  <div>
+    <div class="kindle-text-en">Coming Soon on Kindle</div>
+    <div class="kindle-title" data-ja="写真集 vol.1「春のむぎちゃん」" data-en="Photo Book vol.1 — Mugi in Spring">写真集 vol.1「春のむぎちゃん」</div>
+    <div class="kindle-desc" data-ja="フル解像度で全21枚収録 · 近日Amazon Kindle公開予定" data-en="Full resolution · 21 photos · Coming soon on Amazon Kindle">フル解像度で全21枚収録 · 近日Amazon Kindle公開予定</div>
+  </div>
+  <button class="kindle-btn" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">mugi-an</div>
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="#" class="footer-link">YouTube</a>
+      <a href="#" class="footer-link">Instagram</a>
+      <a href="#" class="footer-link">X</a>
+      <a href="#" class="footer-link" data-ja="プロフィール" data-en="Profile">プロフィール</a>
+      <a href="#" class="footer-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+    </div>
+    <div class="footer-share" data-ja="むぎちゃんのこと、お友達にも教えてあげてください 🐱" data-en="Love Mugi? Share with your friends! 🐱">
+      むぎちゃんのこと、お友達にも教えてあげてください 🐱
+    </div>
+    <div class="footer-copy">© 2026 mugi-an · All rights reserved</div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="card-img" id="modal-img" style="background:#f5ede0;max-height:320px;overflow:hidden">🐱</div>
+    <div class="modal-body">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title">タイトル</div>
+        <span class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕ 閉じる</span>
+      </div>
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-desc" id="modal-desc"></div>
+      <div class="modal-actions">
+        <button class="action-btn primary">↓ ダウンロード<br><small style="opacity:0.8">無料・中サイズ</small></button>
+        <button class="action-btn">📖 写真集で見る<br><small style="opacity:0.7">フル解像度</small></button>
+        <button class="action-btn" onclick="document.getElementById('modal').classList.remove('open')">← 閉じる</button>
+      </div>
+      <div class="modal-share-row">
+        <span class="share-label">シェア：</span>
+        <div class="share-btns">
+          <button class="share-btn" id="share-x">X でシェア</button>
+          <button class="share-btn" id="share-ig">Instagram</button>
+          <button class="share-btn" id="share-copy">リンクをコピー</button>
+        </div>
+        <span class="share-invite">むぎちゃんを広めてね 🐱</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // --- 言語切替 ---
+  let currentLang = 'ja';
+  function setLang(lang, btn) {
+    currentLang = lang;
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('[data-ja]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text !== null && text !== '') {
+        if (el.tagName === 'INPUT') {
+          el.placeholder = el.getAttribute('data-' + lang + '-placeholder') || text;
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+  }
+
+  // --- タグフィルター ---
+  function filterTag(btn, tag) {
+    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const cards = document.querySelectorAll('.card');
+    let count = 0;
+    cards.forEach(card => {
+      const tags = card.getAttribute('data-tags') || '';
+      if (tag === 'all' || tags.includes(tag)) {
+        card.style.display = '';
+        count++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    document.getElementById('gallery-count').textContent = count + ' photos';
+  }
+
+  // --- モーダル ---
+  function openModal(card) {
+    const modal = document.getElementById('modal');
+    const isEn = currentLang === 'en';
+    const title = isEn ? card.getAttribute('data-title-en') : card.getAttribute('data-title');
+    const desc = isEn ? card.getAttribute('data-desc-en') : card.getAttribute('data-desc');
+    
+    // ボタンテキストも言語切替
+    const actions = modal.querySelectorAll('.action-btn');
+    if (isEn) {
+      actions[0].innerHTML = '↓ Download<br><small style="opacity:0.8">Free · Medium size</small>';
+      actions[1].innerHTML = '📖 Photo Book<br><small style="opacity:0.7">Full resolution</small>';
+      actions[2].innerHTML = '← Close';
+    } else {
+      actions[0].innerHTML = '↓ ダウンロード<br><small style="opacity:0.8">無料・中サイズ</small>';
+      actions[1].innerHTML = '📖 写真集で見る<br><small style="opacity:0.7">フル解像度</small>';
+      actions[2].innerHTML = '← 閉じる';
+    }
+    
+    // シェアボタン・ラベルも言語切替
+    modal.querySelector('.share-label').textContent = isEn ? 'Share:' : 'シェア：';
+    document.getElementById('share-x').textContent = isEn ? 'Share on X' : 'X でシェア';
+    document.getElementById('share-ig').textContent = 'Instagram';
+    document.getElementById('share-copy').textContent = isEn ? 'Copy link' : 'リンクをコピー';
+    modal.querySelector('.share-invite').textContent = isEn ? 'Share Mugi with friends! 🐱' : 'むぎちゃんを広めてね 🐱';
+    modal.querySelector('.modal-close').textContent = isEn ? '✕ Close' : '✕ 閉じる';
+    const tags = (card.getAttribute('data-tags') || '').split(',');
+    const ratio = card.getAttribute('data-ratio');
+    const imgEl = card.querySelector('.card-img img');
+
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-desc').textContent = desc;
+
+    const tagsEl = document.getElementById('modal-tags');
+    tagsEl.innerHTML = tags.map(t => `<span class="modal-tag">#${t.trim()}</span>`).join('');
+
+    const modalImg = document.getElementById('modal-img');
+    modalImg.className = 'card-img ' + ratio;
+    modalImg.style.maxHeight = '';
+    if (imgEl && imgEl.src) {
+      modalImg.innerHTML = `<img src="${imgEl.src}" alt="${title}" style="width:100%;height:100%;object-fit:cover">`;
+    } else {
+      modalImg.innerHTML = '🐱';
+    }
+
+    modal.classList.add('open');
+  }
+
+  function closeModal(e) {
+    if (e.target === document.getElementById('modal')) {
+      document.getElementById('modal').classList.remove('open');
+    }
+  }
+
+  // --- シェア ---
+  document.getElementById('share-x').addEventListener('click', () => {
+    const text = encodeURIComponent('むぎちゃんのギャラリーをみてね🐱 #むぎちゃん #猫 #ブリティッシュショートヘア');
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(location.href)}`, '_blank');
+  });
+  document.getElementById('share-copy').addEventListener('click', () => {
+    navigator.clipboard.writeText(location.href).then(() => alert('リンクをコピーしました！'));
+  });
+</script>
+</body>
+</html>
