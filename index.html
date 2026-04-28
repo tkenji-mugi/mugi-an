@@ -121,7 +121,7 @@
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      min-height: 480px;
+      height: 480px;
       border-bottom: 1px solid var(--border);
     }
     .hero-left {
@@ -665,7 +665,10 @@
     @media (max-width: 768px) {
       .nav { padding: 0 16px; }
       .nav-link { display: none; }
-      .hero { grid-template-columns: 1fr; }
+      .hero {
+  grid-template-columns: 1fr;
+  height: auto;
+}
       .hero-right { height: 260px; }
       .hero-left { padding: 40px 24px; }
       .hero-title { font-size: 28px; }
