@@ -1177,6 +1177,18 @@
   document.getElementById('share-copy').addEventListener('click', () => {
     navigator.clipboard.writeText(location.href).then(() => alert('リンクをコピーしました！'));
   });
+<script>
+fetch('gallery-data.json')
+  .then(response => response.json())
+  .then(data => {
+    const count = document.getElementById('gallery-count');
+    if (count && data.photos) {
+      count.textContent = data.photos.length + ' photos';
+    }
+  })
+  .catch(error => {
+    console.log('gallery-data.json could not be loaded:', error);
+  });
 </script>
 </body>
 </html>
