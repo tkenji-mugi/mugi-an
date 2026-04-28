@@ -1,0 +1,631 @@
+{
+  "version": "1.0",
+  "site": "mugi-an",
+  "volumeHint": "spring-2026",
+  "notes": "Initial gallery-data.json converted from the current index.html gallery cards. Kindle chapter fields are provisional and can be changed later.",
+  "photos": [
+    {
+      "id": "20260425-engawa-006",
+      "file": "images/20260425_縁側_006.png",
+      "titleJa": "縁側でうとうと",
+      "titleEn": "Dozing on the Engawa",
+      "descriptionJa": "春の縁側で気持ちよさそうにうとうとするむぎちゃん。障子から差し込む柔らかい光が美しい一枚。",
+      "descriptionEn": "Mugi dozing peacefully on a traditional Japanese engawa, bathed in soft spring light filtering through shoji screens.",
+      "tagsJa": [
+        "縁側",
+        "春",
+        "和の景色",
+        "座り",
+        "うとうと"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-garden-stone-path-007",
+      "file": "images/20260426_庭園石畳_007.png",
+      "titleJa": "庭園石畳を歩く",
+      "titleEn": "Walking the Garden Path",
+      "descriptionJa": "日本庭園の石畳をゆっくり歩くむぎちゃん。石灯籠と松の木が美しい背景。",
+      "descriptionEn": "Mugi strolling along a mossy stone garden path, with stone lanterns and pine trees in the background.",
+      "tagsJa": [
+        "庭園",
+        "石畳",
+        "歩き",
+        "和の景色"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-dandelion-004",
+      "file": "images/20260426_たんぽぽ_004.png",
+      "titleJa": "たんぽぽと遊ぶ",
+      "titleEn": "Playing with Dandelions",
+      "descriptionJa": "春の野原でたんぽぽに前足を伸ばすむぎちゃん。好奇心旺盛な一面が出た一枚。",
+      "descriptionEn": "Mugi curiously reaching out to a bright yellow dandelion in a spring meadow.",
+      "tagsJa": [
+        "たんぽぽ",
+        "春",
+        "自然"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "isNew": false,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 春の花と色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260425-sakura-001",
+      "file": "images/20260425_桜_001.png",
+      "titleJa": "桜の下で",
+      "titleEn": "Under the Cherry Blossoms",
+      "descriptionJa": "満開の桜並木の下、川沿いで春を感じるむぎちゃん。花びらが静かに舞う美しい一枚。",
+      "descriptionEn": "Mugi sitting peacefully beneath full-bloom cherry blossom trees along a river bank.",
+      "tagsJa": [
+        "桜",
+        "春",
+        "自然",
+        "座り"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": false,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 春の花と色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-shrine-torii-009",
+      "file": "images/20260426_神社鳥居_009.png",
+      "titleJa": "稲荷神社の春",
+      "titleEn": "Spring at the Shrine",
+      "descriptionJa": "朱色の鳥居を見上げるむぎちゃん。春の神社の凛とした空気感が伝わる一枚。",
+      "descriptionEn": "Mugi gazing up at a vermillion torii gate at a Japanese shrine in spring.",
+      "tagsJa": [
+        "神社",
+        "鳥居",
+        "春",
+        "座り",
+        "和の景色"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-hinamatsuri-012",
+      "file": "images/20260426_ひな祭り_012.png",
+      "titleJa": "ひな祭りのむぎちゃん",
+      "titleEn": "Mugi at Hinamatsuri",
+      "descriptionJa": "お内裏様・お雛様と並んで鎮座するむぎちゃん。第三のひな人形のような堂々たる存在感。",
+      "descriptionEn": "Mugi sitting proudly between traditional hina dolls, as if she were the third doll in the set.",
+      "tagsJa": [
+        "ひな祭り",
+        "行事",
+        "座り"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260425-japanese-room-shoji-002",
+      "file": "images/20260425_和室障子_002.png",
+      "titleJa": "和室でくつろぐ",
+      "titleEn": "Relaxing in the Japanese Room",
+      "descriptionJa": "畳の上に寝そべるむぎちゃん。障子の格子模様の影が美しく落ちた、静寂の一枚。",
+      "descriptionEn": "Mugi lounging on tatami, with beautiful grid shadows cast by shoji screens in golden light.",
+      "tagsJa": [
+        "和室",
+        "障子",
+        "寝そべり",
+        "和の景色"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": false,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-hanami-014",
+      "file": "images/20260426_お花見_014.png",
+      "titleJa": "お花見でひとやすみ",
+      "titleEn": "Grooming at Hanami",
+      "descriptionJa": "桜の下のレジャーシートの上でマイペースに顔を洗うむぎちゃん。お花見など我関せず。",
+      "descriptionEn": "Mugi grooming herself beside a bento box during a cherry blossom viewing party, completely unbothered.",
+      "tagsJa": [
+        "お花見",
+        "桜",
+        "毛繕い",
+        "自然"
+      ],
+      "ratio": "h",
+      "aspectHint": "3:2",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-garden-pond-011",
+      "file": "images/20260426_庭園池_011.png",
+      "titleJa": "庭園池の錦鯉",
+      "titleEn": "Koi Pond Curiosity",
+      "descriptionJa": "苔むした石の上から錦鯉を覗き込むむぎちゃん。好奇心と庭園の美しさが共存する一枚。",
+      "descriptionEn": "Mugi perching on mossy rocks to peek at colorful koi fish in a Japanese garden pond.",
+      "tagsJa": [
+        "庭園",
+        "錦鯉",
+        "自然",
+        "和の景色"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-wagashi-shop-016",
+      "file": "images/20260426_和菓子屋_016.png",
+      "titleJa": "和菓子屋の夕暮れ",
+      "titleEn": "Sunset at the Wagashi Shop",
+      "descriptionJa": "夕暮れの和菓子屋の縁台でおばあちゃんに頭を撫でられるむぎちゃん。温かな日本の日常。",
+      "descriptionEn": "Mugi being gently petted by an elderly woman at a traditional wagashi shop in the golden hour.",
+      "tagsJa": [
+        "和菓子",
+        "夕方",
+        "和の景色",
+        "座り"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-shrine-torii-wide-010",
+      "file": "images/20260426_神社鳥居_横_010.png",
+      "titleJa": "参道の鳥居",
+      "titleEn": "The Torii Corridor",
+      "descriptionJa": "朱色の鳥居が連なる参道に佇むむぎちゃん。幻想的な光景が広がる一枚。",
+      "descriptionEn": "Mugi sitting in a corridor of vermillion torii gates — an iconic Japanese landscape.",
+      "tagsJa": [
+        "神社",
+        "鳥居",
+        "春",
+        "和の景色"
+      ],
+      "ratio": "h",
+      "aspectHint": "3:2",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-tea-ceremony-017",
+      "file": "images/20260426_茶道_017.png",
+      "titleJa": "茶道のお稽古に乱入",
+      "titleEn": "Crashing the Tea Ceremony",
+      "descriptionJa": "着物姿の方々のお稽古の輪の中心で堂々と寝そべるむぎちゃん。我関せずの貫禄。",
+      "descriptionEn": "Mugi sprawling in the center of a tea ceremony circle, completely at ease among kimono-clad practitioners.",
+      "tagsJa": [
+        "茶道",
+        "行事",
+        "寝そべり"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-hanami-photo-book-015",
+      "file": "images/20260426_お花見_写真集_015.png",
+      "titleJa": "お花見 縦バージョン",
+      "titleEn": "Hanami Portrait",
+      "descriptionJa": "桜の木の下でマイペースに顔を洗うむぎちゃん。奥に花見客の賑わいが見える。",
+      "descriptionEn": "Mugi grooming herself under cherry blossoms while hanami crowds enjoy the spring festival behind her.",
+      "tagsJa": [
+        "お花見",
+        "桜",
+        "春",
+        "毛繕い"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-nara-bento-018",
+      "file": "images/20260426_奈良お弁当_018.png",
+      "titleJa": "奈良公園のお弁当",
+      "titleEn": "Bento in Nara Park",
+      "descriptionJa": "奈良公園でピクニック中の家族のお弁当を狙うむぎちゃん。背景に鹿が歩いている。",
+      "descriptionEn": "Mugi eyeing an open bento box at a family picnic in Nara Park, with deer grazing in the background.",
+      "tagsJa": [
+        "奈良",
+        "お弁当",
+        "行事",
+        "自然"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-spring-sunlight-sparrows-019",
+      "file": "images/20260426_春の日差しすずめ_019.png",
+      "titleJa": "春の日差しとすずめ",
+      "titleEn": "Spring Light & Sparrows",
+      "descriptionJa": "木漏れ日の中を歩くむぎちゃんのそばで、すずめたちが日向ぼっこしている春の一枚。",
+      "descriptionEn": "Mugi walking through dappled sunlight while sparrows bask nearby — a peaceful spring scene.",
+      "tagsJa": [
+        "春",
+        "自然",
+        "すずめ",
+        "歩き"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 春の自然と空気",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-spring-wind-baseball-020",
+      "file": "images/20260426_春風野球_020.png",
+      "titleJa": "春風と野球グラウンド",
+      "titleEn": "Spring Wind & Baseball",
+      "descriptionJa": "春の土手でそよ風を受けて立つむぎちゃん。背景には野球の練習風景が広がる日本の春。",
+      "descriptionEn": "Mugi standing in a spring breeze on a riverbank, with a baseball practice ground in the background.",
+      "tagsJa": [
+        "春風",
+        "自然",
+        "野球",
+        "歩き"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 春の自然と空気",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-riverside-spring-breeze-021",
+      "file": "images/20260426_川沿い春風_021.png",
+      "titleJa": "川沿いの春風",
+      "titleEn": "Spring Breeze by the River",
+      "descriptionJa": "桜並木の川沿いでそよ風を受けるむぎちゃん。散歩の女性と柴犬、ランナーが行き交う春の情景。",
+      "descriptionEn": "Mugi enjoying a spring breeze along a cherry-blossom-lined river, with a woman walking her Shiba Inu and a jogger passing by.",
+      "tagsJa": [
+        "川沿い",
+        "春風",
+        "自然"
+      ],
+      "ratio": "h",
+      "aspectHint": "3:2",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 春の自然と空気",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-hinamatsuri-arare-013",
+      "file": "images/20260426_ひな祭りあられ_013.png",
+      "titleJa": "ひな祭りあられ",
+      "titleEn": "Hinamatsuri Sweets",
+      "descriptionJa": "雛あられに興味津々のむぎちゃん。ひな飾りの前でじっと覗き込む姿が愛らしい。",
+      "descriptionEn": "Mugi curiously inspecting a bowl of hina-arare rice crackers among the beautiful hina doll display.",
+      "tagsJa": [
+        "ひな祭り",
+        "行事"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "isNew": false,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260426-garden-stone-path-wide-008",
+      "file": "images/20260426_庭園石畳_横_008.png",
+      "titleJa": "庭園石畳 横",
+      "titleEn": "Garden Path — Wide View",
+      "descriptionJa": "石畳の小道の真ん中に座り、カメラ目線のむぎちゃん。左右に広がる日本庭園の美しさ。",
+      "descriptionEn": "Mugi sitting in the center of a stone garden path, flanked by lush Japanese garden scenery.",
+      "tagsJa": [
+        "庭園",
+        "石畳",
+        "和の景色"
+      ],
+      "ratio": "h",
+      "aspectHint": "3:2",
+      "isNew": false,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260425-japanese-room-shoji-001",
+      "file": "images/20260425_和室障子_001.png",
+      "titleJa": "和室と障子の光",
+      "titleEn": "Light Through Shoji",
+      "descriptionJa": "障子から差し込む春の光の中で座るむぎちゃん。畳に落ちる格子模様の影が美しい。",
+      "descriptionEn": "Mugi sitting in a traditional Japanese room, with beautiful grid shadows from shoji screens falling on the tatami.",
+      "tagsJa": [
+        "和室",
+        "障子",
+        "座り",
+        "和の景色"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": false,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260425-rapeseed-flowers-002",
+      "file": "images/20260425_菜の花_002.png",
+      "titleJa": "菜の花畑で",
+      "titleEn": "In the Rapeseed Field",
+      "descriptionJa": "黄色い菜の花に囲まれて、春の明るさを感じるむぎちゃん。やわらかな光が広がる一枚。",
+      "descriptionEn": "Mugi surrounded by bright yellow rapeseed blossoms, enjoying the warm and gentle light of spring.",
+      "tagsJa": [
+        "菜の花",
+        "春",
+        "自然"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "isNew": false,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 春の花と色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    },
+    {
+      "id": "20260425-plum-blossoms-003",
+      "file": "images/20260425_梅_003.png",
+      "titleJa": "梅の花と",
+      "titleEn": "With Plum Blossoms",
+      "descriptionJa": "春を告げる梅の花のそばで、むぎちゃんが静かにこちらを見つめています。",
+      "descriptionEn": "Mugi quietly gazes toward us beside early spring plum blossoms.",
+      "tagsJa": [
+        "梅",
+        "春",
+        "自然"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "isNew": false,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 春の花と色",
+        "order": null
+      },
+      "sns": true,
+      "download": true
+    }
+  ]
+}
