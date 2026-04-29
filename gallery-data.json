@@ -824,6 +824,58 @@
       "world": "real-japan",
       "status": "published",
       "featureCandidate": []
-    }
+      },
+    {
+  "id": "20260429-spring-clear-stream-ayu-022",
+  "file": "images/20260429_春の清流鮎ツンツン_022_2x3.png",
+  "titleJa": "春の清流と鮎",
+  "titleEn": "Ayu in the Spring Stream",
+  "descriptionJa": "山あいを流れる清らかな小川で、泳いできた鮎をじっと見つめるむぎちゃん。春の水辺の空気が感じられる一枚です。",
+  "descriptionEn": "Mugi watches an ayu fish in a clear mountain stream, surrounded by the fresh air of spring.",
+  "tagsJa": [
+    "清流",
+    "小川",
+    "鮎",
+    "水辺",
+    "自然",
+    "山あい"
+  ],
+  "tagsEn": [
+    "clear stream",
+    "brook",
+    "ayu fish",
+    "waterside",
+    "nature",
+    "mountains"
+  ],
+  "ratio": "v",
+  "aspectHint": "2:3",
+  "aspect": "2:3",
+  "isNew": true,
+  "usage": [
+    "gallery",
+    "kindle"
+  ],
+  "kindle": {
+    "eligible": true,
+    "volume": "spring-2026",
+    "chapterCandidateJa": "第4章 春の自然と空気",
+    "order": null
+  },
+  "sns": true,
+  "download": true,
+  "series": [
+    "seasonal"
+  ],
+  "volume": "spring-2026",
+  "season": "spring",
+  "style": "ai-photo",
+  "world": "real-japan",
+  "status": "published",
+  "featureCandidate": [
+    "春の自然と空気",
+    "Kindle春版 収録候補"
+  ]
+}
   ]
 }
