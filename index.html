@@ -825,7 +825,7 @@
 
 <!-- GALLERY -->
 <div class="gallery-section" id="gallery">
-  <div class="gallery-meta" id="gallery-count">23 photos</div>
+  <div class="gallery-meta" id="gallery-count">22 photos</div>
   <div class="masonry" id="masonry">
 
     <div class="card" onclick="openModal(this)" data-tags="縁側,春,和の景色,座り,うとうと" data-title="縁側でうとうと" data-title-en="Dozing on the Engawa" data-desc="春の縁側で気持ちよさそうにうとうとするむぎちゃん。障子から差し込む柔らかい光が美しい一枚。" data-desc-en="Mugi dozing peacefully on a traditional Japanese engawa, bathed in soft spring light filtering through shoji screens." data-ratio="v" data-new="true">
@@ -1180,20 +1180,27 @@
 fetch('gallery-data.json')
   .then(response => response.json())
   .then(data => {
-    const count = document.getElementById('gallery-count');
-    if (count && data.photos) {
-      count.textContent = data.photos.length + ' photos';
+    const photos = data.photos || [];
+
+    const galleryCount = document.getElementById('gallery-count');
+    if (galleryCount) {
+      galleryCount.textContent = photos.length + ' photos';
     }
 
+    const kindleEligibleCount = photos.filter(photo => {
+      return photo.kindle && photo.kindle.eligible === true;
+    }).length;
+
     const kindleCount = document.getElementById('kindle-count');
-    if (kindleCount && data.photos) {
-      const eligibleCount = data.photos.filter(photo => photo.kindle && photo.kindle.eligible === true).length;
-      kindleCount.textContent = eligibleCount;
+    if (kindleCount) {
+      kindleCount.textContent = kindleEligibleCount;
+    }
+
+    const kindleCountEn = document.getElementById('kindle-count-en');
+    if (kindleCountEn) {
+      kindleCountEn.textContent = kindleEligibleCount;
     }
   })
-  .catch(error => {
-    console.log('gallery-data.json could not be loaded:', error);
-  });
   .catch(error => {
     console.log('gallery-data.json could not be loaded:', error);
   });
