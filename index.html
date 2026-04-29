@@ -1181,7 +1181,69 @@ fetch('gallery-data.json')
   .then(response => response.json())
   .then(data => {
     const photos = data.photos || [];
+　　    const masonry = document.getElementById('masonry');
+    if (masonry) {
+      const existingFiles = new Set(
+        Array.from(masonry.querySelectorAll('img')).map(img => img.getAttribute('src'))
+      );
 
+      photos.forEach(photo => {
+        if (!photo.file || existingFiles.has(photo.file)) return;
+
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.setAttribute('onclick', 'openModal(this)');
+        card.setAttribute('data-tags', (photo.tagsJa || []).join(','));
+        card.setAttribute('data-title', photo.titleJa || '');
+        card.setAttribute('data-title-en', photo.titleEn || '');
+        card.setAttribute('data-desc', photo.descriptionJa || '');
+        card.setAttribute('data-desc-en', photo.descriptionEn || '');
+        card.setAttribute('data-ratio', photo.ratio || 'v');
+
+        if (photo.isNew) {
+          const badge = document.createElement('span');
+          badge.className = 'new-badge';
+          badge.textContent = 'New';
+          card.appendChild(badge);
+        }
+
+        const imgWrap = document.createElement('div');
+        imgWrap.className = 'card-img ' + (photo.ratio || 'v');
+        imgWrap.style.background = 'linear-gradient(160deg,#f5ede0,#e8d5b8)';
+
+        const img = document.createElement('img');
+        img.src = photo.file;
+        img.alt = photo.titleJa || '';
+        imgWrap.appendChild(img);
+
+        const body = document.createElement('div');
+        body.className = 'card-body';
+
+        const title = document.createElement('div');
+        title.className = 'card-title';
+        title.setAttribute('data-ja', photo.titleJa || '');
+        title.setAttribute('data-en', photo.titleEn || '');
+        title.textContent = photo.titleJa || '';
+
+        const tags = document.createElement('div');
+        tags.className = 'card-tags';
+
+        (photo.tagsJa || []).slice(0, 3).forEach(tag => {
+          const span = document.createElement('span');
+          span.className = 'card-tag';
+          span.textContent = '#' + tag;
+          tags.appendChild(span);
+        });
+
+        body.appendChild(title);
+        body.appendChild(tags);
+
+        card.appendChild(imgWrap);
+        card.appendChild(body);
+
+        masonry.appendChild(card);
+      });
+    }
     const galleryCount = document.getElementById('gallery-count');
     if (galleryCount) {
       galleryCount.textContent = photos.length + ' photos';
