@@ -769,29 +769,29 @@
     <div class="special-card">
       <div class="special-img" style="background: linear-gradient(135deg,#fce8f0,#f5d5e5)">🌸</div>
       <div class="special-body">
-        <div class="special-title" data-ja="春の和むぎちゃん" data-en="Mugi in Japanese Spring">春の和むぎちゃん</div>
-        <div class="special-count" data-ja="神社・縁側・庭園 8枚" data-en="Shrine, Garden, Engawa — 8 photos">神社・縁側・庭園 8枚</div>
+       <div class="special-title" data-ja="春の花とむぎちゃん" data-en="Mugi and Spring Flowers">春の花とむぎちゃん</div>
+<div class="special-count" data-ja="桜・菜の花・梅・たんぽぽ <span id='feature-spring-flowers-count'>0</span>枚" data-en="Cherry blossoms, rapeseed flowers, plum blossoms, and dandelions — <span id='feature-spring-flowers-count-en'>0</span> photos">桜・菜の花・梅・たんぽぽ <span id="feature-spring-flowers-count">0</span>枚</div> 
       </div>
     </div>
     <div class="special-card">
       <div class="special-img" style="background: linear-gradient(135deg,#fce8e8,#f5d0d0)">🎎</div>
       <div class="special-body">
-        <div class="special-title" data-ja="春の行事コレクション" data-en="Japanese Seasonal Events">春の行事コレクション</div>
-        <div class="special-count" data-ja="ひな祭り・お花見・茶道 6枚" data-en="Hinamatsuri, Hanami, Tea — 6 photos">ひな祭り・お花見・茶道 6枚</div>
+ <div class="special-title" data-ja="和の春景色" data-en="Japanese Spring Scenery">和の春景色</div>
+<div class="special-count" data-ja="神社・鳥居・庭園・縁側・和室 <span id='feature-wa-spring-scenery-count'>0</span>枚" data-en="Shrines, torii gates, gardens, engawa, and tatami rooms — <span id='feature-wa-spring-scenery-count-en'>0</span> photos">神社・鳥居・庭園・縁側・和室 <span id="feature-wa-spring-scenery-count">0</span>枚</div>
       </div>
     </div>
     <div class="special-card">
       <div class="special-img" style="background: linear-gradient(135deg,#e8f5e8,#d5e8d5)">😴</div>
       <div class="special-body">
-        <div class="special-title" data-ja="くつろぎむぎちゃん" data-en="Relaxed Mugi">くつろぎむぎちゃん</div>
-        <div class="special-count" data-ja="寝そべり・うとうとポーズ 5枚" data-en="Lounging & Dozing — 5 photos">寝そべり・うとうとポーズ 5枚</div>
+        <div class="special-title" data-ja="春の行事と暮らし" data-en="Spring Events and Daily Life">春の行事と暮らし</div>
+<div class="special-count" data-ja="ひな祭り・お花見・茶道・和菓子・お弁当 <span id='feature-spring-events-life-count'>0</span>枚" data-en="Hinamatsuri, hanami, tea ceremony, wagashi, and bento — <span id='feature-spring-events-life-count-en'>0</span> photos">ひな祭り・お花見・茶道・和菓子・お弁当 <span id="feature-spring-events-life-count">0</span>枚</div>
       </div>
     </div>
     <div class="special-card">
       <div class="special-img" style="background: linear-gradient(135deg,#e0ecf8,#cde0f0)">🌍</div>
       <div class="special-body">
-        <div class="special-title" data-ja="海外に伝えたい日本" data-en="Japan Through Mugi's Eyes">海外に伝えたい日本</div>
-        <div class="special-count" data-ja="鳥居・錦鯉・和菓子屋 7枚" data-en="Torii, Koi, Wagashi — 7 photos">鳥居・錦鯉・和菓子屋 7枚</div>
+  <div class="special-title" data-ja="Kindle春版 収録候補" data-en="Kindle Spring Edition Candidates">Kindle春版 収録候補</div>
+<div class="special-count" data-ja="縦2:3の写真集候補 <span id='feature-kindle-spring-2026-count'>0</span>枚" data-en="Portrait 2:3 images selected for the photo book — <span id='feature-kindle-spring-2026-count-en'>0</span> photos">縦2:3の写真集候補 <span id="feature-kindle-spring-2026-count">0</span>枚</div>
       </div>
     </div>
   </div>
@@ -1200,6 +1200,59 @@ fetch('gallery-data.json')
     if (kindleCountEn) {
       kindleCountEn.textContent = kindleEligibleCount;
     }
+        fetch('feature-rules.json')
+      .then(response => response.json())
+      .then(ruleData => {
+        const features = ruleData.features || [];
+
+        const hasAny = (items, targets) => {
+          if (!targets || targets.length === 0) return true;
+          const list = items || [];
+          return targets.some(target => list.includes(target));
+        };
+
+        const matchesRule = (photo, rule) => {
+          if (rule.volume && photo.volume !== rule.volume) return false;
+          if (rule.season && photo.season !== rule.season) return false;
+
+          if (rule.seriesAny && rule.seriesAny.length > 0) {
+            const photoSeries = photo.series || [];
+            if (!rule.seriesAny.some(series => photoSeries.includes(series))) return false;
+          }
+
+          if (rule.tagsAny && rule.tagsAny.length > 0) {
+            if (!hasAny(photo.tagsJa, rule.tagsAny)) return false;
+          }
+
+          if (rule.kindleEligible === true) {
+            if (!(photo.kindle && photo.kindle.eligible === true)) return false;
+          }
+
+          if (rule.aspectAny && rule.aspectAny.length > 0) {
+            const aspect = photo.aspect || photo.aspectHint;
+            if (!rule.aspectAny.includes(aspect)) return false;
+          }
+
+          return true;
+        };
+
+        features.forEach(feature => {
+          const count = photos.filter(photo => matchesRule(photo, feature.rule || {})).length;
+
+          const jaCount = document.getElementById(`feature-${feature.id}-count`);
+          if (jaCount) {
+            jaCount.textContent = count;
+          }
+
+          const enCount = document.getElementById(`feature-${feature.id}-count-en`);
+          if (enCount) {
+            enCount.textContent = count;
+          }
+        });
+      })
+      .catch(error => {
+        console.log('feature-rules.json could not be loaded:', error);
+      });
   })
   .catch(error => {
     console.log('gallery-data.json could not be loaded:', error);
