@@ -1177,7 +1177,6 @@
   document.getElementById('share-copy').addEventListener('click', () => {
     navigator.clipboard.writeText(location.href).then(() => alert('リンクをコピーしました！'));
   });
-<script>
 fetch('gallery-data.json')
   .then(response => response.json())
   .then(data => {
