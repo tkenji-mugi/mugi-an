@@ -32,7 +32,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-garden-stone-path-007",
@@ -61,7 +70,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-dandelion-004",
@@ -88,7 +106,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260425-sakura-001",
@@ -117,7 +144,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-shrine-torii-009",
@@ -147,7 +183,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-hinamatsuri-012",
@@ -175,7 +220,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260425-japanese-room-shoji-002",
@@ -204,7 +258,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-hanami-014",
@@ -232,7 +295,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-garden-pond-011",
@@ -261,7 +333,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-wagashi-shop-016",
@@ -290,7 +371,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-shrine-torii-wide-010",
@@ -318,7 +408,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-tea-ceremony-017",
@@ -345,7 +444,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-hanami-photo-book-015",
@@ -374,7 +482,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-nara-bento-018",
@@ -403,7 +520,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-spring-sunlight-sparrows-019",
@@ -432,7 +558,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-spring-wind-baseball-020",
@@ -461,7 +596,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-riverside-spring-breeze-021",
@@ -488,7 +632,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-hinamatsuri-arare-013",
@@ -514,7 +667,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260426-garden-stone-path-wide-008",
@@ -541,7 +703,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260425-japanese-room-shoji-001",
@@ -570,7 +741,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260425-rapeseed-flowers-002",
@@ -598,7 +778,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     },
     {
       "id": "20260425-plum-blossoms-003",
@@ -625,7 +814,16 @@
         "order": null
       },
       "sns": true,
-      "download": true
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": []
     }
   ]
 }
