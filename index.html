@@ -1026,7 +1026,7 @@
   <div>
     <div class="kindle-text-en">Coming Soon on Kindle</div>
     <div class="kindle-title" data-ja="写真集 vol.1「春のむぎちゃん」" data-en="Photo Book vol.1 — Mugi in Spring">写真集 vol.1「春のむぎちゃん」</div>
-    <div class="kindle-desc" data-ja="フル解像度で全21枚収録 · 近日Amazon Kindle公開予定" data-en="Full resolution · 21 photos · Coming soon on Amazon Kindle">フル解像度で全21枚収録 · 近日Amazon Kindle公開予定</div>
+    <div class="kindle-desc" data-ja="フル解像度で全<span id='kindle-count'>14</span>枚収録 · 近日Amazon Kindle公開予定" data-en="Full resolution · <span id='kindle-count-en'>14</span> photos · Coming soon on Amazon Kindle">フル解像度で全<span id="kindle-count">14</span>枚収録 · 近日Amazon Kindle公開予定</div>
   </div>
   <button class="kindle-btn" data-ja="詳しく見る →" data-en="Learn more →">詳しく見る →</button>
 </div>
@@ -1183,6 +1183,12 @@ fetch('gallery-data.json')
     const count = document.getElementById('gallery-count');
     if (count && data.photos) {
       count.textContent = data.photos.length + ' photos';
+    }
+
+    const kindleCount = document.getElementById('kindle-count');
+    if (kindleCount && data.photos) {
+      const eligibleCount = data.photos.filter(photo => photo.kindle && photo.kindle.eligible === true).length;
+      kindleCount.textContent = eligibleCount;
     }
   })
   .catch(error => {
