@@ -1182,13 +1182,11 @@ fetch('gallery-data.json')
   .then(data => {
     const photos = data.photos || [];
 　　    const masonry = document.getElementById('masonry');
-    if (masonry) {
-      const existingFiles = new Set(
-        Array.from(masonry.querySelectorAll('img')).map(img => img.getAttribute('src'))
-      );
+if (masonry) {
+  masonry.innerHTML = '';
 
-      photos.forEach(photo => {
-        if (!photo.file || existingFiles.has(photo.file)) return;
+  photos.forEach(photo => {
+    if (!photo.file) return;
 
         const card = document.createElement('div');
         card.className = 'card';
