@@ -949,7 +949,10 @@
     document.getElementById('share-copy').textContent = isEn ? 'Copy link' : 'リンクをコピー';
     modal.querySelector('.share-invite').textContent = isEn ? 'Share Mugi with friends! 🐱' : 'むぎちゃんを広めてね 🐱';
     modal.querySelector('.modal-close').textContent = isEn ? '✕ Close' : '✕ 閉じる';
-    const tags = (card.getAttribute('data-tags') || '').split(',');
+    const tagsText = isEn
+  ? (card.getAttribute('data-tags-en') || card.getAttribute('data-tags') || '')
+  : (card.getAttribute('data-tags') || '');
+const tags = tagsText.split(',');
     const ratio = card.getAttribute('data-ratio');
     const imgEl = card.querySelector('.card-img img');
 
@@ -1000,6 +1003,7 @@ if (masonry) {
         card.className = 'card';
         card.setAttribute('onclick', 'openModal(this)');
         card.setAttribute('data-tags', (photo.tagsJa || []).join(','));
+    　　card.setAttribute('data-tags-en', (photo.tagsEn || photo.tagsJa || []).join(','));
         card.setAttribute('data-title', photo.titleJa || '');
         card.setAttribute('data-title-en', photo.titleEn || '');
         card.setAttribute('data-desc', photo.descriptionJa || '');
@@ -1034,12 +1038,17 @@ if (masonry) {
         const tags = document.createElement('div');
         tags.className = 'card-tags';
 
-        (photo.tagsJa || []).slice(0, 3).forEach(tag => {
-          const span = document.createElement('span');
-          span.className = 'card-tag';
-          span.textContent = '#' + tag;
-          tags.appendChild(span);
-        });
+        const tagsJa = (photo.tagsJa || []).slice(0, 3);
+const tagsEn = (photo.tagsEn || []).slice(0, 3);
+
+tagsJa.forEach((tag, index) => {
+  const span = document.createElement('span');
+  span.className = 'card-tag';
+  span.setAttribute('data-ja', '#' + tag);
+  span.setAttribute('data-en', '#' + (tagsEn[index] || tag));
+  span.textContent = '#' + tag;
+  tags.appendChild(span);
+});
 
         body.appendChild(title);
         body.appendChild(tags);
