@@ -893,7 +893,7 @@
     currentLang = lang;
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('[data-ja]').forEach(el => {
+    document.querySelectorAll('[data-ja], [data-en]').forEach(el => {
       const text = el.getAttribute('data-' + lang);
       if (text !== null && text !== '') {
         if (el.tagName === 'INPUT') {
