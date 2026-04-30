@@ -992,6 +992,47 @@ fetch('gallery-data.json')
   .then(response => response.json())
   .then(data => {
     const photos = data.photos || [];
+    const tagEnMap = {
+  "春": "spring",
+  "桜": "cherry blossoms",
+  "菜の花": "rapeseed flowers",
+  "梅": "plum blossoms",
+  "たんぽぽ": "dandelions",
+  "自然": "nature",
+  "庭園": "garden",
+  "石畳": "stone path",
+  "歩き": "walking",
+  "和の景色": "Japanese scenery",
+  "縁側": "engawa",
+  "和室": "tatami room",
+  "座り": "sitting",
+  "うとうと": "dozing",
+  "寝そべり": "sprawling",
+  "神社": "shrine",
+  "鳥居": "torii gate",
+  "茶道": "tea ceremony",
+  "行事": "seasonal event",
+  "ひな祭り": "Hinamatsuri",
+  "お花見": "hanami",
+  "和菓子屋": "wagashi shop",
+  "和菓子": "wagashi",
+  "お弁当": "bento",
+  "写真集": "photo book",
+  "川沿い": "riverside",
+  "錦鯉": "koi fish",
+  "清流": "clear stream",
+  "小川": "brook",
+  "鮎": "ayu fish",
+  "水辺": "waterside",
+  "山あい": "mountains"
+};
+
+ const getTagsEn = (photo) => {
+  const tagsJa = photo.tagsJa || [];
+  const tagsEn = photo.tagsEn || [];
+  return tagsJa.map((tag, index) => tagsEn[index] || tagEnMap[tag] || tag);
+};
+    
 　　    const masonry = document.getElementById('masonry');
 if (masonry) {
   masonry.innerHTML = '';
@@ -1003,7 +1044,7 @@ if (masonry) {
         card.className = 'card';
         card.setAttribute('onclick', 'openModal(this)');
         card.setAttribute('data-tags', (photo.tagsJa || []).join(','));
-    　　card.setAttribute('data-tags-en', (photo.tagsEn || photo.tagsJa || []).join(','));
+    　　card.setAttribute('data-tags-en', getTagsEn(photo).join(','));
         card.setAttribute('data-title', photo.titleJa || '');
         card.setAttribute('data-title-en', photo.titleEn || '');
         card.setAttribute('data-desc', photo.descriptionJa || '');
@@ -1039,8 +1080,7 @@ if (masonry) {
         tags.className = 'card-tags';
 
         const tagsJa = (photo.tagsJa || []).slice(0, 3);
-const tagsEn = (photo.tagsEn || []).slice(0, 3);
-
+const tagsEn = getTagsEn(photo).slice(0, 3);
 tagsJa.forEach((tag, index) => {
   const span = document.createElement('span');
   span.className = 'card-tag';
