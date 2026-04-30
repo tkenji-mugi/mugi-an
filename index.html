@@ -1058,6 +1058,10 @@ tagsJa.forEach((tag, index) => {
 
         masonry.appendChild(card);
       });
+  const activeLangBtn = document.querySelector('.lang-btn.active');
+      if (activeLangBtn) {
+        setLang(currentLang, activeLangBtn);
+      }
     }
     const galleryCount = document.getElementById('gallery-count');
     if (galleryCount) {
