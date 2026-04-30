@@ -482,6 +482,28 @@
     .card-tags { display: flex; gap: 4px; flex-wrap: wrap; }
     .card-tag { font-size: 10px; color: var(--ink-muted); }
 
+    .gallery-hint {
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: #8b7355;
+  text-align: center;
+}
+
+.card-view-link {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9b6b35;
+  text-align: right;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.card:hover .card-view-link {
+  opacity: 1;
+  text-decoration: underline;
+}
+    
     /* ===== KINDLE BANNER ===== */
     .kindle-banner {
       margin: 0 32px 32px;
@@ -826,6 +848,7 @@
 <!-- GALLERY -->
 <div class="gallery-section" id="gallery">
   <div class="gallery-meta" id="gallery-count">23 photos</div>
+<div class="gallery-hint" data-ja="写真をタップすると、詳細とシェアが表示されます。" data-en="Tap a photo to view details and share.">写真をタップすると、詳細とシェアが表示されます。</div>
   <div class="masonry" id="masonry"></div>
 </div>
 
@@ -1090,11 +1113,18 @@ tagsJa.forEach((tag, index) => {
   tags.appendChild(span);
 });
 
-        body.appendChild(title);
-        body.appendChild(tags);
+      const viewLink = document.createElement('div');
+viewLink.className = 'card-view-link';
+viewLink.setAttribute('data-ja', '見る →');
+viewLink.setAttribute('data-en', 'View →');
+viewLink.textContent = '見る →';
 
-        card.appendChild(imgWrap);
-        card.appendChild(body);
+body.appendChild(title);
+body.appendChild(tags);
+body.appendChild(viewLink);
+
+card.appendChild(imgWrap);
+card.appendChild(body);
 
         masonry.appendChild(card);
       });
