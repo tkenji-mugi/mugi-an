@@ -1060,7 +1060,12 @@ fetch('gallery-data.json')
 if (masonry) {
   masonry.innerHTML = '';
 
-  photos.forEach(photo => {
+  const sortedPhotos = [...photos].sort((a, b) => {
+  if (a.isNew === true && b.isNew !== true) return -1;
+  if (a.isNew !== true && b.isNew === true) return 1;
+  return 0;
+});
+  sortedPhotos.forEach(photo => {
     if (!photo.file) return;
 
         const card = document.createElement('div');
