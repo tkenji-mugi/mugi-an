@@ -824,25 +824,7 @@
 
 <!-- TAGS -->
 <div class="tag-scroll">
-  <div class="tag-row">
-    <span class="tag active" onclick="filterTag(this, 'all')" data-ja="すべて" data-en="All">すべて</span>
-    <span class="tag" onclick="filterTag(this, '春')" data-ja="🌸 春" data-en="🌸 Spring">🌸 春</span>
-    <span class="tag" onclick="filterTag(this, '和の景色')" data-ja="和の景色" data-en="Japanese Scenery">和の景色</span>
-    <span class="tag" onclick="filterTag(this, '行事')" data-ja="行事・暮らし" data-en="Events & Life">行事・暮らし</span>
-    <span class="tag" onclick="filterTag(this, '自然')" data-ja="自然・屋外" data-en="Nature & Outdoors">自然・屋外</span>
-    <span class="tag" onclick="filterTag(this, '座り')" data-ja="座りポーズ" data-en="Sitting">座りポーズ</span>
-    <span class="tag" onclick="filterTag(this, '寝そべり')" data-ja="寝そべり" data-en="Lounging">寝そべり</span>
-    <span class="tag" onclick="filterTag(this, '歩き')" data-ja="歩き" data-en="Walking">歩き</span>
-    <span class="tag" onclick="filterTag(this, '毛繕い')" data-ja="毛繕い" data-en="Grooming">毛繕い</span>
-    <span class="tag" onclick="filterTag(this, '神社')" data-ja="神社" data-en="Shrine">神社</span>
-    <span class="tag" onclick="filterTag(this, '桜')" data-ja="桜" data-en="Sakura">桜</span>
-    <span class="tag" onclick="filterTag(this, '庭園')" data-ja="庭園" data-en="Garden">庭園</span>
-    <span class="tag" onclick="filterTag(this, '縁側')" data-ja="縁側" data-en="Engawa">縁側</span>
-    <span class="tag" onclick="filterTag(this, '和室')" data-ja="和室" data-en="Japanese Room">和室</span>
-    <span class="tag" onclick="filterTag(this, 'お花見')" data-ja="お花見" data-en="Hanami">お花見</span>
-    <span class="tag" onclick="filterTag(this, '茶道')" data-ja="茶道" data-en="Tea Ceremony">茶道</span>
-    <span class="tag" onclick="filterTag(this, '行事')" data-ja="ひな祭り" data-en="Hinamatsuri">ひな祭り</span>
-  </div>
+  <div class="tag-row" id="tag-buttons"></div>
 </div>
 
 <!-- GALLERY -->
@@ -945,7 +927,46 @@
     });
     document.getElementById('gallery-count').textContent = count + ' photos';
   }
+function renderTagButtons(tags) {
+  const tagButtons = document.getElementById('tag-buttons');
+  if (!tagButtons) return;
 
+  tagButtons.innerHTML = '';
+
+  tags
+    .filter(tag => tag.status === 'active')
+    .sort((a, b) => (a.homeOrder || 999) - (b.homeOrder || 999))
+    .forEach((tag, index) => {
+      const span = document.createElement('span');
+      span.className = index === 0 ? 'tag active' : 'tag';
+      span.setAttribute('data-ja', tag.labelJa || tag.value || '');
+      span.setAttribute('data-en', tag.labelEn || tag.labelJa || tag.value || '');
+      span.textContent = currentLang === 'en'
+        ? (tag.labelEn || tag.labelJa || tag.value || '')
+        : (tag.labelJa || tag.value || '');
+
+      span.addEventListener('click', () => {
+        filterTag(span, tag.value || 'all');
+      });
+
+      tagButtons.appendChild(span);
+    });
+
+  const activeLangBtn = document.querySelector('.lang-btn.active');
+  if (activeLangBtn) {
+    setLang(currentLang, activeLangBtn);
+  }
+}
+
+fetch('tag-rules.json')
+  .then(response => response.json())
+  .then(data => {
+    renderTagButtons(data.tags || []);
+  })
+  .catch(error => {
+    console.log('tag-rules.json could not be loaded:', error);
+  });
+  
   // --- モーダル ---
   function openModal(card) {
     const modal = document.getElementById('modal');
