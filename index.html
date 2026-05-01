@@ -956,14 +956,14 @@
     // ボタンテキストも言語切替
     const actions = modal.querySelectorAll('.action-btn');
     if (isEn) {
-      actions[0].innerHTML = '↓ Download<br><small style="opacity:0.8">Free · Medium size</small>';
-      actions[1].innerHTML = '📖 Photo Book<br><small style="opacity:0.7">Full resolution</small>';
-      actions[2].innerHTML = '← Close';
-    } else {
-      actions[0].innerHTML = '↓ ダウンロード<br><small style="opacity:0.8">無料・中サイズ</small>';
-      actions[1].innerHTML = '📖 写真集で見る<br><small style="opacity:0.7">フル解像度</small>';
-      actions[2].innerHTML = '← 閉じる';
-    }
+  actions[0].innerHTML = '↓ Download<br><small style="opacity:0.8">Save image</small>';
+  actions[1].innerHTML = '📖 View Photo Book<br><small style="opacity:0.7">Now on Kindle</small>';
+  actions[2].innerHTML = '← Close';
+} else {
+  actions[0].innerHTML = '↓ ダウンロード<br><small style="opacity:0.8">画像を保存</small>';
+  actions[1].innerHTML = '📖 写真集を見る<br><small style="opacity:0.7">Kindleで公開中</small>';
+  actions[2].innerHTML = '← 閉じる';
+}
     
     // シェアボタン・ラベルも言語切替
     modal.querySelector('.share-label').textContent = isEn ? 'Share:' : 'シェア：';
