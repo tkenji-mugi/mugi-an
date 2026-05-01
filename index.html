@@ -1060,11 +1060,26 @@ fetch('gallery-data.json')
 if (masonry) {
   masonry.innerHTML = '';
 
-  const sortedPhotos = [...photos].sort((a, b) => {
+  const getPhotoDate = (photo) => {
+  const text = photo.id || photo.file || '';
+  const match = text.match(/\d{8}/);
+  return match ? match[0] : '';
+};
+
+const sortedPhotos = [...photos].sort((a, b) => {
   if (a.isNew === true && b.isNew !== true) return -1;
   if (a.isNew !== true && b.isNew === true) return 1;
+
+  const dateA = getPhotoDate(a);
+  const dateB = getPhotoDate(b);
+
+  if (dateA !== dateB) {
+    return dateB.localeCompare(dateA);
+  }
+
   return 0;
 });
+
   sortedPhotos.forEach(photo => {
     if (!photo.file) return;
 
