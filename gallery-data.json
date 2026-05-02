@@ -876,6 +876,61 @@
     "春の自然と空気",
     "Kindle春版 収録候補"
   ]
+},
+{
+  "id": "20260502-mugi-mossy-stone-bridge-023",
+  "file": "images/20260502_苔石橋むぎ_023_2x3.png",
+  "titleJa": "苔むす石橋のむぎちゃん",
+  "titleEn": "Mugi on a Mossy Stone Bridge",
+  "descriptionJa": "春の里山に佇むむぎちゃん。苔の石橋の上で穏やかな午後の光を浴びている。",
+  "descriptionEn": "Mugi sits calmly on a moss-covered stone bridge in a serene spring countryside.",
+  "tagsJa": [
+    "むぎちゃん",
+    "里山",
+    "苔の石橋",
+    "春の風景",
+    "古民家",
+    "小川",
+    "自然光"
+  ],
+  "tagsEn": [
+    "Mugi",
+    "countryside",
+    "mossy stone bridge",
+    "spring scenery",
+    "old house",
+    "stream",
+    "natural light"
+  ],
+  "ratio": "v",
+  "aspectHint": "2:3",
+  "aspect": "2:3",
+  "isNew": true,
+  "usage": [
+    "gallery",
+    "kindle"
+  ],
+  "kindle": {
+    "eligible": true,
+    "volume": "spring-2026",
+    "chapterCandidateJa": "第5章 里山と旅の春",
+    "order": null
+  },
+  "sns": true,
+  "download": true,
+  "series": [
+    "seasonal"
+  ],
+  "volume": "spring-2026",
+  "season": "spring",
+  "style": "ai-photo",
+  "world": "real-japan",
+  "status": "published",
+  "featureCandidate": [
+    "フォトリアル",
+    "春の午後の自然光",
+    "昭和の里山風景"
+  ]
 }
   ]
 }
