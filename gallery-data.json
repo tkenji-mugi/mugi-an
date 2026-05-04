@@ -20,7 +20,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -58,7 +58,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -171,7 +171,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -208,7 +208,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -321,7 +321,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -397,7 +397,7 @@
       ],
       "ratio": "h",
       "aspectHint": "3:2",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -1090,6 +1090,116 @@
         "フォトリアル",
         "高精細",
         "春の花"
+      ]
+    },
+    {
+      "id": "20260504-sunset-ricefield-path-027",
+      "file": "images/20260504_sunset-ricefield-path_027_2x3.png",
+      "titleJa": "夕暮れ田んぼのあぜ道",
+      "titleEn": "Sunset Rice Field Path",
+      "descriptionJa": "夕暮れの田んぼに座るむぎちゃん。穏やかな表情で水面に映る夕焼けを見つめている。",
+      "descriptionEn": "Mugi sits quietly on a rice field path at sunset, gazing softly at the reflected colors on the water.",
+      "tagsJa": [
+        "夕暮れ",
+        "田んぼ",
+        "あぜ道",
+        "夕焼け",
+        "水面の反射",
+        "穏やか",
+        "自然"
+      ],
+      "tagsEn": [
+        "sunset",
+        "rice field",
+        "path",
+        "evening sky",
+        "water reflection",
+        "calm",
+        "nature"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夕焼けの光",
+        "水面の映り込み",
+        "田園風景"
+      ]
+    },
+    {
+      "id": "20260504-sunset-paddy-field-028",
+      "file": "images/20260504_sunset-paddy-field_028_2x3.png",
+      "titleJa": "夕暮れの田んぼ",
+      "titleEn": "Sunset Paddy Field",
+      "descriptionJa": "むぎちゃんが夕焼けの映る田んぼのあぜ道にちょこんと座り、静かに風景を見つめる。",
+      "descriptionEn": "Mugi sits quietly on a paddy path, gazing at the sunset reflecting on the water.",
+      "tagsJa": [
+        "夕暮れ",
+        "田んぼ",
+        "水田",
+        "あぜ道",
+        "静けさ",
+        "オレンジ色",
+        "反射"
+      ],
+      "tagsEn": [
+        "sunset",
+        "paddy field",
+        "rice paddies",
+        "pathway",
+        "silence",
+        "orange hues",
+        "reflection"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夕暮れの暖色光",
+        "水面の鏡映し",
+        "田んぼの広がり"
       ]
     }
   ]
