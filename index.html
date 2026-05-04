@@ -480,7 +480,18 @@
       margin-bottom: 4px;
     }
     .card-tags { display: flex; gap: 4px; flex-wrap: wrap; }
-    .card-tag { font-size: 10px; color: var(--ink-muted); }
+    .card-tag {
+      font-size: 10px;
+      color: var(--ink-muted);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .card-tag:hover { color: var(--gold); text-decoration: underline; }
 
     .gallery-hint {
   margin-top: 6px;
@@ -641,6 +652,16 @@
       border-radius: 10px;
       border: 1px solid var(--border-warm);
       color: var(--ink-muted);
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-weight: 300;
+      transition: all 0.2s;
+    }
+    .modal-tag:hover {
+      border-color: var(--gold);
+      color: var(--ink);
+      background: rgba(201,169,110,0.08);
     }
     .modal-desc { font-size: 13px; color: var(--ink-light); line-height: 1.8; margin-bottom: 18px; }
     .modal-actions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 14px; }
@@ -777,7 +798,7 @@
 <div class="search-wrap">
   <div class="search-box">
     <span class="search-icon">🔍</span>
-    <input class="search-input" type="text" placeholder="写真を検索... 例：桜、縁側、神社" data-ja-placeholder="写真を検索... 例：桜、縁側、神社" data-en-placeholder="Search photos... e.g. sakura, shrine, garden">
+    <input id="gallery-search" class="search-input" type="text" placeholder="写真を検索... 例：桜、縁側、神社" data-ja-placeholder="写真を検索... 例：桜、縁側、神社" data-en-placeholder="Search photos... e.g. sakura, shrine, garden">
   </div>
 </div>
 
@@ -910,23 +931,76 @@
     });
   }
 
-  // --- タグフィルター ---
-  function filterTag(btn, tag) {
-    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
+  // --- 検索・タグ絞り込み ---
+  function normalizeSearchText(value) {
+    return String(value || '')
+      .replace(/^#/, '')
+      .trim()
+      .toLowerCase();
+  }
+
+  function updateGalleryCount(count) {
+    const galleryCount = document.getElementById('gallery-count');
+    if (galleryCount) {
+      galleryCount.textContent = count + ' photos';
+    }
+  }
+
+  function applyGallerySearch(keyword, options = {}) {
+    const q = normalizeSearchText(keyword);
     const cards = document.querySelectorAll('.card');
     let count = 0;
+
     cards.forEach(card => {
-      const tags = card.getAttribute('data-tags') || '';
-      if (tag === 'all' || tags.includes(tag)) {
-        card.style.display = '';
-        count++;
-      } else {
-        card.style.display = 'none';
-      }
+      const text = card.getAttribute('data-search-text') || '';
+      const visible = !q || text.includes(q);
+      card.style.display = visible ? '' : 'none';
+      if (visible) count++;
     });
-    document.getElementById('gallery-count').textContent = count + ' photos';
+
+    updateGalleryCount(count);
+
+    if (!options.keepTagActive) {
+      document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+      if (!q) {
+        const allTag = document.querySelector('.tag');
+        if (allTag) allTag.classList.add('active');
+      }
+    }
   }
+
+  function setSearchKeyword(keyword, options = {}) {
+    const input = document.getElementById('gallery-search') || document.querySelector('.search-input');
+    if (input) {
+      input.value = keyword || '';
+    }
+    applyGallerySearch(keyword, options);
+  }
+
+  function searchByTag(tag) {
+    const keyword = String(tag || '').replace(/^#/, '').trim();
+    document.getElementById('modal')?.classList.remove('open');
+    setSearchKeyword(keyword);
+    const gallery = document.getElementById('gallery');
+    if (gallery) {
+      gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function filterTag(btn, tagValue, keyword) {
+    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const q = tagValue === 'all' ? '' : (keyword || tagValue);
+    setSearchKeyword(q, { keepTagActive: true });
+  }
+
+  const gallerySearchInput = document.getElementById('gallery-search') || document.querySelector('.search-input');
+  if (gallerySearchInput) {
+    gallerySearchInput.addEventListener('input', (event) => {
+      applyGallerySearch(event.target.value);
+    });
+  }
+
 function renderTagButtons(tags) {
   const tagButtons = document.getElementById('tag-buttons');
   if (!tagButtons) return;
@@ -946,7 +1020,12 @@ function renderTagButtons(tags) {
         : (tag.labelJa || tag.value || '');
 
       span.addEventListener('click', () => {
-        filterTag(span, tag.value || 'all');
+        const keyword = (tag.value || 'all') === 'all'
+          ? ''
+          : (currentLang === 'en'
+              ? (tag.labelEn || tag.labelJa || tag.value || '')
+              : (tag.labelJa || tag.value || ''));
+        filterTag(span, tag.value || 'all', keyword);
       });
 
       tagButtons.appendChild(span);
@@ -1004,7 +1083,21 @@ const tags = tagsText.split(',');
     document.getElementById('modal-desc').textContent = desc;
 
     const tagsEl = document.getElementById('modal-tags');
-    tagsEl.innerHTML = tags.map(t => `<span class="modal-tag">#${t.trim()}</span>`).join('');
+    tagsEl.innerHTML = '';
+    tags
+      .map(t => t.trim())
+      .filter(Boolean)
+      .forEach(tag => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'modal-tag';
+        button.textContent = '#' + tag;
+        button.addEventListener('click', (event) => {
+          event.stopPropagation();
+          searchByTag(tag);
+        });
+        tagsEl.appendChild(button);
+      });
 
     const modalImg = document.getElementById('modal-img');
     modalImg.className = 'card-img ' + ratio;
@@ -1114,6 +1207,16 @@ const sortedPhotos = [...photos].sort((a, b) => {
         card.setAttribute('data-desc', photo.descriptionJa || '');
         card.setAttribute('data-desc-en', photo.descriptionEn || '');
         card.setAttribute('data-ratio', photo.ratio || 'v');
+        const searchText = [
+          photo.titleJa || '',
+          photo.titleEn || '',
+          photo.descriptionJa || '',
+          photo.descriptionEn || '',
+          ...(photo.tagsJa || []),
+          ...getTagsEn(photo),
+          ...(photo.featureCandidate || [])
+        ].join(' ').toLowerCase();
+        card.setAttribute('data-search-text', searchText);
 
         if (photo.isNew) {
           const badge = document.createElement('span');
@@ -1146,12 +1249,18 @@ const sortedPhotos = [...photos].sort((a, b) => {
         const tagsJa = (photo.tagsJa || []).slice(0, 3);
 const tagsEn = getTagsEn(photo).slice(0, 3);
 tagsJa.forEach((tag, index) => {
-  const span = document.createElement('span');
-  span.className = 'card-tag';
-  span.setAttribute('data-ja', '#' + tag);
-  span.setAttribute('data-en', '#' + (tagsEn[index] || tag));
-  span.textContent = '#' + tag;
-  tags.appendChild(span);
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'card-tag';
+  button.setAttribute('data-ja', '#' + tag);
+  button.setAttribute('data-en', '#' + (tagsEn[index] || tag));
+  button.textContent = '#' + tag;
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const keyword = currentLang === 'en' ? (tagsEn[index] || tag) : tag;
+    searchByTag(keyword);
+  });
+  tags.appendChild(button);
 });
 
       const viewLink = document.createElement('div');
@@ -1174,10 +1283,8 @@ card.appendChild(body);
         setLang(currentLang, activeLangBtn);
       }
     }
-    const galleryCount = document.getElementById('gallery-count');
-    if (galleryCount) {
-      galleryCount.textContent = photos.length + ' photos';
-    }
+    const currentSearchValue = (document.getElementById('gallery-search') || document.querySelector('.search-input'))?.value || '';
+    applyGallerySearch(currentSearchValue, { keepTagActive: true });
 
     const kindleEligibleCount = photos.filter(photo => {
       return photo.kindle && photo.kindle.eligible === true;
