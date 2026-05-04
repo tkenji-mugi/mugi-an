@@ -1365,23 +1365,35 @@ if (masonry) {
   return match ? match[0] : '';
 };
 
+const getPhotoSerial = (photo) => {
+  const text = [photo.id, photo.file].filter(Boolean).join(' ');
+  const matches = [...text.matchAll(/(?:-|_)(\d{1,4})(?=(?:_|-|\.|$))/g)];
+  if (!matches.length) return 0;
+  const last = matches[matches.length - 1][1];
+  const num = parseInt(last, 10);
+  return Number.isFinite(num) ? num : 0;
+};
+
+const getPhotoSortKey = (photo) => {
+  return `${getPhotoDate(photo)}_${String(getPhotoSerial(photo)).padStart(6, '0')}`;
+};
+
 const getPhotoKey = (photo) => photo.id || photo.file || '';
+
+const sortByLatest = (a, b) => {
+  const keyA = getPhotoSortKey(a);
+  const keyB = getPhotoSortKey(b);
+  if (keyA !== keyB) return keyB.localeCompare(keyA);
+  return getPhotoKey(b).localeCompare(getPhotoKey(a));
+};
 
 const sortedPhotos = [...photos].sort((a, b) => {
   if (a.isNew === true && b.isNew !== true) return -1;
   if (a.isNew !== true && b.isNew === true) return 1;
-
-  const dateA = getPhotoDate(a);
-  const dateB = getPhotoDate(b);
-
-  if (dateA !== dateB) {
-    return dateB.localeCompare(dateA);
-  }
-
-  return 0;
+  return sortByLatest(a, b);
 });
 
-  const newPhotos = sortedPhotos.filter(photo => photo.isNew === true).slice(0, NEW_LIMIT);
+  const newPhotos = sortedPhotos.filter(photo => photo.isNew === true).sort(sortByLatest).slice(0, NEW_LIMIT);
   const newPhotoKeySet = new Set(newPhotos.map(getPhotoKey));
   renderNewSlider(newPhotos, getTagsEn);
 
