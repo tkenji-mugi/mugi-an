@@ -1041,6 +1041,56 @@
         "水たまりの反射",
         "石畳の質感"
       ]
+    },
+    {
+      "id": "20260504-rainy-stone-path-azalea-026",
+      "file": "images/20260504_rainy-stone-path-azalea_026_1x1.png",
+      "titleJa": "雨上がりの石畳とつつじ",
+      "titleEn": "Rainy Stone Path with Azalea",
+      "descriptionJa": "むぎちゃんが雨上がりの京都の石畳でつつじを背景にまったりと寝そべる。",
+      "descriptionEn": "Mugi lounges calmly on wet stone pavement with azalea blooms after rain in Kyoto.",
+      "tagsJa": [
+        "雨上がり",
+        "石畳",
+        "つつじ",
+        "京都",
+        "静けさ"
+      ],
+      "tagsEn": [
+        "rainy",
+        "stone pavement",
+        "azalea",
+        "Kyoto",
+        "serene"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "aspect": "1:1",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "高精細",
+        "春の花"
+      ]
     }
   ]
 }
