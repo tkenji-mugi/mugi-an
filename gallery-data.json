@@ -931,6 +931,61 @@
     "春の午後の自然光",
     "昭和の里山風景"
   ]
+},
+{
+  "id": "20260504-green-maple-pathway-024",
+  "file": "images/20260504_green-maple-pathway_024_2x3.png",
+  "titleJa": "青もみじの参道で見上げるむぎちゃん",
+  "titleEn": "Mugi Gazing Up the Maple Pathway",
+  "descriptionJa": "青もみじの参道に座り、朱色の燈籠と木漏れ日に包まれながら見上げるむぎちゃんの穏やかな表情。",
+  "descriptionEn": "Mugi sits peacefully on a maple-lined stone path, looking up under dappled sunlight and red lanterns.",
+  "tagsJa": [
+    "青もみじ",
+    "参道",
+    "朱色の燈籠",
+    "初夏",
+    "京都",
+    "木漏れ日",
+    "石段"
+  ],
+  "tagsEn": [
+    "green maple",
+    "pathway",
+    "red lanterns",
+    "early summer",
+    "Kyoto",
+    "sunlight through leaves",
+    "stone steps"
+  ],
+  "ratio": "v",
+  "aspectHint": "2:3",
+  "aspect": "2:3",
+  "isNew": true,
+  "usage": [
+    "gallery",
+    "kindle"
+  ],
+  "kindle": {
+    "eligible": true,
+    "volume": "spring-2026",
+    "chapterCandidateJa": "第4章 水辺と新緑",
+    "order": null
+  },
+  "sns": true,
+  "download": true,
+  "series": [
+    "seasonal"
+  ],
+  "volume": "spring-2026",
+  "season": "spring",
+  "style": "ai-photo",
+  "world": "real-japan",
+  "status": "published",
+  "featureCandidate": [
+    "青もみじ",
+    "石段の参道",
+    "朱色の燈籠"
+  ]
 }
   ]
 }
