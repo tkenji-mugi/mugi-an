@@ -493,6 +493,100 @@
     }
     .card-tag:hover { color: var(--gold); text-decoration: underline; }
 
+    /* ===== NEW SLIDER ===== */
+    .new-section {
+      padding: 28px 32px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 250, 242, 0.55);
+    }
+    .new-section[hidden] { display: none; }
+    .new-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .new-title-wrap { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .new-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+    .new-title-en {
+      font-family: var(--font-en);
+      font-size: 11px;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    .new-count {
+      font-size: 12px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+    }
+    .new-scroll {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x proximity;
+      padding: 2px 2px 10px;
+      scrollbar-width: thin;
+    }
+    .new-scroll::-webkit-scrollbar { height: 8px; }
+    .new-scroll::-webkit-scrollbar-thumb {
+      background: rgba(201,169,110,0.45);
+      border-radius: 999px;
+    }
+    .new-card {
+      flex: 0 0 220px;
+      scroll-snap-align: start;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--warm-white);
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .new-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .new-card .card-img {
+      aspect-ratio: 4 / 5 !important;
+      background: linear-gradient(160deg,#f5ede0,#e8d5b8);
+    }
+    .new-card .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .new-body { padding: 9px 10px 11px; }
+    .new-card-title {
+      font-family: var(--font-serif);
+      font-size: 12px;
+      color: var(--ink);
+      line-height: 1.5;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .new-card-sub {
+      margin-top: 2px;
+      font-family: var(--font-en);
+      font-size: 10px;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    @media (min-width: 1200px) {
+      .new-card { flex-basis: 240px; }
+    }
+    @media (max-width: 640px) {
+      .new-section { padding: 22px 18px 16px; }
+      .new-head { align-items: flex-start; flex-direction: column; gap: 6px; }
+      .new-card { flex-basis: 68vw; max-width: 260px; }
+    }
+
     .gallery-hint {
   margin-top: 6px;
   margin-bottom: 18px;
@@ -843,6 +937,18 @@
   </div>
 </section>
 
+<!-- NEW -->
+<section class="new-section" id="new-section" hidden>
+  <div class="new-head">
+    <div class="new-title-wrap">
+      <span class="new-title" data-ja="新着作品" data-en="New Photos">新着作品</span>
+      <span class="new-title-en">NEW</span>
+    </div>
+    <div class="new-count" id="new-count" data-ja="横にスクロールできます" data-en="Scroll sideways">横にスクロールできます</div>
+  </div>
+  <div class="new-scroll" id="new-scroll"></div>
+</section>
+
 <!-- TAGS -->
 <div class="tag-scroll">
   <div class="tag-row" id="tag-buttons"></div>
@@ -1125,6 +1231,84 @@ const tags = tagsText.split(',');
   document.getElementById('share-copy').addEventListener('click', () => {
     navigator.clipboard.writeText(location.href).then(() => alert('リンクをコピーしました！'));
   });
+function renderNewSlider(newPhotos, getTagsEn) {
+  const section = document.getElementById('new-section');
+  const scroll = document.getElementById('new-scroll');
+  const countEl = document.getElementById('new-count');
+  if (!section || !scroll) return;
+
+  scroll.innerHTML = '';
+
+  if (!newPhotos || newPhotos.length === 0) {
+    section.hidden = true;
+    return;
+  }
+
+  section.hidden = false;
+
+  if (countEl) {
+    countEl.setAttribute('data-ja', `${newPhotos.length}枚の新着 · 横にスクロールできます`);
+    countEl.setAttribute('data-en', `${newPhotos.length} new · Scroll sideways`);
+    countEl.textContent = currentLang === 'en'
+      ? `${newPhotos.length} new · Scroll sideways`
+      : `${newPhotos.length}枚の新着 · 横にスクロールできます`;
+  }
+
+  newPhotos.forEach(photo => {
+    if (!photo.file) return;
+
+    const card = document.createElement('div');
+    card.className = 'new-card';
+    card.setAttribute('data-tags', (photo.tagsJa || []).join(','));
+    card.setAttribute('data-tags-en', getTagsEn(photo).join(','));
+    card.setAttribute('data-title', photo.titleJa || '');
+    card.setAttribute('data-title-en', photo.titleEn || '');
+    card.setAttribute('data-desc', photo.descriptionJa || '');
+    card.setAttribute('data-desc-en', photo.descriptionEn || '');
+    card.setAttribute('data-ratio', photo.ratio || 'v');
+    card.addEventListener('click', () => openModal(card));
+
+    const badge = document.createElement('span');
+    badge.className = 'new-badge';
+    badge.textContent = 'New';
+    card.appendChild(badge);
+
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'card-img ' + (photo.ratio || 'v');
+
+    const img = document.createElement('img');
+    img.src = photo.file;
+    img.alt = photo.titleJa || '';
+    imgWrap.appendChild(img);
+
+    const body = document.createElement('div');
+    body.className = 'new-body';
+
+    const title = document.createElement('div');
+    title.className = 'new-card-title';
+    title.setAttribute('data-ja', photo.titleJa || '');
+    title.setAttribute('data-en', photo.titleEn || '');
+    title.textContent = currentLang === 'en' ? (photo.titleEn || photo.titleJa || '') : (photo.titleJa || '');
+
+    const sub = document.createElement('div');
+    sub.className = 'new-card-sub';
+    sub.setAttribute('data-ja', '見る →');
+    sub.setAttribute('data-en', 'View →');
+    sub.textContent = currentLang === 'en' ? 'View →' : '見る →';
+
+    body.appendChild(title);
+    body.appendChild(sub);
+    card.appendChild(imgWrap);
+    card.appendChild(body);
+    scroll.appendChild(card);
+  });
+
+  const activeLangBtn = document.querySelector('.lang-btn.active');
+  if (activeLangBtn) {
+    setLang(currentLang, activeLangBtn);
+  }
+}
+
 fetch('gallery-data.json')
   .then(response => response.json())
   .then(data => {
@@ -1193,6 +1377,9 @@ const sortedPhotos = [...photos].sort((a, b) => {
 
   return 0;
 });
+
+  const newPhotos = sortedPhotos.filter(photo => photo.isNew === true);
+  renderNewSlider(newPhotos, getTagsEn);
 
   sortedPhotos.forEach(photo => {
     if (!photo.file) return;
