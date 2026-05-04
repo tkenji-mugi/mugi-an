@@ -1021,6 +1021,7 @@
 <script>
   // --- 言語切替 ---
   let currentLang = 'ja';
+  const NEW_LIMIT = 15;
   function setLang(lang, btn) {
     currentLang = lang;
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
@@ -1247,11 +1248,11 @@ function renderNewSlider(newPhotos, getTagsEn) {
   section.hidden = false;
 
   if (countEl) {
-    countEl.setAttribute('data-ja', `${newPhotos.length}枚の新着 · 横にスクロールできます`);
-    countEl.setAttribute('data-en', `${newPhotos.length} new · Scroll sideways`);
+    countEl.setAttribute('data-ja', `${newPhotos.length}枚の新着 · 最大${NEW_LIMIT}枚 · 横にスクロールできます`);
+    countEl.setAttribute('data-en', `${newPhotos.length} new · up to ${NEW_LIMIT} · Scroll sideways`);
     countEl.textContent = currentLang === 'en'
-      ? `${newPhotos.length} new · Scroll sideways`
-      : `${newPhotos.length}枚の新着 · 横にスクロールできます`;
+      ? `${newPhotos.length} new · up to ${NEW_LIMIT} · Scroll sideways`
+      : `${newPhotos.length}枚の新着 · 最大${NEW_LIMIT}枚 · 横にスクロールできます`;
   }
 
   newPhotos.forEach(photo => {
@@ -1364,6 +1365,8 @@ if (masonry) {
   return match ? match[0] : '';
 };
 
+const getPhotoKey = (photo) => photo.id || photo.file || '';
+
 const sortedPhotos = [...photos].sort((a, b) => {
   if (a.isNew === true && b.isNew !== true) return -1;
   if (a.isNew !== true && b.isNew === true) return 1;
@@ -1378,7 +1381,8 @@ const sortedPhotos = [...photos].sort((a, b) => {
   return 0;
 });
 
-  const newPhotos = sortedPhotos.filter(photo => photo.isNew === true);
+  const newPhotos = sortedPhotos.filter(photo => photo.isNew === true).slice(0, NEW_LIMIT);
+  const newPhotoKeySet = new Set(newPhotos.map(getPhotoKey));
   renderNewSlider(newPhotos, getTagsEn);
 
   sortedPhotos.forEach(photo => {
@@ -1405,7 +1409,7 @@ const sortedPhotos = [...photos].sort((a, b) => {
         ].join(' ').toLowerCase();
         card.setAttribute('data-search-text', searchText);
 
-        if (photo.isNew) {
+        if (newPhotoKeySet.has(getPhotoKey(photo))) {
           const badge = document.createElement('span');
           badge.className = 'new-badge';
           badge.textContent = 'New';
