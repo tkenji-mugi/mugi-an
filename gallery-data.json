@@ -824,168 +824,223 @@
       "world": "real-japan",
       "status": "published",
       "featureCandidate": []
-      },
+    },
     {
-  "id": "20260429-spring-clear-stream-ayu-022",
-  "file": "images/20260429_春の清流鮎ツンツン_022_2x3.png",
-  "titleJa": "春の清流と鮎",
-  "titleEn": "Ayu in the Spring Stream",
-  "descriptionJa": "山あいを流れる清らかな小川で、泳いできた鮎をじっと見つめるむぎちゃん。春の水辺の空気が感じられる一枚です。",
-  "descriptionEn": "Mugi watches an ayu fish in a clear mountain stream, surrounded by the fresh air of spring.",
-  "tagsJa": [
-    "清流",
-    "小川",
-    "鮎",
-    "水辺",
-    "自然",
-    "山あい"
-  ],
-  "tagsEn": [
-    "clear stream",
-    "brook",
-    "ayu fish",
-    "waterside",
-    "nature",
-    "mountains"
-  ],
-  "ratio": "v",
-  "aspectHint": "2:3",
-  "aspect": "2:3",
-  "isNew": true,
-  "usage": [
-    "gallery",
-    "kindle"
-  ],
-  "kindle": {
-    "eligible": true,
-    "volume": "spring-2026",
-    "chapterCandidateJa": "第4章 春の自然と空気",
-    "order": null
-  },
-  "sns": true,
-  "download": true,
-  "series": [
-    "seasonal"
-  ],
-  "volume": "spring-2026",
-  "season": "spring",
-  "style": "ai-photo",
-  "world": "real-japan",
-  "status": "published",
-  "featureCandidate": [
-    "春の自然と空気",
-    "Kindle春版 収録候補"
-  ]
-},
-{
-  "id": "20260502-mugi-mossy-stone-bridge-023",
-  "file": "images/20260502_mossy-stone-bridge-mugi_023_2x3.png",
-  "titleJa": "苔むす石橋のむぎちゃん",
-  "titleEn": "Mugi on a Mossy Stone Bridge",
-  "descriptionJa": "春の里山に佇むむぎちゃん。苔の石橋の上で穏やかな午後の光を浴びている。",
-  "descriptionEn": "Mugi sits calmly on a moss-covered stone bridge in a serene spring countryside.",
-  "tagsJa": [
-    "むぎちゃん",
-    "里山",
-    "苔の石橋",
-    "春の風景",
-    "古民家",
-    "小川",
-    "自然光"
-  ],
-  "tagsEn": [
-    "Mugi",
-    "countryside",
-    "mossy stone bridge",
-    "spring scenery",
-    "old house",
-    "stream",
-    "natural light"
-  ],
-  "ratio": "v",
-  "aspectHint": "2:3",
-  "aspect": "2:3",
-  "isNew": true,
-  "usage": [
-    "gallery",
-    "kindle"
-  ],
-  "kindle": {
-    "eligible": true,
-    "volume": "spring-2026",
-    "chapterCandidateJa": "第5章 里山と旅の春",
-    "order": null
-  },
-  "sns": true,
-  "download": true,
-  "series": [
-    "seasonal"
-  ],
-  "volume": "spring-2026",
-  "season": "spring",
-  "style": "ai-photo",
-  "world": "real-japan",
-  "status": "published",
-  "featureCandidate": [
-    "フォトリアル",
-    "春の午後の自然光",
-    "昭和の里山風景"
-  ]
-},
-{
-  "id": "20260504-green-maple-pathway-024",
-  "file": "images/20260504_green-maple-pathway_024_2x3.png",
-  "titleJa": "青もみじの参道で見上げるむぎちゃん",
-  "titleEn": "Mugi Gazing Up the Maple Pathway",
-  "descriptionJa": "青もみじの参道に座り、朱色の燈籠と木漏れ日に包まれながら見上げるむぎちゃんの穏やかな表情。",
-  "descriptionEn": "Mugi sits peacefully on a maple-lined stone path, looking up under dappled sunlight and red lanterns.",
-  "tagsJa": [
-    "青もみじ",
-    "参道",
-    "朱色の燈籠",
-    "初夏",
-    "京都",
-    "木漏れ日",
-    "石段"
-  ],
-  "tagsEn": [
-    "green maple",
-    "pathway",
-    "red lanterns",
-    "early summer",
-    "Kyoto",
-    "sunlight through leaves",
-    "stone steps"
-  ],
-  "ratio": "v",
-  "aspectHint": "2:3",
-  "aspect": "2:3",
-  "isNew": true,
-  "usage": [
-    "gallery",
-    "kindle"
-  ],
-  "kindle": {
-    "eligible": true,
-    "volume": "spring-2026",
-    "chapterCandidateJa": "第4章 水辺と新緑",
-    "order": null
-  },
-  "sns": true,
-  "download": true,
-  "series": [
-    "seasonal"
-  ],
-  "volume": "spring-2026",
-  "season": "spring",
-  "style": "ai-photo",
-  "world": "real-japan",
-  "status": "published",
-  "featureCandidate": [
-    "青もみじ",
-    "石段の参道",
-    "朱色の燈籠"
-  ]
-}
+      "id": "20260429-spring-clear-stream-ayu-022",
+      "file": "images/20260429_春の清流鮎ツンツン_022_2x3.png",
+      "titleJa": "春の清流と鮎",
+      "titleEn": "Ayu in the Spring Stream",
+      "descriptionJa": "山あいを流れる清らかな小川で、泳いできた鮎をじっと見つめるむぎちゃん。春の水辺の空気が感じられる一枚です。",
+      "descriptionEn": "Mugi watches an ayu fish in a clear mountain stream, surrounded by the fresh air of spring.",
+      "tagsJa": [
+        "清流",
+        "小川",
+        "鮎",
+        "水辺",
+        "自然",
+        "山あい"
+      ],
+      "tagsEn": [
+        "clear stream",
+        "brook",
+        "ayu fish",
+        "waterside",
+        "nature",
+        "mountains"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 春の自然と空気",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の自然と空気",
+        "Kindle春版 収録候補"
+      ]
+    },
+    {
+      "id": "20260502-mugi-mossy-stone-bridge-023",
+      "file": "images/20260502_mossy-stone-bridge-mugi_023_2x3.png",
+      "titleJa": "苔むす石橋のむぎちゃん",
+      "titleEn": "Mugi on a Mossy Stone Bridge",
+      "descriptionJa": "春の里山に佇むむぎちゃん。苔の石橋の上で穏やかな午後の光を浴びている。",
+      "descriptionEn": "Mugi sits calmly on a moss-covered stone bridge in a serene spring countryside.",
+      "tagsJa": [
+        "むぎちゃん",
+        "里山",
+        "苔の石橋",
+        "春の風景",
+        "古民家",
+        "小川",
+        "自然光"
+      ],
+      "tagsEn": [
+        "Mugi",
+        "countryside",
+        "mossy stone bridge",
+        "spring scenery",
+        "old house",
+        "stream",
+        "natural light"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "春の午後の自然光",
+        "昭和の里山風景"
+      ]
+    },
+    {
+      "id": "20260504-green-maple-pathway-024",
+      "file": "images/20260504_green-maple-pathway_024_2x3.png",
+      "titleJa": "青もみじの参道で見上げるむぎちゃん",
+      "titleEn": "Mugi Gazing Up the Maple Pathway",
+      "descriptionJa": "青もみじの参道に座り、朱色の燈籠と木漏れ日に包まれながら見上げるむぎちゃんの穏やかな表情。",
+      "descriptionEn": "Mugi sits peacefully on a maple-lined stone path, looking up under dappled sunlight and red lanterns.",
+      "tagsJa": [
+        "青もみじ",
+        "参道",
+        "朱色の燈籠",
+        "初夏",
+        "京都",
+        "木漏れ日",
+        "石段"
+      ],
+      "tagsEn": [
+        "green maple",
+        "pathway",
+        "red lanterns",
+        "early summer",
+        "Kyoto",
+        "sunlight through leaves",
+        "stone steps"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "青もみじ",
+        "石段の参道",
+        "朱色の燈籠"
+      ]
+    },
+    {
+      "id": "20260504-rainy-stone-path-025",
+      "file": "images/20260504_rainy-stone-path_025_2x3.png",
+      "titleJa": "雨上がりの石畳とむぎちゃん",
+      "titleEn": "Mugi by the Rainy Stone Path",
+      "descriptionJa": "雨上がりの京都の石畳で、水たまりに映る自分の姿をじっと見つめるむぎちゃん。",
+      "descriptionEn": "Mugi gazes curiously at her reflection in a puddle on a rainy Kyoto stone path.",
+      "tagsJa": [
+        "京都",
+        "雨上がり",
+        "石畳",
+        "水たまり",
+        "静けさ",
+        "苔",
+        "曇り空"
+      ],
+      "tagsEn": [
+        "Kyoto",
+        "after rain",
+        "stone pavement",
+        "puddle",
+        "quietness",
+        "moss",
+        "overcast"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "雨上がりの風景",
+        "水たまりの反射",
+        "石畳の質感"
+      ]
+    }
   ]
 }
