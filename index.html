@@ -404,11 +404,25 @@
 
     .gallery-load-more-wrap {
       text-align: center;
-      margin-top: 24px;
+      margin-top: 26px;
     }
     .gallery-load-more {
-      background: var(--warm-white);
+      background: #b98324;
+      color: #fff;
+      border-color: #b98324;
       cursor: pointer;
+      min-width: 180px;
+      justify-content: center;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: 0.04em;
+      box-shadow: 0 8px 18px rgba(185, 131, 36, 0.18);
+    }
+    .gallery-load-more:hover {
+      background: #9f6d1c;
+      border-color: #9f6d1c;
+      color: #fff;
+      transform: translateY(-1px);
     }
     .gallery-load-more[hidden] {
       display: none;
