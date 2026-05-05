@@ -1146,6 +1146,59 @@
         "水面の鏡映し",
         "田んぼの広がり"
       ]
+    },
+    {
+      "id": "20260505-satoyama-waterwheel-yamabuki-029",
+      "file": "images/20260505_satoyama-waterwheel-yamabuki_029_2x3.png",
+      "titleJa": "里山の水車と山吹",
+      "titleEn": "Waterwheel and Yamabuki in the Satoyama",
+      "descriptionJa": "むぎちゃんが春の里山の水車脇で山吹の花を背景に見上げています。",
+      "descriptionEn": "Mugi gazes up by a waterwheel in spring satoyama with yamabuki flowers behind.",
+      "tagsJa": [
+        "里山",
+        "水車",
+        "春",
+        "山吹",
+        "清流",
+        "自然光"
+      ],
+      "tagsEn": [
+        "satoyama",
+        "waterwheel",
+        "spring",
+        "yamabuki",
+        "stream",
+        "natural light"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "苔むした古木の水車",
+        "春の山吹の花",
+        "清らかな流れ"
+      ]
     }
   ]
 }
