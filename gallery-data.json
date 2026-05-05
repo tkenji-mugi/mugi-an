@@ -284,7 +284,7 @@
       ],
       "ratio": "h",
       "aspectHint": "3:2",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -1198,6 +1198,60 @@
         "苔むした古木の水車",
         "春の山吹の花",
         "清らかな流れ"
+      ]
+    },
+    {
+      "id": "20260505-mossy-waterwheel-camellia-030",
+      "file": "images/20260505_mossy-waterwheel-camellia_030_1x1.png",
+      "titleJa": "苔むす水車と白椿",
+      "titleEn": "Mossy Waterwheel and White Camellia",
+      "descriptionJa": "むぎちゃんが春の里山、苔むした水車の隣で白椿を見上げています。",
+      "descriptionEn": "Mugi looks up at white camellias beside a mossy waterwheel in the spring countryside.",
+      "tagsJa": [
+        "里山",
+        "水車",
+        "白椿",
+        "春",
+        "苔",
+        "清流",
+        "新緑"
+      ],
+      "tagsEn": [
+        "countryside",
+        "waterwheel",
+        "white camellia",
+        "spring",
+        "moss",
+        "clear stream",
+        "fresh greenery"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "aspect": "1:1",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の自然光",
+        "苔むした木製水車",
+        "白い椿の花"
       ]
     }
   ]
