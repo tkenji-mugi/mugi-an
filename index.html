@@ -868,7 +868,7 @@
 <div class="news-bar">
   <div class="news-inner">
     <div class="news-label">News</div>
-    <div class="news-list">
+    <div class="news-list" id="news-list">
       <div class="news-item">
         <span class="news-date">4/27</span>
         <span class="news-badge">New</span>
@@ -1019,6 +1019,71 @@
 </div>
 
 <script>
+  // --- NEWS JSON表示 ---
+  const NEWS_LIMIT = 3;
+
+  function formatNewsDate(dateValue) {
+    const text = String(dateValue || '');
+    const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return text;
+    return `${parseInt(match[2], 10)}/${parseInt(match[3], 10)}`;
+  }
+
+  function renderNewsList(newsItems) {
+    const list = document.getElementById('news-list');
+    if (!list || !Array.isArray(newsItems) || newsItems.length === 0) return;
+
+    const sorted = [...newsItems]
+      .filter(item => item && item.date)
+      .sort((a, b) => String(b.date).localeCompare(String(a.date)))
+      .slice(0, NEWS_LIMIT);
+
+    if (sorted.length === 0) return;
+
+    list.innerHTML = '';
+
+    sorted.forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'news-item';
+
+      const date = document.createElement('span');
+      date.className = 'news-date';
+      date.textContent = formatNewsDate(item.date);
+
+      const badge = document.createElement('span');
+      badge.className = 'news-badge';
+      badge.textContent = item.label || 'New';
+
+      const body = document.createElement('span');
+      body.className = 'news-text';
+      body.setAttribute('data-ja', item.textJa || '');
+      body.setAttribute('data-en', item.textEn || item.textJa || '');
+      body.textContent = currentLang === 'en'
+        ? (item.textEn || item.textJa || '')
+        : (item.textJa || '');
+
+      row.appendChild(date);
+      row.appendChild(badge);
+      row.appendChild(body);
+      list.appendChild(row);
+    });
+
+    const activeLangBtn = document.querySelector('.lang-btn.active');
+    if (activeLangBtn) {
+      setLang(currentLang, activeLangBtn);
+    }
+  }
+
+  fetch('news-data.json')
+    .then(response => {
+      if (!response.ok) throw new Error('news-data.json not found');
+      return response.json();
+    })
+    .then(renderNewsList)
+    .catch(() => {
+      // news-data.jsonが読めない場合は、HTML内の予備NEWSをそのまま表示します。
+    });
+
   // --- 言語切替 ---
   let currentLang = 'ja';
   const NEW_LIMIT = 15;
