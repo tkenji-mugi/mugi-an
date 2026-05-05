@@ -402,6 +402,18 @@
     }
     .more-btn:hover { border-color: var(--gold); color: var(--ink); }
 
+    .gallery-load-more-wrap {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .gallery-load-more {
+      background: var(--warm-white);
+      cursor: pointer;
+    }
+    .gallery-load-more[hidden] {
+      display: none;
+    }
+
     /* ===== TAGS ===== */
     .tag-scroll {
       overflow-x: auto;
@@ -999,6 +1011,9 @@
   <div class="gallery-meta" id="gallery-count">23 photos</div>
 <div class="gallery-hint" data-ja="写真をタップすると、詳細とシェアが表示されます。" data-en="Tap a photo to view details and share.">写真をタップすると、詳細とシェアが表示されます。</div>
   <div class="masonry" id="masonry"></div>
+  <div class="gallery-load-more-wrap">
+    <button id="gallery-load-more" class="more-btn gallery-load-more" type="button" data-ja="もっと見る →" data-en="Load more →">もっと見る →</button>
+  </div>
 </div>
 
 <!-- KINDLE BANNER -->
@@ -1162,6 +1177,8 @@
   // --- 言語切替 ---
   let currentLang = 'ja';
   const NEW_LIMIT = 15;
+  const GALLERY_PAGE_SIZE = 24;
+  let galleryVisibleLimit = GALLERY_PAGE_SIZE;
   function setLang(lang, btn) {
     currentLang = lang;
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
@@ -1186,26 +1203,55 @@
       .toLowerCase();
   }
 
-  function updateGalleryCount(count) {
+  function updateGalleryCount(total, visible) {
     const galleryCount = document.getElementById('gallery-count');
-    if (galleryCount) {
-      galleryCount.textContent = count + ' photos';
+    if (!galleryCount) return;
+
+    if (total === visible) {
+      galleryCount.textContent = total + ' photos';
+    } else {
+      galleryCount.textContent = visible + ' / ' + total + ' photos';
     }
+  }
+
+  function updateLoadMoreButton(total, visible) {
+    const button = document.getElementById('gallery-load-more');
+    if (!button) return;
+
+    const hasMore = visible < total;
+    button.hidden = !hasMore;
+    button.setAttribute('data-ja', 'もっと見る →');
+    button.setAttribute('data-en', 'Load more →');
+    button.textContent = currentLang === 'en' ? 'Load more →' : 'もっと見る →';
   }
 
   function applyGallerySearch(keyword, options = {}) {
     const q = normalizeSearchText(keyword);
-    const cards = document.querySelectorAll('.card');
-    let count = 0;
+    const cards = Array.from(document.querySelectorAll('.card'));
+
+    if (!options.keepLimit) {
+      galleryVisibleLimit = GALLERY_PAGE_SIZE;
+    }
+
+    const matchedCards = cards.filter(card => {
+      const text = card.getAttribute('data-search-text') || '';
+      return !q || text.includes(q);
+    });
+
+    const total = matchedCards.length;
+    const visibleLimit = Math.min(galleryVisibleLimit, total);
+    let visibleCount = 0;
 
     cards.forEach(card => {
       const text = card.getAttribute('data-search-text') || '';
-      const visible = !q || text.includes(q);
+      const matched = !q || text.includes(q);
+      const visible = matched && visibleCount < visibleLimit;
       card.style.display = visible ? '' : 'none';
-      if (visible) count++;
+      if (visible) visibleCount++;
     });
 
-    updateGalleryCount(count);
+    updateGalleryCount(total, visibleCount);
+    updateLoadMoreButton(total, visibleCount);
 
     if (!options.keepTagActive) {
       document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
@@ -1245,6 +1291,15 @@
   if (gallerySearchInput) {
     gallerySearchInput.addEventListener('input', (event) => {
       applyGallerySearch(event.target.value);
+    });
+  }
+
+  const galleryLoadMoreButton = document.getElementById('gallery-load-more');
+  if (galleryLoadMoreButton) {
+    galleryLoadMoreButton.addEventListener('click', () => {
+      galleryVisibleLimit += GALLERY_PAGE_SIZE;
+      const currentSearchValue = (document.getElementById('gallery-search') || document.querySelector('.search-input'))?.value || '';
+      applyGallerySearch(currentSearchValue, { keepTagActive: true, keepLimit: true });
     });
   }
 
