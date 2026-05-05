@@ -840,6 +840,15 @@
     .action-btn:hover { border-color: var(--gold); }
     .action-btn.primary { background: var(--gold); border-color: var(--gold); color: white; }
     .action-btn.primary:hover { background: #B8924A; }
+    .modal-usage-note {
+      margin: -4px 0 14px;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(201,169,110,0.08);
+      color: var(--ink-light);
+      font-size: 11px;
+      line-height: 1.7;
+    }
     .modal-share-row {
       display: flex;
       align-items: center;
@@ -1070,10 +1079,11 @@
       <div class="modal-tags" id="modal-tags"></div>
       <div class="modal-desc" id="modal-desc"></div>
       <div class="modal-actions">
-        <button class="action-btn primary">↓ ダウンロード<br><small style="opacity:0.8">無料・中サイズ</small></button>
-        <button class="action-btn">📖 写真集で見る<br><small style="opacity:0.7">フル解像度</small></button>
+        <button class="action-btn primary" id="download-btn" type="button">↓ ダウンロード<br><small style="opacity:0.8">フル解像度</small></button>
+        <button class="action-btn">📖 写真集で見る<br><small style="opacity:0.7">Kindleで公開中</small></button>
         <button class="action-btn" onclick="document.getElementById('modal').classList.remove('open')">← 閉じる</button>
       </div>
+      <div class="modal-usage-note" data-ja="個人利用の範囲でご自由に保存してお楽しみください。無断販売・再配布・商用利用はご遠慮ください。" data-en="Feel free to save and enjoy for personal use. Please do not sell, redistribute, or use commercially.">個人利用の範囲でご自由に保存してお楽しみください。無断販売・再配布・商用利用はご遠慮ください。</div>
       <div class="modal-share-row">
         <span class="share-label">シェア：</span>
         <div class="share-btns">
@@ -1190,6 +1200,8 @@
 
   // --- 言語切替 ---
   let currentLang = 'ja';
+  let currentDownloadUrl = '';
+  let currentDownloadName = 'mugi-an-photo.png';
   const NEW_LIMIT = 15;
   const GALLERY_PAGE_SIZE = 24;
   let galleryVisibleLimit = GALLERY_PAGE_SIZE;
@@ -1372,11 +1384,11 @@ fetch('tag-rules.json')
     // ボタンテキストも言語切替
     const actions = modal.querySelectorAll('.action-btn');
     if (isEn) {
-  actions[0].innerHTML = '↓ Download<br><small style="opacity:0.8">Save image</small>';
+  actions[0].innerHTML = '↓ Download<br><small style="opacity:0.8">Full resolution</small>';
   actions[1].innerHTML = '📖 View Photo Book<br><small style="opacity:0.7">Now on Kindle</small>';
   actions[2].innerHTML = '← Close';
 } else {
-  actions[0].innerHTML = '↓ ダウンロード<br><small style="opacity:0.8">画像を保存</small>';
+  actions[0].innerHTML = '↓ ダウンロード<br><small style="opacity:0.8">フル解像度</small>';
   actions[1].innerHTML = '📖 写真集を見る<br><small style="opacity:0.7">Kindleで公開中</small>';
   actions[2].innerHTML = '← 閉じる';
 }
@@ -1394,6 +1406,9 @@ fetch('tag-rules.json')
 const tags = tagsText.split(',');
     const ratio = card.getAttribute('data-ratio');
     const imgEl = card.querySelector('.card-img img');
+    const filePath = card.getAttribute('data-file') || (imgEl ? imgEl.getAttribute('src') : '');
+    currentDownloadUrl = filePath || '';
+    currentDownloadName = filePath ? decodeURIComponent(filePath.split('/').pop().split('?')[0]) : 'mugi-an-photo.png';
 
     document.getElementById('modal-title').textContent = title;
     document.getElementById('modal-desc').textContent = desc;
@@ -1427,7 +1442,27 @@ const tags = tagsText.split(',');
     modal.classList.add('open');
   }
 
-  function closeModal(e) {
+  
+  function downloadCurrentImage() {
+    if (!currentDownloadUrl) {
+      alert(currentLang === 'en' ? 'No image is available to download.' : 'ダウンロードできる画像が見つかりませんでした。');
+      return;
+    }
+
+    const link = document.createElement('a');
+    link.href = currentDownloadUrl;
+    link.download = currentDownloadName || 'mugi-an-photo.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  const downloadButton = document.getElementById('download-btn');
+  if (downloadButton) {
+    downloadButton.addEventListener('click', downloadCurrentImage);
+  }
+
+function closeModal(e) {
     if (e.target === document.getElementById('modal')) {
       document.getElementById('modal').classList.remove('open');
     }
@@ -1476,6 +1511,7 @@ function renderNewSlider(newPhotos, getTagsEn) {
     card.setAttribute('data-desc', photo.descriptionJa || '');
     card.setAttribute('data-desc-en', photo.descriptionEn || '');
     card.setAttribute('data-ratio', photo.ratio || 'v');
+    card.setAttribute('data-file', photo.file || '');
     card.addEventListener('click', () => openModal(card));
 
     const badge = document.createElement('span');
@@ -1489,6 +1525,8 @@ function renderNewSlider(newPhotos, getTagsEn) {
     const img = document.createElement('img');
     img.src = photo.file;
     img.alt = photo.titleJa || '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
     imgWrap.appendChild(img);
 
     const body = document.createElement('div');
@@ -1619,6 +1657,7 @@ const sortedPhotos = [...photos].sort((a, b) => {
         card.setAttribute('data-desc', photo.descriptionJa || '');
         card.setAttribute('data-desc-en', photo.descriptionEn || '');
         card.setAttribute('data-ratio', photo.ratio || 'v');
+        card.setAttribute('data-file', photo.file || '');
         const searchText = [
           photo.titleJa || '',
           photo.titleEn || '',
@@ -1644,6 +1683,8 @@ const sortedPhotos = [...photos].sort((a, b) => {
         const img = document.createElement('img');
         img.src = photo.file;
         img.alt = photo.titleJa || '';
+        img.loading = 'lazy';
+        img.decoding = 'async';
         imgWrap.appendChild(img);
 
         const body = document.createElement('div');
