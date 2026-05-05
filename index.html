@@ -240,6 +240,18 @@
       align-items: center;
       gap: 12px;
       font-size: 12px;
+      padding: 6px 8px;
+      border-radius: 12px;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      flex-wrap: wrap;
+    }
+    .news-item.has-link:hover {
+      background: #fbf6ec;
+    }
+    .news-item.featured {
+      background: #fff7ea;
+      border: 1px solid #ead6aa;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
     }
     .news-date {
       font-family: var(--font-en);
@@ -256,8 +268,34 @@
       letter-spacing: 0.05em;
       font-family: var(--font-en);
     }
+    .news-badge.featured {
+      background: #c78f2b;
+      box-shadow: 0 0 0 2px rgba(199,143,43,0.12);
+    }
     .news-text {
       color: var(--ink-light);
+      flex: 1 1 auto;
+      min-width: 180px;
+    }
+    .news-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e3c98b;
+      background: #fffaf1;
+      color: #8f6a1f;
+      text-decoration: none;
+      font-size: 11px;
+      line-height: 1;
+      white-space: nowrap;
+      margin-left: auto;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .news-link:hover {
+      background: #f7ecd5;
+      transform: translateY(-1px);
     }
 
     /* ===== SEARCH ===== */
@@ -820,6 +858,8 @@
       .tag-scroll { padding: 12px 16px; }
       .search-wrap { padding: 14px 16px; }
       .news-bar { padding: 0 16px; }
+      .news-item { align-items: flex-start; }
+      .news-link { margin-left: 52px; }
       .kindle-banner { flex-direction: column; gap: 16px; margin: 0 16px 24px; padding: 20px; }
       .footer { flex-direction: column; gap: 20px; padding: 24px 16px; }
     }
@@ -1034,7 +1074,7 @@
     if (!list || !Array.isArray(newsItems) || newsItems.length === 0) return;
 
     const sorted = [...newsItems]
-      .filter(item => item && item.date)
+      .filter(item => item && item.date && item.isVisible !== false)
       .sort((a, b) => String(b.date).localeCompare(String(a.date)))
       .slice(0, NEWS_LIMIT);
 
@@ -1045,13 +1085,16 @@
     sorted.forEach(item => {
       const row = document.createElement('div');
       row.className = 'news-item';
+      const isFeatured = item.isFeatured === true || item.label === '注目';
+      if (isFeatured) row.classList.add('featured');
+      if (item.url) row.classList.add('has-link');
 
       const date = document.createElement('span');
       date.className = 'news-date';
       date.textContent = formatNewsDate(item.date);
 
       const badge = document.createElement('span');
-      badge.className = 'news-badge';
+      badge.className = 'news-badge' + (isFeatured ? ' featured' : '');
       badge.textContent = item.label || 'New';
 
       const body = document.createElement('span');
@@ -1065,6 +1108,19 @@
       row.appendChild(date);
       row.appendChild(badge);
       row.appendChild(body);
+
+      if (item.url) {
+        const link = document.createElement('a');
+        link.className = 'news-link';
+        link.href = item.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.setAttribute('data-ja', '見る →');
+        link.setAttribute('data-en', 'View →');
+        link.textContent = currentLang === 'en' ? 'View →' : '見る →';
+        row.appendChild(link);
+      }
+
       list.appendChild(row);
     });
 
