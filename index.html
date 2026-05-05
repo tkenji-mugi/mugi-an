@@ -249,9 +249,9 @@
       background: #fbf6ec;
     }
     .news-item.featured {
-      background: #fff7ea;
-      border: 1px solid #ead6aa;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+      background: transparent;
+      border: none;
+      box-shadow: none;
     }
     .news-date {
       font-family: var(--font-en);
@@ -269,33 +269,33 @@
       font-family: var(--font-en);
     }
     .news-badge.featured {
-      background: #c78f2b;
-      box-shadow: 0 0 0 2px rgba(199,143,43,0.12);
+      background: #b98324;
+      color: #fff;
+      font-weight: 700;
+      padding: 2px 8px;
+      box-shadow: 0 0 0 2px rgba(185,131,36,0.16);
     }
     .news-text {
       color: var(--ink-light);
-      flex: 1 1 auto;
-      min-width: 180px;
+      flex: 0 1 auto;
+      min-width: 0;
     }
     .news-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid #e3c98b;
-      background: #fffaf1;
-      color: #8f6a1f;
+      display: inline;
+      color: #9a6f20;
       text-decoration: none;
-      font-size: 11px;
+      font-size: 12px;
+      font-weight: 600;
       line-height: 1;
       white-space: nowrap;
-      margin-left: auto;
-      transition: background 0.2s ease, transform 0.2s ease;
+      margin-left: 4px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
     .news-link:hover {
-      background: #f7ecd5;
-      transform: translateY(-1px);
+      color: #6f4a12;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
     }
 
     /* ===== SEARCH ===== */
@@ -859,7 +859,7 @@
       .search-wrap { padding: 14px 16px; }
       .news-bar { padding: 0 16px; }
       .news-item { align-items: flex-start; }
-      .news-link { margin-left: 52px; }
+      .news-link { margin-left: 4px; }
       .kindle-banner { flex-direction: column; gap: 16px; margin: 0 16px 24px; padding: 20px; }
       .footer { flex-direction: column; gap: 20px; padding: 24px 16px; }
     }
