@@ -1,6 +1,16 @@
 [
   {
     "date": "2026-05-04",
+    "label": "注目",
+    "type": "youtube",
+    "textJa": "ショート動画をアップしました！",
+    "textEn": "ショート動画をアップしました！",
+    "isFeatured": true,
+    "isVisible": true,
+    "url": "https://www.youtube.com/shorts/5KhjATmi8Xk"
+  },
+  {
+    "date": "2026-05-04",
     "label": "New",
     "type": "gallery",
     "textJa": "雨上がりと夕暮れなど新着作品3枚追加しました",
