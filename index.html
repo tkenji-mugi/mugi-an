@@ -1069,6 +1069,21 @@
     return `${parseInt(match[2], 10)}/${parseInt(match[3], 10)}`;
   }
 
+  function translateNewsLabel(label, lang) {
+    const value = String(label || 'New');
+    const map = {
+      '注目': { ja: '注目', en: 'Pick' },
+      'New': { ja: 'New', en: 'New' },
+      'Book': { ja: 'Book', en: 'Book' },
+      'YouTube': { ja: 'YouTube', en: 'YouTube' },
+      'Update': { ja: 'Update', en: 'Update' },
+      'Info': { ja: 'Info', en: 'Info' }
+    };
+    const entry = map[value];
+    if (!entry) return value;
+    return entry[lang] || entry.ja || value;
+  }
+
   function renderNewsList(newsItems) {
     const list = document.getElementById('news-list');
     if (!list || !Array.isArray(newsItems) || newsItems.length === 0) return;
@@ -1095,7 +1110,11 @@
 
       const badge = document.createElement('span');
       badge.className = 'news-badge' + (isFeatured ? ' featured' : '');
-      badge.textContent = item.label || 'New';
+      const labelJa = translateNewsLabel(item.label || 'New', 'ja');
+      const labelEn = translateNewsLabel(item.label || 'New', 'en');
+      badge.setAttribute('data-ja', labelJa);
+      badge.setAttribute('data-en', labelEn);
+      badge.textContent = currentLang === 'en' ? labelEn : labelJa;
 
       const body = document.createElement('span');
       body.className = 'news-text';
