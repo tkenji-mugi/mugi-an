@@ -508,7 +508,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -546,7 +546,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1466,6 +1466,61 @@
         "春の写真",
         "しだれ桜の花びら",
         "菜の花の黄"
+      ]
+    },
+    {
+      "id": "20260506-early-summer-tea-field-035",
+      "file": "images/20260506_early-summer-tea-field_035_2x3.png",
+      "titleJa": "初夏の茶畑散歩",
+      "titleEn": "Early Summer Tea Field Walk",
+      "descriptionJa": "むぎちゃんが初夏の茶畑の土道をしっぽを立てて元気に歩いています。背後に富士山も見えます。",
+      "descriptionEn": "Mugi is walking happily along the dirt path in early summer tea fields with Mount Fuji in the background.",
+      "tagsJa": [
+        "初夏",
+        "茶畑",
+        "富士山",
+        "静岡",
+        "自然光",
+        "緑",
+        "伝統農業"
+      ],
+      "tagsEn": [
+        "early summer",
+        "tea field",
+        "Mount Fuji",
+        "Shizuoka",
+        "natural light",
+        "greenery",
+        "traditional farming"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "茶畑",
+        "富士山",
+        "初夏の自然"
       ]
     }
   ]
