@@ -851,7 +851,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1631,6 +1631,60 @@
         "無人駅",
         "新緑",
         "静かな自然"
+      ]
+    },
+    {
+      "id": "20260506-remote-hokkaido-tracks-038",
+      "file": "images/20260506_remote-hokkaido-tracks_038_1x1.png",
+      "titleJa": "秘境の線路歩き",
+      "titleEn": "Walking on the Remote Tracks",
+      "descriptionJa": "むぎちゃんが北海道の秘境・小幌駅で錆びた線路の上をしっぽを立てて歩く静かな一瞬。",
+      "descriptionEn": "Mugi walks confidently on the rusted tracks at a remote station in Hokkaido, surrounded by quiet nature.",
+      "tagsJa": [
+        "北海道",
+        "秘境駅",
+        "廃線跡",
+        "初夏",
+        "新緑",
+        "線路",
+        "静寂"
+      ],
+      "tagsEn": [
+        "Hokkaido",
+        "remote station",
+        "abandoned railway",
+        "early summer",
+        "fresh greenery",
+        "railway tracks",
+        "tranquility"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "aspect": "1:1",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "秘境駅の風景",
+        "錆びた線路と草",
+        "初夏の新緑"
       ]
     }
   ]
