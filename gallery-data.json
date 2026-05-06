@@ -960,7 +960,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1740,6 +1740,61 @@
         "雨に濡れた",
         "藤の花のトンネル",
         "霧雨の情景"
+      ]
+    },
+    {
+      "id": "20260506-spring-night-spa-town-040",
+      "file": "images/20260506_spring-night-spa-town_040_2x3.png",
+      "titleJa": "春夜の温泉街",
+      "titleEn": "Spring Night Spa Town",
+      "descriptionJa": "むぎちゃんが春の夜、湯気立つ温泉街の橋で静かに過ごしています。",
+      "descriptionEn": "Mugi quietly rests on a bridge in the steamy spring night spa town.",
+      "tagsJa": [
+        "温泉街",
+        "春の夜",
+        "大正ロマン",
+        "木造旅館",
+        "川辺",
+        "湯気",
+        "橋"
+      ],
+      "tagsEn": [
+        "spa town",
+        "spring night",
+        "Taisho romance",
+        "wooden inn",
+        "riverside",
+        "steam",
+        "bridge"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の夜の温泉街",
+        "湯気と灯りの幻想的な光景",
+        "大正ロマン風木造建築"
       ]
     }
   ]
