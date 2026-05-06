@@ -621,7 +621,7 @@
       ],
       "ratio": "h",
       "aspectHint": "3:2",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -1576,6 +1576,61 @@
         "フォトリアル",
         "高精細",
         "和の静寂"
+      ]
+    },
+    {
+      "id": "20260506-remote-abandoned-station-greenery-037",
+      "file": "images/20260506_remote-abandoned-station-greenery_037_2x3.png",
+      "titleJa": "秘境の無人駅",
+      "titleEn": "Remote Abandoned Station",
+      "descriptionJa": "むぎちゃんが北海道の小幌駅で静かに新緑を眺める、孤独で穏やかなひととき。",
+      "descriptionEn": "Mugi quietly gazes at the fresh greenery at a remote station in Hokkaido, serene and alone.",
+      "tagsJa": [
+        "北海道",
+        "無人駅",
+        "新緑",
+        "トンネル",
+        "静寂",
+        "自然",
+        "錆びた線路"
+      ],
+      "tagsEn": [
+        "Hokkaido",
+        "abandoned station",
+        "fresh greenery",
+        "tunnel",
+        "silence",
+        "nature",
+        "rusty rails"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "無人駅",
+        "新緑",
+        "静かな自然"
       ]
     }
   ]
