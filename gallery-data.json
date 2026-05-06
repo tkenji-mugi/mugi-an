@@ -1066,7 +1066,7 @@
       "ratio": "s",
       "aspectHint": "1:1",
       "aspect": "1:1",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -1848,6 +1848,60 @@
         "夕暮れの静けさ",
         "空港風景",
         "茶トラ"
+      ]
+    },
+    {
+      "id": "20260506-night-airport-plane-takeoff-042",
+      "file": "images/20260506_night-airport-plane-takeoff_042_3x2.png",
+      "titleJa": "夜の空港と飛行機離陸",
+      "titleEn": "Night Airport and Plane Taking Off",
+      "descriptionJa": "むぎちゃんが深夜の空港の土手に座り、離陸する飛行機をじっと見つめています。",
+      "descriptionEn": "Mugi sits quietly on the night airport hill, watching the plane take off.",
+      "tagsJa": [
+        "夜景",
+        "空港",
+        "離陸",
+        "夜空",
+        "フェンス",
+        "土手",
+        "ライト"
+      ],
+      "tagsEn": [
+        "night view",
+        "airport",
+        "takeoff",
+        "night sky",
+        "fence",
+        "hill",
+        "lights"
+      ],
+      "ratio": "h",
+      "aspectHint": "3:2",
+      "aspect": "3:2",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夜間撮影",
+        "飛行機離陸",
+        "リアルな毛並み"
       ]
     }
   ]
