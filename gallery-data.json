@@ -470,7 +470,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1252,6 +1252,61 @@
         "春の自然光",
         "苔むした木製水車",
         "白い椿の花"
+      ]
+    },
+    {
+      "id": "20260505-spring-tulip-pond-031",
+      "file": "images/20260505_spring-tulip-pond_031_2x3.png",
+      "titleJa": "チューリップ畔の春夕景",
+      "titleEn": "Spring Evening by Tulip Pond",
+      "descriptionJa": "春の池のほとり、むぎちゃんがチューリップに囲まれ静かに佇みます。穏やかな横顔が印象的です。",
+      "descriptionEn": "Mugi quietly rests by the tulip-filled spring pond, gazing serenely at the water.",
+      "tagsJa": [
+        "春",
+        "池",
+        "チューリップ",
+        "夕方",
+        "サギ",
+        "自然光",
+        "穏やか"
+      ],
+      "tagsEn": [
+        "spring",
+        "pond",
+        "tulips",
+        "evening",
+        "egret",
+        "natural light",
+        "calm"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の池畔",
+        "チューリップの多色",
+        "サギとの共演"
       ]
     }
   ]
