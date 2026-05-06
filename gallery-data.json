@@ -1015,7 +1015,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1795,6 +1795,59 @@
         "春の夜の温泉街",
         "湯気と灯りの幻想的な光景",
         "大正ロマン風木造建築"
+      ]
+    },
+    {
+      "id": "20260506-sunset-runway-side-041",
+      "file": "images/20260506_sunset-runway-side_041_2x3.png",
+      "titleJa": "夕焼け滑走路の傍らで",
+      "titleEn": "By the Sunset Runway",
+      "descriptionJa": "夕暮れの滑走路を穏やかに眺めるむぎちゃんの姿。暖かい光に包まれて。",
+      "descriptionEn": "Mugi quietly watches the runway at sunset, embraced by warm light.",
+      "tagsJa": [
+        "夕焼け",
+        "空港",
+        "滑走路",
+        "草地",
+        "夕暮れ",
+        "静けさ"
+      ],
+      "tagsEn": [
+        "sunset",
+        "airport",
+        "runway",
+        "grassland",
+        "evening",
+        "serenity"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夕暮れの静けさ",
+        "空港風景",
+        "茶トラ"
       ]
     }
   ]
