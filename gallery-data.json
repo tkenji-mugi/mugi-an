@@ -905,7 +905,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1685,6 +1685,61 @@
         "秘境駅の風景",
         "錆びた線路と草",
         "初夏の新緑"
+      ]
+    },
+    {
+      "id": "20260506-spring-rain-path-039",
+      "file": "images/20260506_spring-rain-path_039_2x3.png",
+      "titleJa": "春雨の参道",
+      "titleEn": "Path in Spring Rain",
+      "descriptionJa": "むぎちゃんが雨に濡れた石段に座り、藤と桜の中で静かに遠くを見つめている。",
+      "descriptionEn": "Mugi sits quietly on wet stone steps under wisteria and cherry blossoms in spring rain.",
+      "tagsJa": [
+        "春",
+        "雨",
+        "参道",
+        "藤",
+        "桜",
+        "新緑",
+        "石段"
+      ],
+      "tagsEn": [
+        "spring",
+        "rain",
+        "temple path",
+        "wisteria",
+        "cherry blossoms",
+        "fresh greenery",
+        "stone steps"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "雨に濡れた",
+        "藤の花のトンネル",
+        "霧雨の情景"
       ]
     }
   ]
