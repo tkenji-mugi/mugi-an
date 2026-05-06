@@ -584,7 +584,7 @@
       ],
       "ratio": "v",
       "aspectHint": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1521,6 +1521,61 @@
         "茶畑",
         "富士山",
         "初夏の自然"
+      ]
+    },
+    {
+      "id": "20260506-satoyama-veranda-036",
+      "file": "images/20260506_satoyama-veranda_036_2x3.png",
+      "titleJa": "里山の縁側でまどろむ",
+      "titleEn": "Dozing on the Satoyama Veranda",
+      "descriptionJa": "里山の古民家の縁側で、むぎちゃんが庭と山並みを静かに見つめている。",
+      "descriptionEn": "Mugi quietly gazes at the garden and hills from the satoyama veranda.",
+      "tagsJa": [
+        "里山",
+        "古民家",
+        "縁側",
+        "囲炉裏",
+        "緑",
+        "田園",
+        "静けさ"
+      ],
+      "tagsEn": [
+        "satoyama",
+        "old house",
+        "veranda",
+        "hearth",
+        "greenery",
+        "rice field",
+        "tranquility"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "高精細",
+        "和の静寂"
       ]
     }
   ]
