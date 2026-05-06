@@ -433,7 +433,7 @@
       ],
       "ratio": "s",
       "aspectHint": "1:1",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -1360,6 +1360,57 @@
         "2:3の縦構図",
         "高精細な毛並み描写",
         "初夏の自然光"
+      ]
+    },
+    {
+      "id": "20260506-bench-nap-033",
+      "file": "images/20260506_bench-nap_033_2x3.png",
+      "titleJa": "木漏れ日ベンチ",
+      "titleEn": "Bench in Early Summer Sunlight",
+      "descriptionJa": "公園でむぎちゃんが古い木製ベンチの上で木漏れ日を浴びながら穏やかに昼寝している。",
+      "descriptionEn": "Mugi peacefully naps on an old wooden bench bathed in gentle early summer sunlight in the park.",
+      "tagsJa": [
+        "新緑",
+        "公園",
+        "木漏れ日",
+        "昼寝",
+        "木製ベンチ"
+      ],
+      "tagsEn": [
+        "fresh greenery",
+        "park",
+        "sunlight filtering",
+        "nap",
+        "wooden bench"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "新緑の公園",
+        "昼寝する",
+        "木漏れ日"
       ]
     }
   ]
