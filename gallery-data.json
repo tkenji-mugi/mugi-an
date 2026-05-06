@@ -1412,6 +1412,61 @@
         "昼寝する",
         "木漏れ日"
       ]
+    },
+    {
+      "id": "20260506-spring-cherry-curtain-034",
+      "file": "images/20260506_spring-cherry-curtain_034_2x3.png",
+      "titleJa": "春の桜カーテン",
+      "titleEn": "Spring Cherry Curtain",
+      "descriptionJa": "むぎちゃんが菜の花としだれ桜の間の小道で顔をひょっこり出している。春の光に包まれて。",
+      "descriptionEn": "Mugi peeks out from the spring path framed by weeping cherry and blooming rapeseed flowers.",
+      "tagsJa": [
+        "春",
+        "菜の花",
+        "しだれ桜",
+        "小道",
+        "花のカーテン",
+        "自然光",
+        "暖色"
+      ],
+      "tagsEn": [
+        "spring",
+        "rapeseed flowers",
+        "weeping cherry",
+        "path",
+        "flower curtain",
+        "natural light",
+        "warm tones"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の写真",
+        "しだれ桜の花びら",
+        "菜の花の黄"
+      ]
     }
   ]
 }
