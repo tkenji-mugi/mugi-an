@@ -533,6 +533,40 @@
       letter-spacing: 0.05em;
       z-index: 1;
     }
+    .real-mugi-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,169,110,0.75);
+      background: rgba(255,253,249,0.92);
+      color: #8a5a2b;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 12px rgba(28,23,20,0.08);
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .modal-real-mugi-label {
+      display: none;
+      width: fit-content;
+      margin-bottom: 8px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,169,110,0.75);
+      background: rgba(201,169,110,0.1);
+      color: #8a5a2b;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
     .card-img {
       width: 100%;
       display: flex;
@@ -1086,6 +1120,7 @@
   <div class="modal" onclick="event.stopPropagation()">
     <div class="card-img" id="modal-img" style="background:#f5ede0;max-height:320px;overflow:hidden">🐱</div>
     <div class="modal-body">
+      <div class="modal-real-mugi-label" id="modal-real-mugi-label">リアルむぎ</div>
       <div class="modal-header">
         <div class="modal-title" id="modal-title">タイトル</div>
         <span class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕ 閉じる</span>
@@ -1424,6 +1459,13 @@ const tags = tagsText.split(',');
     currentDownloadUrl = filePath || '';
     currentDownloadName = filePath ? decodeURIComponent(filePath.split('/').pop().split('?')[0]) : 'mugi-an-photo.png';
 
+    const isRealMugi = card.getAttribute('data-real-mugi') === 'true';
+    const realMugiLabel = document.getElementById('modal-real-mugi-label');
+    if (realMugiLabel) {
+      realMugiLabel.textContent = isEn ? 'Real Mugi' : 'リアルむぎ';
+      realMugiLabel.style.display = isRealMugi ? 'inline-flex' : 'none';
+    }
+
     document.getElementById('modal-title').textContent = title;
     document.getElementById('modal-desc').textContent = desc;
 
@@ -1526,12 +1568,22 @@ function renderNewSlider(newPhotos, getTagsEn) {
     card.setAttribute('data-desc-en', photo.descriptionEn || '');
     card.setAttribute('data-ratio', photo.ratio || 'v');
     card.setAttribute('data-file', photo.file || '');
+    card.setAttribute('data-real-mugi', photo.isRealMugi === true ? 'true' : 'false');
     card.addEventListener('click', () => openModal(card));
 
     const badge = document.createElement('span');
     badge.className = 'new-badge';
     badge.textContent = 'New';
     card.appendChild(badge);
+
+    if (photo.isRealMugi === true) {
+      const realBadge = document.createElement('span');
+      realBadge.className = 'real-mugi-badge';
+      realBadge.setAttribute('data-ja', 'リアルむぎ');
+      realBadge.setAttribute('data-en', 'Real Mugi');
+      realBadge.textContent = currentLang === 'en' ? 'Real Mugi' : 'リアルむぎ';
+      card.appendChild(realBadge);
+    }
 
     const imgWrap = document.createElement('div');
     imgWrap.className = 'card-img ' + (photo.ratio || 'v');
@@ -1672,6 +1724,7 @@ const sortedPhotos = [...photos].sort((a, b) => {
         card.setAttribute('data-desc-en', photo.descriptionEn || '');
         card.setAttribute('data-ratio', photo.ratio || 'v');
         card.setAttribute('data-file', photo.file || '');
+        card.setAttribute('data-real-mugi', photo.isRealMugi === true ? 'true' : 'false');
         const searchText = [
           photo.titleJa || '',
           photo.titleEn || '',
@@ -1679,7 +1732,8 @@ const sortedPhotos = [...photos].sort((a, b) => {
           photo.descriptionEn || '',
           ...(photo.tagsJa || []),
           ...getTagsEn(photo),
-          ...(photo.featureCandidate || [])
+          ...(photo.featureCandidate || []),
+          ...(photo.isRealMugi === true ? ['リアルむぎ', 'Real Mugi'] : [])
         ].join(' ').toLowerCase();
         card.setAttribute('data-search-text', searchText);
 
@@ -1688,6 +1742,15 @@ const sortedPhotos = [...photos].sort((a, b) => {
           badge.className = 'new-badge';
           badge.textContent = 'New';
           card.appendChild(badge);
+        }
+
+        if (photo.isRealMugi === true) {
+          const realBadge = document.createElement('span');
+          realBadge.className = 'real-mugi-badge';
+          realBadge.setAttribute('data-ja', 'リアルむぎ');
+          realBadge.setAttribute('data-en', 'Real Mugi');
+          realBadge.textContent = currentLang === 'en' ? 'Real Mugi' : 'リアルむぎ';
+          card.appendChild(realBadge);
         }
 
         const imgWrap = document.createElement('div');
