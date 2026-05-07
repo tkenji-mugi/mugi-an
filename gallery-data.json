@@ -1120,7 +1120,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1903,6 +1903,61 @@
         "飛行機離陸",
         "リアルな毛並み"
       ]
+    },
+    {
+      "id": "20260507-dining-table-sitting-043",
+      "file": "images/20260507_dining-table-sitting_043_1x1.png",
+      "titleJa": "ダイニングテーブル",
+      "titleEn": "The Dining Table",
+      "descriptionJa": "ダイニングテーブルの上で、むぎちゃんがちょこんとお座りしています。尻尾が一直線に伸びている姿がかわいらしいです。",
+      "descriptionEn": "Mugi sits quietly on the dining table with her tail stretched out straight, looking calm and composed.",
+      "tagsJa": [
+        "室内",
+        "ダイニング",
+        "静か",
+        "冬",
+        "照明",
+        "まったり",
+        "暖かい"
+      ],
+      "tagsEn": [
+        "indoor",
+        "dining",
+        "calm",
+        "winter",
+        "lighting",
+        "relaxed",
+        "warm"
+      ],
+      "ratio": "s",
+      "aspectHint": "1:1",
+      "aspect": "1:1",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "室内ポートレート",
+        "静かな時間",
+        "光と影"
+      ],
+      "isRealMugi": true
     }
   ]
 }
