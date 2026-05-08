@@ -1254,6 +1254,10 @@
   const NEW_LIMIT = 15;
   const GALLERY_PAGE_SIZE = 24;
   let galleryVisibleLimit = GALLERY_PAGE_SIZE;
+  let currentTagRules = [];
+  let currentTagValue = 'all';
+  let currentTagKeywords = null;
+
   function setLang(lang, btn) {
     currentLang = lang;
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
@@ -1273,9 +1277,99 @@
   // --- 検索・タグ絞り込み ---
   function normalizeSearchText(value) {
     return String(value || '')
+      .normalize('NFKC')
       .replace(/^#/, '')
       .trim()
       .toLowerCase();
+  }
+
+  function cleanTagKey(value) {
+    return normalizeSearchText(value)
+      .replace(/[🌸🎎😴🌍🐱✨🍵🎐⛩️]/g, '')
+      .replace(/[・\s　]/g, '')
+      .replace(/[^\p{Letter}\p{Number}一-龠ぁ-んァ-ヶ々ー]/gu, '');
+  }
+
+  const TAG_ALIAS_MAP = {
+    '春': ['春', '桜', '菜の花', '梅', 'たんぽぽ', 'お花見', 'ひな祭り', '茶道', '和菓子', 'お弁当', '新緑', 'spring', 'cherry blossoms', 'rapeseed flowers', 'plum blossoms', 'dandelions', 'hanami', 'hinamatsuri', 'tea ceremony', 'wagashi', 'bento'],
+    '行事暮らし': ['行事', '暮らし', 'ひな祭り', 'お花見', '茶道', '和菓子', 'お弁当', '縁側', '和室', 'ダイニングテーブル', 'seasonal event', 'daily life', 'hinamatsuri', 'hanami', 'tea ceremony', 'wagashi', 'bento'],
+    '自然屋外': ['自然', '屋外', '庭園', '川沿い', '清流', '小川', '水辺', '山あい', '里山', '公園', '参道', '桜', '菜の花', '梅', 'たんぽぽ', 'nature', 'outdoor', 'garden', 'riverside', 'clear stream', 'brook', 'waterside', 'mountains', 'park'],
+    '和の景色': ['和の景色', '神社', '鳥居', '庭園', '縁側', '緑側', '和室', '石畳', '参道', '茶道', 'Japanese scenery', 'shrine', 'torii gate', 'garden', 'engawa', 'tatami room', 'stone path', 'tea ceremony'],
+    '座りポーズ': ['座り', '座る', '座りポーズ', 'sitting'],
+    '寝そべり': ['寝そべり', 'うとうと', '昼寝', 'sprawling', 'dozing', 'nap'],
+    '歩き': ['歩き', '歩く', '散歩', 'walking'],
+    '毛繕い': ['毛繕い', 'グルーミング', 'grooming'],
+    '神社': ['神社', '鳥居', '参道', 'shrine', 'torii gate'],
+    '桜': ['桜', 'しだれ桜', 'cherry blossoms', 'weeping cherry'],
+    '庭園': ['庭園', '日本庭園', 'garden', 'Japanese garden'],
+    '緑側': ['縁側', '緑側', 'engawa'],
+    '縁側': ['縁側', '緑側', 'engawa'],
+    '和室': ['和室', '畳', 'tatami room', 'tatami'],
+    'お花見': ['お花見', '桜', 'hanami', 'cherry blossoms'],
+    '茶道': ['茶道', '抹茶', '茶室', 'tea ceremony', 'matcha'],
+    'ひな祭り': ['ひな祭り', '雛祭り', 'hinamatsuri'],
+    '清流': ['清流', '小川', '川沿い', '水辺', '鮎', 'clear stream', 'brook', 'riverside', 'waterside', 'ayu fish']
+  };
+
+  function uniqueKeywords(values) {
+    const result = [];
+    const seen = new Set();
+    values
+      .flat()
+      .map(v => String(v || '').trim())
+      .filter(Boolean)
+      .forEach(value => {
+        const normalized = normalizeSearchText(value);
+        if (!normalized || seen.has(normalized)) return;
+        seen.add(normalized);
+        result.push(normalized);
+      });
+    return result;
+  }
+
+  function getTagKeywords(tag) {
+    if (!tag || (tag.value || 'all') === 'all') return [];
+
+    const baseValues = [
+      tag.value,
+      tag.labelJa,
+      tag.labelEn,
+      ...(tag.keywords || []),
+      ...(tag.keywordsJa || []),
+      ...(tag.keywordsEn || []),
+      ...(tag.aliases || []),
+      ...(tag.searchWords || [])
+    ];
+
+    const aliasValues = [];
+    baseValues.forEach(value => {
+      const key = cleanTagKey(value);
+      if (TAG_ALIAS_MAP[key]) aliasValues.push(TAG_ALIAS_MAP[key]);
+    });
+
+    return uniqueKeywords([...baseValues, ...aliasValues]);
+  }
+
+  function cardMatchesKeywords(card, keywords) {
+    const text = card.getAttribute('data-search-text') || '';
+    const normalizedText = normalizeSearchText(text);
+    const list = Array.isArray(keywords) ? keywords : [];
+    if (!list.length) return true;
+    return list.some(keyword => normalizedText.includes(normalizeSearchText(keyword)));
+  }
+
+  function countCardsForTag(tag) {
+    if (!tag || (tag.value || 'all') === 'all') {
+      return document.querySelectorAll('.card').length;
+    }
+    const keywords = getTagKeywords(tag);
+    return Array.from(document.querySelectorAll('.card'))
+      .filter(card => cardMatchesKeywords(card, keywords))
+      .length;
+  }
+
+  function getTagCount(tag) {
+    return countCardsForTag(tag);
   }
 
   function updateGalleryCount(total, visible) {
@@ -1308,9 +1402,14 @@
       galleryVisibleLimit = GALLERY_PAGE_SIZE;
     }
 
+    const tagKeywords = options.tagKeywords || currentTagKeywords;
+    const useTagKeywords = Array.isArray(tagKeywords) && tagKeywords.length > 0;
+
     const matchedCards = cards.filter(card => {
       const text = card.getAttribute('data-search-text') || '';
-      return !q || text.includes(q);
+      const matchedByText = !q || normalizeSearchText(text).includes(q);
+      const matchedByTag = !useTagKeywords || cardMatchesKeywords(card, tagKeywords);
+      return matchedByText && matchedByTag;
     });
 
     const total = matchedCards.length;
@@ -1319,7 +1418,9 @@
 
     cards.forEach(card => {
       const text = card.getAttribute('data-search-text') || '';
-      const matched = !q || text.includes(q);
+      const matchedByText = !q || normalizeSearchText(text).includes(q);
+      const matchedByTag = !useTagKeywords || cardMatchesKeywords(card, tagKeywords);
+      const matched = matchedByText && matchedByTag;
       const visible = matched && visibleCount < visibleLimit;
       card.style.display = visible ? '' : 'none';
       if (visible) visibleCount++;
@@ -1329,6 +1430,8 @@
     updateLoadMoreButton(total, visibleCount);
 
     if (!options.keepTagActive) {
+      currentTagValue = q ? '' : 'all';
+      currentTagKeywords = null;
       document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
       if (!q) {
         const allTag = document.querySelector('.tag');
@@ -1342,12 +1445,19 @@
     if (input) {
       input.value = keyword || '';
     }
+    if (options.tagKeywords) {
+      currentTagKeywords = options.tagKeywords;
+    } else if (!options.keepTagKeywords) {
+      currentTagKeywords = null;
+    }
     applyGallerySearch(keyword, options);
   }
 
   function searchByTag(tag) {
     const keyword = String(tag || '').replace(/^#/, '').trim();
     document.getElementById('modal')?.classList.remove('open');
+    currentTagValue = '';
+    currentTagKeywords = null;
     setSearchKeyword(keyword);
     const gallery = document.getElementById('gallery');
     if (gallery) {
@@ -1355,16 +1465,26 @@
     }
   }
 
-  function filterTag(btn, tagValue, keyword) {
+  function filterTag(btn, tagValue, keywords, displayKeyword) {
     document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
-    const q = tagValue === 'all' ? '' : (keyword || tagValue);
-    setSearchKeyword(q, { keepTagActive: true });
+
+    currentTagValue = tagValue || 'all';
+    currentTagKeywords = currentTagValue === 'all' ? null : (keywords || []);
+
+    const q = currentTagValue === 'all' ? '' : '';
+    const input = document.getElementById('gallery-search') || document.querySelector('.search-input');
+    if (input) {
+      input.value = currentTagValue === 'all' ? '' : (displayKeyword || '');
+    }
+    applyGallerySearch(q, { keepTagActive: true, tagKeywords: currentTagKeywords });
   }
 
   const gallerySearchInput = document.getElementById('gallery-search') || document.querySelector('.search-input');
   if (gallerySearchInput) {
     gallerySearchInput.addEventListener('input', (event) => {
+      currentTagValue = event.target.value ? '' : 'all';
+      currentTagKeywords = null;
       applyGallerySearch(event.target.value);
     });
   }
@@ -1374,7 +1494,7 @@
     galleryLoadMoreButton.addEventListener('click', () => {
       galleryVisibleLimit += GALLERY_PAGE_SIZE;
       const currentSearchValue = (document.getElementById('gallery-search') || document.querySelector('.search-input'))?.value || '';
-      applyGallerySearch(currentSearchValue, { keepTagActive: true, keepLimit: true });
+      applyGallerySearch(currentSearchValue, { keepTagActive: true, keepLimit: true, tagKeywords: currentTagKeywords });
     });
   }
 
@@ -1382,31 +1502,42 @@ function renderTagButtons(tags) {
   const tagButtons = document.getElementById('tag-buttons');
   if (!tagButtons) return;
 
+  currentTagRules = Array.isArray(tags) ? tags : currentTagRules;
+  const activeTags = currentTagRules.filter(tag => tag.status === 'active');
+
+  const allTags = activeTags.filter(tag => (tag.value || 'all') === 'all');
+  const otherTags = activeTags
+    .filter(tag => (tag.value || 'all') !== 'all')
+    .map(tag => ({ ...tag, _count: getTagCount(tag) }))
+    .sort((a, b) => {
+      if ((b._count || 0) !== (a._count || 0)) return (b._count || 0) - (a._count || 0);
+      return (a.homeOrder || 999) - (b.homeOrder || 999);
+    });
+
+  const orderedTags = [...allTags, ...otherTags];
+
   tagButtons.innerHTML = '';
 
-  tags
-    .filter(tag => tag.status === 'active')
-    .sort((a, b) => (a.homeOrder || 999) - (b.homeOrder || 999))
-    .forEach((tag, index) => {
-      const span = document.createElement('span');
-      span.className = index === 0 ? 'tag active' : 'tag';
-      span.setAttribute('data-ja', tag.labelJa || tag.value || '');
-      span.setAttribute('data-en', tag.labelEn || tag.labelJa || tag.value || '');
-      span.textContent = currentLang === 'en'
+  orderedTags.forEach((tag, index) => {
+    const span = document.createElement('span');
+    const tagValue = tag.value || 'all';
+    const active = currentTagValue === tagValue || (!currentTagValue && index === 0);
+    span.className = active ? 'tag active' : 'tag';
+    span.setAttribute('data-ja', tag.labelJa || tag.value || '');
+    span.setAttribute('data-en', tag.labelEn || tag.labelJa || tag.value || '');
+    span.textContent = currentLang === 'en'
+      ? (tag.labelEn || tag.labelJa || tag.value || '')
+      : (tag.labelJa || tag.value || '');
+
+    span.addEventListener('click', () => {
+      const displayKeyword = currentLang === 'en'
         ? (tag.labelEn || tag.labelJa || tag.value || '')
         : (tag.labelJa || tag.value || '');
-
-      span.addEventListener('click', () => {
-        const keyword = (tag.value || 'all') === 'all'
-          ? ''
-          : (currentLang === 'en'
-              ? (tag.labelEn || tag.labelJa || tag.value || '')
-              : (tag.labelJa || tag.value || ''));
-        filterTag(span, tag.value || 'all', keyword);
-      });
-
-      tagButtons.appendChild(span);
+      filterTag(span, tagValue, getTagKeywords(tag), displayKeyword);
     });
+
+    tagButtons.appendChild(span);
+  });
 
   const activeLangBtn = document.querySelector('.lang-btn.active');
   if (activeLangBtn) {
@@ -1417,7 +1548,8 @@ function renderTagButtons(tags) {
 fetch('tag-rules.json')
   .then(response => response.json())
   .then(data => {
-    renderTagButtons(data.tags || []);
+    currentTagRules = data.tags || [];
+    renderTagButtons(currentTagRules);
   })
   .catch(error => {
     console.log('tag-rules.json could not be loaded:', error);
@@ -1733,6 +1865,14 @@ const sortedPhotos = [...photos].sort((a, b) => {
           ...(photo.tagsJa || []),
           ...getTagsEn(photo),
           ...(photo.featureCandidate || []),
+          ...(photo.series || []),
+          photo.volume || '',
+          photo.season || '',
+          photo.world || '',
+          photo.style || '',
+          photo.aspect || '',
+          photo.aspectHint || '',
+          photo.status || '',
           ...(photo.isRealMugi === true ? ['リアルむぎ', 'Real Mugi'] : [])
         ].join(' ').toLowerCase();
         card.setAttribute('data-search-text', searchText);
@@ -1812,9 +1952,12 @@ card.appendChild(body);
       if (activeLangBtn) {
         setLang(currentLang, activeLangBtn);
       }
+      if (currentTagRules.length) {
+        renderTagButtons(currentTagRules);
+      }
     }
     const currentSearchValue = (document.getElementById('gallery-search') || document.querySelector('.search-input'))?.value || '';
-    applyGallerySearch(currentSearchValue, { keepTagActive: true });
+    applyGallerySearch(currentSearchValue, { keepTagActive: true, tagKeywords: currentTagKeywords });
 
     const kindleEligibleCount = photos.filter(photo => {
       return photo.kindle && photo.kindle.eligible === true;
