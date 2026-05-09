@@ -1282,7 +1282,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2067,6 +2067,59 @@
         "フォトリアル",
         "夕暮れ風景",
         "和の伝統"
+      ]
+    },
+    {
+      "id": "20260509-red-post-spring-morning-046",
+      "file": "images/20260509_red-post-spring-morning_046_2x3.png",
+      "titleJa": "赤い丸ポストの春朝",
+      "titleEn": "Spring Morning by Red Post",
+      "descriptionJa": "むぎちゃんが赤い丸ポストの隣に座り、朝靄のかかる山里の道を見つめている。",
+      "descriptionEn": "Mugi sits by a red post on a misty spring morning in the mountain village.",
+      "tagsJa": [
+        "春",
+        "山里",
+        "朝靄",
+        "かやぶき屋根",
+        "赤い丸ポスト",
+        "田舎道"
+      ],
+      "tagsEn": [
+        "spring",
+        "mountain village",
+        "morning mist",
+        "thatched roofs",
+        "red post",
+        "rural road"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "春の朝",
+        "古民家"
       ]
     }
   ]
