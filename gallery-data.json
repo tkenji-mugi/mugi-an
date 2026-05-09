@@ -1173,7 +1173,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -1958,6 +1958,61 @@
         "光と影"
       ],
       "isRealMugi": true
+    },
+    {
+      "id": "20260509-carp-streamers-country-path-044",
+      "file": "images/20260509_carp-streamers-country-path_044_2x3.png",
+      "titleJa": "鯉のぼりとあぜ道",
+      "titleEn": "Carp Streamers and Country Path",
+      "descriptionJa": "あぜ道に座るむぎちゃんが、初夏の青空と鯉のぼりを楽しそうに見上げています。",
+      "descriptionEn": "Mugi happily gazes at the carp streamers fluttering against the clear early summer sky while sitting on a country path.",
+      "tagsJa": [
+        "初夏",
+        "里山",
+        "鯉のぼり",
+        "田植え",
+        "青空",
+        "水田",
+        "晴れ"
+      ],
+      "tagsEn": [
+        "early summer",
+        "satoyama",
+        "carp streamers",
+        "rice planting",
+        "blue sky",
+        "paddy field",
+        "sunny"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "初夏の里山風景",
+        "鯉のぼりの色鮮やかさ",
+        "水田に映る空と鯉のぼり"
+      ]
     }
   ]
 }
