@@ -1335,7 +1335,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2120,6 +2120,61 @@
         "フォトリアル",
         "春の朝",
         "古民家"
+      ]
+    },
+    {
+      "id": "20260509-spring-wildflower-grooming-047",
+      "file": "images/20260509_spring-wildflower-grooming_047_2x3.png",
+      "titleJa": "春の野草と毛づくろい",
+      "titleEn": "Grooming among Spring Wildflowers",
+      "descriptionJa": "春の土手でむぎちゃんが野草の花に囲まれ気持ちよさそうに毛づくろいしている。",
+      "descriptionEn": "Mugi is grooming peacefully among wildflowers on a spring hillside.",
+      "tagsJa": [
+        "春",
+        "土手",
+        "野草",
+        "毛づくろい",
+        "青空",
+        "トンビ",
+        "タンポポ"
+      ],
+      "tagsEn": [
+        "spring",
+        "hillside",
+        "wildflowers",
+        "grooming",
+        "blue sky",
+        "kite bird",
+        "dandelion"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 花のそばのむぎちゃん",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "春の自然光",
+        "野草の花"
       ]
     }
   ]
