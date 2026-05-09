@@ -1228,7 +1228,7 @@
       "ratio": "s",
       "aspectHint": "1:1",
       "aspect": "1:1",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -2012,6 +2012,61 @@
         "初夏の里山風景",
         "鯉のぼりの色鮮やかさ",
         "水田に映る空と鯉のぼり"
+      ]
+    },
+    {
+      "id": "20260509-sunset-sannenzaka-045",
+      "file": "images/20260509_sunset-sannenzaka_045_2x3.png",
+      "titleJa": "夕暮れの産寧坂",
+      "titleEn": "Sunset at Sannenzaka",
+      "descriptionJa": "むぎちゃんが夕暮れの産寧坂で舞妓さんを見上げる穏やかな時間。",
+      "descriptionEn": "Mugi looks up at the Maiko on Sannenzaka in the gentle sunset light.",
+      "tagsJa": [
+        "京都",
+        "夕暮れ",
+        "産寧坂",
+        "舞妓",
+        "石畳",
+        "しだれ桜",
+        "八坂の塔"
+      ],
+      "tagsEn": [
+        "Kyoto",
+        "sunset",
+        "Sannenzaka",
+        "Maiko",
+        "stone-paved street",
+        "weeping cherry",
+        "Yasaka Pagoda"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第5章 里山と旅の春",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "夕暮れ風景",
+        "和の伝統"
       ]
     }
   ]
