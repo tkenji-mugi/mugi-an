@@ -1386,7 +1386,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2175,6 +2175,61 @@
         "フォトリアル",
         "春の自然光",
         "野草の花"
+      ]
+    },
+    {
+      "id": "20260509-mothers-day-living-room-048",
+      "file": "images/20260509_mothers-day-living-room_048_2x3.png",
+      "titleJa": "母の日の温かいリビング",
+      "titleEn": "Warm Mother's Day Living Room",
+      "descriptionJa": "むぎちゃんが温かなリビングで赤いカーネーションを見つめる、母の日の優しい瞬間。",
+      "descriptionEn": "Mugi gazes at the red carnations in a warm living room on Mother's Day.",
+      "tagsJa": [
+        "母の日",
+        "カーネーション",
+        "リビング",
+        "春",
+        "温かい光",
+        "赤色",
+        "室内"
+      ],
+      "tagsEn": [
+        "Mother's Day",
+        "carnation",
+        "living room",
+        "spring",
+        "warm light",
+        "red",
+        "indoor"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "母の日モチーフ",
+        "赤いカーネーション",
+        "温かな自然光"
       ]
     }
   ]
