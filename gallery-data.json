@@ -1441,7 +1441,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2230,6 +2230,61 @@
         "母の日モチーフ",
         "赤いカーネーション",
         "温かな自然光"
+      ]
+    },
+    {
+      "id": "20260509-spring-flowerbed-afternoon-049",
+      "file": "images/20260509_spring-flowerbed-afternoon_049_2x3.png",
+      "titleJa": "春の花壇の午後",
+      "titleEn": "Afternoon in the Spring Flowerbed",
+      "descriptionJa": "むぎちゃんが花壇の縁石に座り、色とりどりの春の花を穏やかに眺めている。",
+      "descriptionEn": "Mugi sits quietly on the flowerbed edge, gazing softly at the colorful spring blooms.",
+      "tagsJa": [
+        "春",
+        "公園",
+        "花壇",
+        "チューリップ",
+        "パンジー",
+        "ネモフィラ",
+        "穏やかな光"
+      ],
+      "tagsEn": [
+        "spring",
+        "park",
+        "flowerbed",
+        "tulips",
+        "pansies",
+        "nemophila",
+        "soft light"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 花のそばのむぎちゃん",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の花壇",
+        "やさしい光",
+        "リラックスした"
       ]
     }
   ]
