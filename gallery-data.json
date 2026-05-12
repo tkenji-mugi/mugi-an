@@ -1496,7 +1496,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2285,6 +2285,59 @@
         "春の花壇",
         "やさしい光",
         "リラックスした"
+      ]
+    },
+    {
+      "id": "20260509-flower-peach-path-050",
+      "file": "images/20260509_flower-peach-path_050_2x3.png",
+      "titleJa": "花桃の小道を歩く",
+      "titleEn": "Flower Peach Path",
+      "descriptionJa": "むぎちゃんは花桃のトンネルを、しっぽを立てて楽しげに歩いています。",
+      "descriptionEn": "Mugi happily walks through the flower peach tunnel with her tail raised.",
+      "tagsJa": [
+        "花桃",
+        "春",
+        "新緑",
+        "石灯籠",
+        "小道",
+        "風景"
+      ],
+      "tagsEn": [
+        "flower peach",
+        "spring",
+        "fresh green",
+        "stone lantern",
+        "path",
+        "landscape"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 花のそばのむぎちゃん",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "花桃トンネル",
+        "しっぽのグラデーション",
+        "春の自然光"
       ]
     }
   ]
