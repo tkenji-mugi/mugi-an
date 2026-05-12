@@ -1551,7 +1551,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2337,6 +2337,61 @@
       "featureCandidate": [
         "花桃トンネル",
         "しっぽのグラデーション",
+        "春の自然光"
+      ]
+    },
+    {
+      "id": "20260509-spring-renge-field-051",
+      "file": "images/20260509_spring-renge-field_051_2x3.png",
+      "titleJa": "レンゲ畑の春の日",
+      "titleEn": "Spring Day in the Renge Field",
+      "descriptionJa": "レンゲの花冠をかぶったむぎちゃんが春の里山で優しく座っています。みつばちも花冠に訪れています。",
+      "descriptionEn": "Mugi sits gently in the spring countryside wearing a renge flower crown visited by a bee.",
+      "tagsJa": [
+        "春",
+        "里山",
+        "レンゲ",
+        "花冠",
+        "みつばち",
+        "自然光",
+        "穏やか"
+      ],
+      "tagsEn": [
+        "spring",
+        "countryside",
+        "renge",
+        "flower crown",
+        "bee",
+        "natural light",
+        "calm"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 花のそばのむぎちゃん",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の花畑",
+        "レンゲの花冠",
         "春の自然光"
       ]
     }
