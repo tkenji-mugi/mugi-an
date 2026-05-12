@@ -2422,6 +2422,7 @@
       "aspectHint": "2:3",
       "aspect": "2:3",
       "isNew": true,
+      "isRealMugi": true,
       "usage": [
         "gallery",
         "kindle"
