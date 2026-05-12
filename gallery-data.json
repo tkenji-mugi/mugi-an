@@ -1606,7 +1606,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2393,6 +2393,59 @@
         "春の花畑",
         "レンゲの花冠",
         "春の自然光"
+      ]
+    },
+    {
+      "id": "20260509-marble-table-relaxing-052",
+      "file": "images/20260509_marble-table-relaxing_052_2x3.png",
+      "titleJa": "大理石のテーブルでくつろぐ",
+      "titleEn": "Relaxing on Marble Table",
+      "descriptionJa": "ご飯後の毛繕いをするむぎちゃんが、大理石のテーブルでゆったりとくつろいでいます。",
+      "descriptionEn": "Mugi relaxes comfortably on the marble table after grooming.",
+      "tagsJa": [
+        "室内",
+        "大理石テーブル",
+        "茶トラ",
+        "ブリティッシュショートヘア",
+        "日常",
+        "暖かい光"
+      ],
+      "tagsEn": [
+        "indoor",
+        "marble table",
+        "ginger tabby",
+        "British Shorthair",
+        "everyday life",
+        "warm light"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "室内の静かなひととき",
+        "毛並みの微細な質感",
+        "温かい日常の風景"
       ]
     }
   ]
