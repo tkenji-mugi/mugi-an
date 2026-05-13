@@ -1715,7 +1715,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2502,6 +2502,61 @@
         "春の花畑",
         "動きのある瞬間",
         "自然光の描写"
+      ]
+    },
+    {
+      "id": "20260509-spring-hill-cherry-tree-054",
+      "file": "images/20260509_spring-hill-cherry-tree_054_2x3.png",
+      "titleJa": "春の丘の一本桜",
+      "titleEn": "Spring Hill and Cherry Tree",
+      "descriptionJa": "桜の幹にもたれて、むぎちゃんが春の陽を浴びてうとうとしている。",
+      "descriptionEn": "Mugi dozes gently under the cherry tree on a spring hill, bathed in soft sunlight.",
+      "tagsJa": [
+        "春",
+        "桜",
+        "丘",
+        "雪山",
+        "青空",
+        "陽だまり",
+        "やわらかい光"
+      ],
+      "tagsEn": [
+        "spring",
+        "cherry blossom",
+        "hill",
+        "snowy mountains",
+        "blue sky",
+        "sunlight",
+        "soft light"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第1章 花のそばのむぎちゃん",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の桜",
+        "雄大な自然景観",
+        "繊細な毛並み描写"
       ]
     }
   ]
