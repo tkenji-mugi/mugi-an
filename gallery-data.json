@@ -1661,7 +1661,7 @@
       "ratio": "s",
       "aspectHint": "1:1",
       "aspect": "1:1",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -2447,6 +2447,61 @@
         "室内の静かなひととき",
         "毛並みの微細な質感",
         "温かい日常の風景"
+      ]
+    },
+    {
+      "id": "20260509-chasing-tulip-field-053",
+      "file": "images/20260509_chasing-tulip-field_053_2x3.png",
+      "titleJa": "チューリップ畑の追いかけっこ",
+      "titleEn": "Chasing in the Tulip Field",
+      "descriptionJa": "春のチューリップ畑で、むぎちゃんがアゲハチョウを追いかける姿が生き生きと映る。",
+      "descriptionEn": "Mugi is chasing a swallowtail butterfly in a vibrant spring tulip field.",
+      "tagsJa": [
+        "春",
+        "チューリップ",
+        "花畑",
+        "アゲハチョウ",
+        "風車",
+        "青空",
+        "躍動感"
+      ],
+      "tagsEn": [
+        "spring",
+        "tulip",
+        "flower field",
+        "swallowtail butterfly",
+        "windmill",
+        "blue sky",
+        "motion"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の花畑",
+        "動きのある瞬間",
+        "自然光の描写"
       ]
     }
   ]
