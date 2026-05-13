@@ -2095,7 +2095,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2886,6 +2886,61 @@
         "春の和庭園",
         "苔と石灯籠",
         "木漏れ日"
+      ]
+    },
+    {
+      "id": "20260513-spring-rain-veranda-swallows-061",
+      "file": "images/20260513_spring-rain-veranda-swallows_061_2x3.png",
+      "titleJa": "春雨の縁側とツバメ",
+      "titleEn": "Spring Rain and Swallows",
+      "descriptionJa": "春雨が降る縁側で、むぎちゃんがちゃぶ台の上から軒下のツバメを好奇心いっぱいに見つめています。",
+      "descriptionEn": "In the gentle spring rain, Mugi watches swallows under the eaves from the round table on the veranda.",
+      "tagsJa": [
+        "春雨",
+        "和室",
+        "縁側",
+        "ツバメ",
+        "新緑",
+        "ちゃぶ台",
+        "高精細"
+      ],
+      "tagsEn": [
+        "spring rain",
+        "Japanese room",
+        "veranda",
+        "swallows",
+        "fresh greenery",
+        "round table",
+        "high detail"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春雨の日の和室",
+        "軒下のツバメの巣",
+        "香箱座りの"
       ]
     }
   ]
