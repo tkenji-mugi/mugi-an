@@ -2042,7 +2042,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2831,6 +2831,61 @@
         "フォトリアル",
         "夜の光と影",
         "日本の伝統美"
+      ]
+    },
+    {
+      "id": "20260513-spring-moss-garden-lantern-060",
+      "file": "images/20260513_spring-moss-garden-lantern_060_2x3.png",
+      "titleJa": "春の木漏れ日と苔庭",
+      "titleEn": "Spring Sunlight in Moss Garden",
+      "descriptionJa": "春の和庭園で苔むした石灯籠の横に座り、むぎちゃんが静かに庭を眺める。",
+      "descriptionEn": "Mugi quietly sits beside a moss-covered stone lantern in a spring Japanese garden.",
+      "tagsJa": [
+        "和庭園",
+        "春の風景",
+        "苔",
+        "石灯籠",
+        "木漏れ日",
+        "緑",
+        "静けさ"
+      ],
+      "tagsEn": [
+        "Japanese garden",
+        "spring scenery",
+        "moss",
+        "stone lantern",
+        "sunlight",
+        "green",
+        "calm"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の和庭園",
+        "苔と石灯籠",
+        "木漏れ日"
       ]
     }
   ]
