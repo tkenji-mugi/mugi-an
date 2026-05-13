@@ -1823,7 +1823,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2612,6 +2612,61 @@
         "和の春景色",
         "庭園の静寂",
         "光と影の織り成す風景"
+      ]
+    },
+    {
+      "id": "20260509-jizo-mossy-waterfall-056",
+      "file": "images/20260509_jizo-mossy-waterfall_056_2x3.png",
+      "titleJa": "苔の中のお地蔵さまと",
+      "titleEn": "Jizo and Mossy Silence",
+      "descriptionJa": "むぎちゃんがお地蔵さまと並んで苔深い森の滝を静かに眺めています。",
+      "descriptionEn": "Mugi quietly gazes at the waterfall beside a moss-covered Jizo statue in a deep forest.",
+      "tagsJa": [
+        "苔むした森",
+        "滝",
+        "お地蔵さま",
+        "緑",
+        "静けさ",
+        "深緑",
+        "川辺"
+      ],
+      "tagsEn": [
+        "mossy forest",
+        "waterfall",
+        "Jizo statue",
+        "green",
+        "tranquility",
+        "deep green",
+        "riverbank"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "苔の緑",
+        "静寂"
       ]
     }
   ]
