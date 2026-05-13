@@ -1932,7 +1932,7 @@
       "ratio": "s",
       "aspectHint": "1:1",
       "aspect": "1:1",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -2721,6 +2721,61 @@
         "伝統的な茶室",
         "飛び石の露地",
         "穏やかな表情"
+      ]
+    },
+    {
+      "id": "20260513-spring-tokonoma-room-058",
+      "file": "images/20260513_spring-tokonoma-room_058_2x3.png",
+      "titleJa": "春の床の間で",
+      "titleEn": "Spring Tokonoma",
+      "descriptionJa": "むぎちゃんが春の和室、床の間の掛け軸前で穏やかな表情で座っている。",
+      "descriptionEn": "Mugi calmly sits in a spring-themed tokonoma in a traditional Japanese room.",
+      "tagsJa": [
+        "和室",
+        "春",
+        "掛け軸",
+        "桜",
+        "山吹",
+        "和風",
+        "静寂"
+      ],
+      "tagsEn": [
+        "Japanese room",
+        "spring",
+        "hanging scroll",
+        "cherry blossoms",
+        "yamabuki flowers",
+        "traditional",
+        "serene"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の和室",
+        "掛け軸と花",
+        "静かな春の日差し"
       ]
     }
   ]
