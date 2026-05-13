@@ -1878,7 +1878,7 @@
       "ratio": "h",
       "aspectHint": "3:2",
       "aspect": "3:2",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -2667,6 +2667,60 @@
         "フォトリアル",
         "苔の緑",
         "静寂"
+      ]
+    },
+    {
+      "id": "20260513-tea-room-stepping-stones-057",
+      "file": "images/20260513_tea-room-stepping-stones_057_2x3.png",
+      "titleJa": "茶室の飛び石",
+      "titleEn": "Stepping Stones at Tea Room",
+      "descriptionJa": "伝統的な茶室の飛び石に座るむぎちゃんが、穏やかな表情でこちらを見つめています。",
+      "descriptionEn": "Mugi sits calmly on stepping stones at a traditional tea room entrance, looking peacefully at the camera.",
+      "tagsJa": [
+        "茶室",
+        "飛び石",
+        "露地",
+        "和風",
+        "落ち着いた色調",
+        "侘び寂び",
+        "春"
+      ],
+      "tagsEn": [
+        "tea room",
+        "stepping stones",
+        "Japanese style",
+        "quiet color tone",
+        "wabi-sabi",
+        "spring"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "伝統的な茶室",
+        "飛び石の露地",
+        "穏やかな表情"
       ]
     }
   ]
