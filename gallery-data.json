@@ -1770,7 +1770,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2557,6 +2557,61 @@
         "春の桜",
         "雄大な自然景観",
         "繊細な毛並み描写"
+      ]
+    },
+    {
+      "id": "20260509-bamboo-fence-garden-055",
+      "file": "images/20260509_bamboo-fence-garden_055_2x3.png",
+      "titleJa": "竹垣に座る和庭",
+      "titleEn": "Bamboo Fence",
+      "descriptionJa": "むぎちゃんが京都の和庭園の竹垣に静かに座り、ししおどしを見つめています。",
+      "descriptionEn": "Mugi sits quietly on a bamboo fence, gazing at a shishi-odoshi in a Kyoto garden.",
+      "tagsJa": [
+        "京都",
+        "和庭園",
+        "竹垣",
+        "ししおどし",
+        "苔",
+        "石灯籠",
+        "松"
+      ],
+      "tagsEn": [
+        "Kyoto",
+        "Japanese garden",
+        "bamboo fence",
+        "shishi-odoshi",
+        "moss",
+        "stone lantern",
+        "pine tree"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "和の春景色",
+        "庭園の静寂",
+        "光と影の織り成す風景"
       ]
     }
   ]
