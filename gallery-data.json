@@ -2313,7 +2313,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3100,6 +3100,61 @@
         "夕暮れの祭り風景",
         "和の伝統との佇まい",
         "桜と提灯の灯り"
+      ]
+    },
+    {
+      "id": "20260513-wagasa-studio-afternoon-065",
+      "file": "images/20260513_wagasa-studio-afternoon_065_2x3.png",
+      "titleJa": "和傘工房の昼下がり",
+      "titleEn": "Afternoon at the Wagasa Studio",
+      "descriptionJa": "むぎちゃんは岐阜の老舗和傘工房の作業台で、職人の手元を興味深く見つめています。",
+      "descriptionEn": "Mugi watches intently at the craftsman's hands in a traditional wagasa studio in Gifu.",
+      "tagsJa": [
+        "和傘",
+        "岐阜",
+        "伝統工芸",
+        "昼下がり",
+        "和室",
+        "自然光",
+        "職人"
+      ],
+      "tagsEn": [
+        "wagasa",
+        "Gifu",
+        "traditional craft",
+        "afternoon",
+        "Japanese room",
+        "natural light",
+        "artisan"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "和傘工房の伝統光景",
+        "の好奇心",
+        "色とりどりの和傘の光影"
       ]
     }
   ]
