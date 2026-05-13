@@ -2260,7 +2260,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3045,6 +3045,61 @@
       "featureCandidate": [
         "春の光",
         "伝統料理"
+      ]
+    },
+    {
+      "id": "20260513-spring-festival-steps-064",
+      "file": "images/20260513_spring-festival-steps_064_2x3.png",
+      "titleJa": "春祭りの石段",
+      "titleEn": "Spring Festival Steps",
+      "descriptionJa": "むぎちゃんが春祭りの神社の石段で静かに佇んでいる夕暮れの一コマ。",
+      "descriptionEn": "Mugi calmly sits on the stone steps of a shrine during a spring festival at dusk.",
+      "tagsJa": [
+        "春祭り",
+        "夕暮れ",
+        "神社",
+        "石段",
+        "提灯",
+        "桜",
+        "和風"
+      ],
+      "tagsEn": [
+        "spring festival",
+        "dusk",
+        "shrine",
+        "stone steps",
+        "lanterns",
+        "cherry blossoms",
+        "Japanese style"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夕暮れの祭り風景",
+        "和の伝統との佇まい",
+        "桜と提灯の灯り"
       ]
     }
   ]
