@@ -1987,7 +1987,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2776,6 +2776,61 @@
         "春の和室",
         "掛け軸と花",
         "静かな春の日差し"
+      ]
+    },
+    {
+      "id": "20260513-moonlit-japanese-garden-059",
+      "file": "images/20260513_moonlit-japanese-garden_059_2x3.png",
+      "titleJa": "月夜の和庭園で",
+      "titleEn": "Moonlit Japanese Garden",
+      "descriptionJa": "むぎちゃんが石灯籠の灯りと満月の夜空を見上げ、静かな庭でたたずむ。",
+      "descriptionEn": "Mugi sits quietly beside a stone lantern, looking up at the moonlit night sky in a Japanese garden.",
+      "tagsJa": [
+        "和庭園",
+        "満月",
+        "夜空",
+        "石灯籠",
+        "苔",
+        "静寂",
+        "春"
+      ],
+      "tagsEn": [
+        "Japanese garden",
+        "full moon",
+        "night sky",
+        "stone lantern",
+        "moss",
+        "tranquility",
+        "spring"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "夜の光と影",
+        "日本の伝統美"
       ]
     }
   ]
