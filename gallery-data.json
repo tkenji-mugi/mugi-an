@@ -2205,7 +2205,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2993,6 +2993,58 @@
       "featureCandidate": [
         "和菓子屋店内",
         "桜餅色彩"
+      ]
+    },
+    {
+      "id": "20260513-spring-chirashi-sushi-063",
+      "file": "images/20260513_spring-chirashi-sushi_063_2x3.png",
+      "titleJa": "春のちらし寿司と好奇心",
+      "titleEn": "Spring Chirashi Sushi",
+      "descriptionJa": "むぎちゃんがちらし寿司を覗き込み、好奇心いっぱいのまなざしを見せる。",
+      "descriptionEn": "Mugi peers curiously at the colorful chirashi sushi during spring festivities.",
+      "tagsJa": [
+        "春",
+        "ひな祭り",
+        "ちらし寿司",
+        "和の風景",
+        "桃の花",
+        "好奇心"
+      ],
+      "tagsEn": [
+        "spring",
+        "Hinamatsuri",
+        "chirashi sushi",
+        "Japanese scenery",
+        "peach blossoms",
+        "curiosity"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の光",
+        "伝統料理"
       ]
     }
   ]
