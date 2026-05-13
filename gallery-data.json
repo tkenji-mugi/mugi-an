@@ -2150,7 +2150,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -2941,6 +2941,58 @@
         "春雨の日の和室",
         "軒下のツバメの巣",
         "香箱座りの"
+      ]
+    },
+    {
+      "id": "20260513-wagashi-shop-sweet-display-062",
+      "file": "images/20260513_wagashi-shop-sweet-display_062_2x3.png",
+      "titleJa": "和菓子屋の看板娘",
+      "titleEn": "Wagashi Shop Sweet Display",
+      "descriptionJa": "老舗和菓子屋の冷蔵ケース上で、むぎちゃんが前かがみで桜餅を興味深く見つめる。",
+      "descriptionEn": "Mugi intently watches sakuramochi atop the refrigerated case in a historic wagashi shop.",
+      "tagsJa": [
+        "和菓子",
+        "春",
+        "桜餅",
+        "店内風景",
+        "伝統",
+        "反射"
+      ],
+      "tagsEn": [
+        "Japanese sweets",
+        "spring",
+        "sakuramochi",
+        "interior scene",
+        "traditional",
+        "reflection"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "和菓子屋店内",
+        "桜餅色彩"
       ]
     }
   ]
