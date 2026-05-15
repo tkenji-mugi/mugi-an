@@ -2421,7 +2421,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "isRealMugi": true,
       "usage": [
         "gallery",
@@ -3208,6 +3208,60 @@
         "品のある姿勢",
         "純粋な好奇心",
         "温かい室内光"
+      ],
+      "isRealMugi": true
+    },
+    {
+      "id": "20260515-quiet-window-moment-067",
+      "file": "images/20260515_quiet-window-moment_067_2x3.png",
+      "titleJa": "窓際のしずかなひととき",
+      "titleEn": "Quiet Moment by the Window",
+      "descriptionJa": "窓辺でくつろぐむぎちゃんの澄んだ瞳が、静かな好奇心を映している。",
+      "descriptionEn": "relaxes by the window with eyes full of quiet curiosity.",
+      "tagsJa": [
+        "窓辺",
+        "茶トラ",
+        "静けさ",
+        "室内",
+        "柔らかな光",
+        "タワー"
+      ],
+      "tagsEn": [
+        "window",
+        "orange tabby",
+        "quiet",
+        "indoor",
+        "soft light",
+        "tower"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "窓際の",
+        "茶トラ",
+        "静かな日常"
       ],
       "isRealMugi": true
     }
