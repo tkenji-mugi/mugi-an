@@ -2368,7 +2368,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3156,6 +3156,60 @@
         "の好奇心",
         "色とりどりの和傘の光影"
       ]
+    },
+    {
+      "id": "20260515-calm-gaze-living-room-066",
+      "file": "images/20260515_calm-gaze-living-room_066_2x3.png",
+      "titleJa": "リビングの凛とした視線",
+      "titleEn": "Calm Gaze in the Living Room",
+      "descriptionJa": "リビングのテーブルで、むぎちゃんが品よく座り、好奇心あふれる目を輝かせている。",
+      "descriptionEn": "Mugi sits elegantly on the table in the living room, eyes shining with curious calmness.",
+      "tagsJa": [
+        "室内",
+        "テーブル",
+        "好奇心",
+        "茶トラ",
+        "ブリティッシュショートヘア",
+        "静けさ"
+      ],
+      "tagsEn": [
+        "indoor",
+        "table",
+        "curiosity",
+        "orange tabby",
+        "British Shorthair",
+        "calm"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "品のある姿勢",
+        "純粋な好奇心",
+        "温かい室内光"
+      ],
+      "isRealMugi": true
     }
   ]
 }
