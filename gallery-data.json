@@ -2477,7 +2477,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3262,6 +3262,60 @@
         "窓際の",
         "茶トラ",
         "静かな日常"
+      ],
+      "isRealMugi": true
+    },
+    {
+      "id": "20260516-stalking-pose-rug-edge-068",
+      "file": "images/20260516_stalking-pose-rug-edge_068_2x3.png",
+      "titleJa": "臨戦態勢",
+      "titleEn": "Stalking Pose",
+      "descriptionJa": "むぎちゃんが白いふかふかラグの境目で獲物を狙い、真剣な眼差しを向けている一瞬。",
+      "descriptionEn": "Mugi crouches low on a fluffy white rug's edge, eyes intently fixed on prey in a tense moment.",
+      "tagsJa": [
+        "室内",
+        "冬",
+        "動物の本能",
+        "緊張感",
+        "ふわふわラグ",
+        "茶トラ"
+      ],
+      "tagsEn": [
+        "indoor",
+        "winter",
+        "animal instinct",
+        "tension",
+        "fluffy rug",
+        "ginger tabby"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "自然光の中の",
+        "野生の本能を見せる瞬間",
+        "冬の室内の静かな時間"
       ],
       "isRealMugi": true
     }
