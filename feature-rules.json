@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "site": "mugi-an",
+  "description": "Feature collection rules for automatically creating and counting special collections from gallery-data.json.",
+  "features": [
+    {
+      "id": "spring-flowers",
+      "titleJa": "春の花とむぎちゃん",
+      "titleEn": "Mugi and Spring Flowers",
+      "subtitleJa": "桜・菜の花・梅・たんぽぽ",
+      "subtitleEn": "Cherry blossoms, rapeseed flowers, plum blossoms, and dandelions",
+      "descriptionJa": "春の花や明るい色に包まれたむぎちゃんを集めた特集です。",
+      "descriptionEn": "A collection of Mugi surrounded by spring flowers and gentle seasonal colors.",
+      "displayOnHome": true,
+      "homeOrder": 1,
+      "status": "active",
+      "rule": {
+        "volume": "spring-2026",
+        "season": "spring",
+        "seriesAny": [
+          "seasonal"
+        ],
+        "tagsAny": [
+          "桜",
+          "菜の花",
+          "梅",
+          "たんぽぽ",
+          "春"
+        ],
+        "kindleEligible": null,
+        "aspectAny": [],
+        "limit": 12,
+        "sort": "default"
+      }
+    },
+    {
+      "id": "wa-spring-scenery",
+      "titleJa": "和の春景色",
+      "titleEn": "Japanese Spring Scenery",
+      "subtitleJa": "神社・鳥居・庭園・縁側・和室",
+      "subtitleEn": "Shrines, torii gates, gardens, engawa, and tatami rooms",
+      "descriptionJa": "日本らしい春の景色とむぎちゃんを集めた特集です。",
+      "descriptionEn": "A collection of Mugi in calm, traditional Japanese spring scenery.",
+      "displayOnHome": true,
+      "homeOrder": 2,
+      "status": "active",
+      "rule": {
+        "volume": "spring-2026",
+        "season": "spring",
+        "seriesAny": [
+          "seasonal"
+        ],
+        "tagsAny": [
+          "神社",
+          "鳥居",
+          "庭園",
+          "縁側",
+          "和室",
+          "和の景色",
+          "石畳",
+          "錦鯉"
+        ],
+        "kindleEligible": null,
+        "aspectAny": [],
+        "limit": 12,
+        "sort": "default"
+      }
+    },
+    {
+      "id": "spring-events-life",
+      "titleJa": "春の行事と暮らし",
+      "titleEn": "Spring Events and Daily Life",
+      "subtitleJa": "ひな祭り・お花見・茶道・和菓子・お弁当",
+      "subtitleEn": "Hinamatsuri, hanami, tea ceremony, wagashi, and bento",
+      "descriptionJa": "春の行事や日本の暮らしの中にいるむぎちゃんを集めた特集です。",
+      "descriptionEn": "A collection of Mugi enjoying spring events and everyday Japanese culture.",
+      "displayOnHome": true,
+      "homeOrder": 3,
+      "status": "active",
+      "rule": {
+        "volume": "spring-2026",
+        "season": "spring",
+        "seriesAny": [
+          "seasonal"
+        ],
+        "tagsAny": [
+          "ひな祭り",
+          "お花見",
+          "茶道",
+          "和菓子",
+          "奈良",
+          "お弁当",
+          "行事"
+        ],
+        "kindleEligible": null,
+        "aspectAny": [],
+        "limit": 12,
+        "sort": "default"
+      }
+    },
+    {
+      "id": "kindle-spring-2026",
+      "titleJa": "Kindle春版 収録候補",
+      "titleEn": "Kindle Spring Edition Candidates",
+      "subtitleJa": "縦2:3の写真集候補",
+      "subtitleEn": "Portrait 2:3 images selected for the photo book",
+      "descriptionJa": "写真集 vol.1「春のむぎちゃん」に収録予定の縦2:3画像を集めた特集です。",
+      "descriptionEn": "Portrait 2:3 images planned for Mugi’s first spring photo book.",
+      "displayOnHome": true,
+      "homeOrder": 4,
+      "status": "active",
+      "rule": {
+        "volume": "spring-2026",
+        "season": "spring",
+        "seriesAny": [
+          "seasonal"
+        ],
+        "tagsAny": [],
+        "kindleEligible": true,
+        "aspectAny": [
+          "2:3"
+        ],
+        "limit": 60,
+        "sort": "kindle"
+      }
+    },
+    {
+      "id": "spring-nature-air",
+      "titleJa": "春の自然と空気",
+      "titleEn": "Spring Nature and Breeze",
+      "subtitleJa": "春風・川沿い・すずめ・自然",
+      "subtitleEn": "Spring breeze, riversides, sparrows, and nature",
+      "descriptionJa": "春の空気や自然の中にいるむぎちゃんを集めた特集です。",
+      "descriptionEn": "A collection of Mugi in the fresh air and gentle nature of spring.",
+      "displayOnHome": false,
+      "homeOrder": 5,
+      "status": "active",
+      "rule": {
+        "volume": "spring-2026",
+        "season": "spring",
+        "seriesAny": [
+          "seasonal"
+        ],
+        "tagsAny": [
+          "春風",
+          "川沿い",
+          "自然",
+          "すずめ",
+          "野球",
+          "歩き"
+        ],
+        "kindleEligible": null,
+        "aspectAny": [],
+        "limit": 12,
+        "sort": "default"
+      }
+    }
+  ]
+}

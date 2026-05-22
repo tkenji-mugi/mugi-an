@@ -1,0 +1,89 @@
+[
+  {
+    "date": "2026-05-16",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "臨戦態勢を追加しました",
+    "textEn": "Added a new photo — Stalking Pose"
+  },
+  {
+    "date": "2026-05-15",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "窓際のしずかなひとときなど新着作品2枚追加しました",
+    "textEn": "Added 2 new photos, including Quiet Moment by the Window"
+  },
+  {
+    "date": "2026-05-13",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "和傘工房の昼下がりなど新着作品9枚追加しました",
+    "textEn": "Added 9 new photos, including Afternoon at the Wagasa Studio"
+  },
+  {
+    "date": "2026-05-09",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "苔の中のお地蔵さまとなど新着作品13枚追加しました",
+    "textEn": "Added 13 new photos, including Jizo and Mossy Silence"
+  },
+  {
+    "date": "2026-05-07",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "ダイニングテーブルを追加しました",
+    "textEn": "Added a new photo — The Dining Table"
+  },
+  {
+    "date": "2026-05-06",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "夜の空港と飛行機離陸など新着作品10枚追加しました",
+    "textEn": "Added 10 new photos, including Night Airport and Plane Taking Off"
+  },
+  {
+    "date": "2026-05-05",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "吊り橋歩きなど新着作品4枚追加しました",
+    "textEn": "Added 4 new photos, including On the Suspension Bridge"
+  },
+  {
+    "date": "2026-05-04",
+    "label": "注目",
+    "type": "youtube",
+    "textJa": "２０秒ショート動画をアップしました！",
+    "textEn": "A short video has been uploaded!",
+    "isFeatured": true,
+    "isVisible": true,
+    "url": "https://www.youtube.com/shorts/5KhjATmi8Xk"
+  },
+  {
+    "date": "2026-05-04",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "雨上がりと夕暮れなど新着作品3枚追加しました",
+    "textEn": "Added 3 new photos, including rainy scenes and sunset views"
+  },
+  {
+    "date": "2026-04-27",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "春の日差しシリーズ3枚を追加しました",
+    "textEn": "Added 3 new photos — Spring Sunlight series"
+  },
+  {
+    "date": "2026-04-26",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "和の春景色シリーズ8枚を追加しました",
+    "textEn": "Added 8 new photos — Japanese Spring series"
+  },
+  {
+    "date": "2026-04-25",
+    "label": "New",
+    "type": "youtube",
+    "textJa": "YouTube「春のむぎちゃん」公開しました",
+    "textEn": "New YouTube video — Mugi in Spring"
+  }
+]

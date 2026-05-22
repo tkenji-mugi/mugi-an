@@ -1,0 +1,169 @@
+{
+  "version": "1.0",
+  "site": "mugi-an",
+  "description": "Gallery tag button rules for filtering photos from gallery-data.json.",
+  "tags": [
+    {
+      "id": "all",
+      "labelJa": "すべて",
+      "labelEn": "All",
+      "value": "all",
+      "type": "system",
+      "homeOrder": 1,
+      "status": "active"
+    },
+    {
+      "id": "spring",
+      "labelJa": "🌸 春",
+      "labelEn": "🌸 Spring",
+      "value": "春",
+      "type": "season",
+      "homeOrder": 2,
+      "status": "active"
+    },
+    {
+      "id": "japanese-scenery",
+      "labelJa": "和の景色",
+      "labelEn": "Japanese Scenery",
+      "value": "和の景色",
+      "type": "theme",
+      "homeOrder": 3,
+      "status": "active"
+    },
+    {
+      "id": "seasonal-events",
+      "labelJa": "行事・暮らし",
+      "labelEn": "Events & Life",
+      "value": "行事",
+      "type": "theme",
+      "homeOrder": 4,
+      "status": "active"
+    },
+    {
+      "id": "nature-outdoor",
+      "labelJa": "自然・屋外",
+      "labelEn": "Nature & Outdoor",
+      "value": "自然",
+      "type": "theme",
+      "homeOrder": 5,
+      "status": "active"
+    },
+    {
+      "id": "sitting",
+      "labelJa": "座りポーズ",
+      "labelEn": "Sitting Pose",
+      "value": "座り",
+      "type": "pose",
+      "homeOrder": 6,
+      "status": "active"
+    },
+    {
+      "id": "sprawling",
+      "labelJa": "寝そべり",
+      "labelEn": "Sprawling",
+      "value": "寝そべり",
+      "type": "pose",
+      "homeOrder": 7,
+      "status": "active"
+    },
+    {
+      "id": "walking",
+      "labelJa": "歩き",
+      "labelEn": "Walking",
+      "value": "歩き",
+      "type": "pose",
+      "homeOrder": 8,
+      "status": "active"
+    },
+    {
+      "id": "grooming",
+      "labelJa": "毛繕い",
+      "labelEn": "Grooming",
+      "value": "毛繕い",
+      "type": "pose",
+      "homeOrder": 9,
+      "status": "active"
+    },
+    {
+      "id": "shrine",
+      "labelJa": "神社",
+      "labelEn": "Shrine",
+      "value": "神社",
+      "type": "place",
+      "homeOrder": 10,
+      "status": "active"
+    },
+    {
+      "id": "cherry-blossoms",
+      "labelJa": "桜",
+      "labelEn": "Cherry Blossoms",
+      "value": "桜",
+      "type": "seasonal",
+      "homeOrder": 11,
+      "status": "active"
+    },
+    {
+      "id": "garden",
+      "labelJa": "庭園",
+      "labelEn": "Garden",
+      "value": "庭園",
+      "type": "place",
+      "homeOrder": 12,
+      "status": "active"
+    },
+    {
+      "id": "engawa",
+      "labelJa": "縁側",
+      "labelEn": "Engawa",
+      "value": "縁側",
+      "type": "place",
+      "homeOrder": 13,
+      "status": "active"
+    },
+    {
+      "id": "tatami-room",
+      "labelJa": "和室",
+      "labelEn": "Tatami Room",
+      "value": "和室",
+      "type": "place",
+      "homeOrder": 14,
+      "status": "active"
+    },
+    {
+      "id": "hanami",
+      "labelJa": "お花見",
+      "labelEn": "Hanami",
+      "value": "お花見",
+      "type": "event",
+      "homeOrder": 15,
+      "status": "active"
+    },
+    {
+      "id": "tea-ceremony",
+      "labelJa": "茶道",
+      "labelEn": "Tea Ceremony",
+      "value": "茶道",
+      "type": "event",
+      "homeOrder": 16,
+      "status": "active"
+    },
+    {
+      "id": "hinamatsuri",
+      "labelJa": "ひな祭り",
+      "labelEn": "Hinamatsuri",
+      "value": "ひな祭り",
+      "type": "event",
+      "homeOrder": 17,
+      "status": "active"
+    },
+    {
+      "id": "clear-stream",
+      "labelJa": "清流",
+      "labelEn": "Clear Stream",
+      "value": "清流",
+      "type": "place",
+      "homeOrder": 18,
+      "status": "active"
+    }
+  ]
+}
