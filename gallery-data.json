@@ -2532,7 +2532,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3318,6 +3318,60 @@
         "冬の室内の静かな時間"
       ],
       "isRealMugi": true
+    },
+    {
+      "id": "20260523-train-window-cherry-river-069",
+      "file": "images/20260523_train-window-cherry-river_069_2x3.png",
+      "titleJa": "桜河川敷の電車窓",
+      "titleEn": "Train Window by Cherry River",
+      "descriptionJa": "むぎちゃんがローカル線の窓際に座り、春の桜並木を静かに眺めています。",
+      "descriptionEn": "Mugi sits quietly by the local train window, gazing at the spring cherry blossoms along the river.",
+      "tagsJa": [
+        "春",
+        "桜",
+        "河川敷",
+        "ローカル線",
+        "やわらかい光",
+        "窓辺",
+        "静かな風景"
+      ],
+      "tagsEn": [
+        "spring",
+        "cherry blossoms",
+        "riverbank",
+        "local train",
+        "soft light",
+        "window seat",
+        "quiet scenery"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "春の昼間",
+        "ローカル線の車内",
+        "桜並木の景観"
+      ]
     }
   ]
 }
