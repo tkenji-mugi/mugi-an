@@ -2642,7 +2642,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3426,6 +3426,60 @@
         "夏の縁側",
         "風鈴のある風景",
         "古きよき日本の夏"
+      ]
+    },
+    {
+      "id": "20260527-flower-shop-evening-gaze-071",
+      "file": "images/20260527_flower-shop-evening-gaze_071_2x3.png",
+      "titleJa": "花屋の夕暮れのまなざし",
+      "titleEn": "Evening Gaze at the Flower Shop",
+      "descriptionJa": "夕暮れの花屋で、むぎちゃんが売れ残った一輪の花を静かに見つめている。",
+      "descriptionEn": "Mugi quietly gazes at a single remaining flower outside the flower shop in the evening.",
+      "tagsJa": [
+        "夕方",
+        "花屋",
+        "一輪の花",
+        "街角",
+        "温かい光",
+        "ノスタルジック",
+        "静かな物語"
+      ],
+      "tagsEn": [
+        "evening",
+        "flower shop",
+        "single flower",
+        "street corner",
+        "warm light",
+        "nostalgic",
+        "quiet story"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第2章 和の春景色",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夕方の温かい光",
+        "花屋の風景",
+        "静かな物語性"
       ]
     }
   ]
