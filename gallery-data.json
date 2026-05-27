@@ -2696,7 +2696,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3480,6 +3480,58 @@
         "夕方の温かい光",
         "花屋の風景",
         "静かな物語性"
+      ]
+    },
+    {
+      "id": "20260527-warm-memories-072",
+      "file": "images/20260527_warm-memories_072_2x3.png",
+      "titleJa": "ぬくもりの思い出",
+      "titleEn": "Warm Memories",
+      "descriptionJa": "むぎちゃんとくまのぬいぐるみ、そして女の子の小さな頃の写真が並ぶ、やさしい部屋の風景です。",
+      "descriptionEn": "Mugi sits with the teddy and a childhood photo, sharing a gentle moment of warmth and memory.",
+      "tagsJa": [
+        "ぬいぐるみ",
+        "子ども部屋",
+        "夜の光",
+        "思い出",
+        "ぬくもり",
+        "やさしい色調"
+      ],
+      "tagsEn": [
+        "teddy bear",
+        "child's room",
+        "evening light",
+        "memories",
+        "warmth",
+        "soft tones"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "やさしい光",
+        "物語性"
       ]
     }
   ]
