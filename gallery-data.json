@@ -2751,7 +2751,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3532,6 +3532,60 @@
         "フォトリアル",
         "やさしい光",
         "物語性"
+      ]
+    },
+    {
+      "id": "20260529-library-storytime-before-073",
+      "file": "images/20260529_library-storytime-before_073_2x3.png",
+      "titleJa": "図書館の読み聞かせ前",
+      "titleEn": "Before Reading Time in Library",
+      "descriptionJa": "むぎちゃんと子どもが絵本の表紙に注目し、これから始まる物語に心を弾ませる瞬間。",
+      "descriptionEn": "Mugi and the child focus on the book cover, eagerly awaiting the story to begin.",
+      "tagsJa": [
+        "図書館",
+        "読み聞かせ",
+        "絵本",
+        "親子",
+        "春",
+        "室内",
+        "穏やか"
+      ],
+      "tagsEn": [
+        "library",
+        "storytime",
+        "picture book",
+        "parent and child",
+        "spring",
+        "indoor",
+        "calm"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "やわらかな図書館の光",
+        "親子との親密な時間",
+        "絵本の表紙にの肉球マーク"
       ]
     }
   ]
