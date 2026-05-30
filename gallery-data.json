@@ -2806,7 +2806,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3586,6 +3586,59 @@
         "やわらかな図書館の光",
         "親子との親密な時間",
         "絵本の表紙にの肉球マーク"
+      ]
+    },
+    {
+      "id": "20260530-riverside-fireworks-night-074",
+      "file": "images/20260530_riverside-fireworks-night_074_2x3.png",
+      "titleJa": "花火の夜の河川敷",
+      "titleEn": "Riverside Fireworks Night",
+      "descriptionJa": "むぎちゃんも家族と一緒に夜空に咲く花火を見上げ、夏の夜を楽しんでいる。",
+      "descriptionEn": "Mugi enjoys the summer night, watching fireworks with the family by the riverside.",
+      "tagsJa": [
+        "花火",
+        "夏の夜",
+        "家族",
+        "河川敷",
+        "浴衣",
+        "夏祭り"
+      ],
+      "tagsEn": [
+        "fireworks",
+        "summer night",
+        "family",
+        "riverside",
+        "yukata",
+        "summer festival"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery",
+        "kindle"
+      ],
+      "kindle": {
+        "eligible": true,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夏の花火大会",
+        "家族の時間",
+        "河川敷の風景"
       ]
     }
   ]
