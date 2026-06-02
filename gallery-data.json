@@ -2861,7 +2861,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3639,6 +3639,60 @@
         "夏の花火大会",
         "家族の時間",
         "河川敷の風景"
+      ]
+    },
+    {
+      "id": "20260602-sleeping-on-clouds-075",
+      "file": "images/20260602_sleeping-on-clouds_075_2x3.png",
+      "titleJa": "雲の上のまどろみ",
+      "titleEn": "Dozing on the Clouds",
+      "descriptionJa": "むぎちゃんがふわふわの雲の上で安心してへそ天のまま眠っています。青空が広がる優しい光景です。",
+      "descriptionEn": "Mugi dozes comfortably on fluffy clouds in a soft, sunlit blue sky, peacefully lying on her back.",
+      "tagsJa": [
+        "青空",
+        "白い雲",
+        "ふわふわ",
+        "春",
+        "優しい光",
+        "空想的",
+        "縦構図"
+      ],
+      "tagsEn": [
+        "blue sky",
+        "white clouds",
+        "fluffy",
+        "spring",
+        "gentle light",
+        "dreamlike",
+        "vertical composition"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "夢見心地の色調",
+        "優しい自然光"
       ]
     }
   ]
