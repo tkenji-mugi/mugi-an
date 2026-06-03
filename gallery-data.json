@@ -2916,7 +2916,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3693,6 +3693,60 @@
         "フォトリアル",
         "夢見心地の色調",
         "優しい自然光"
+      ]
+    },
+    {
+      "id": "20260603-island-alley-trashbin-076",
+      "file": "images/20260603_island-alley-trashbin_076_2x3.png",
+      "titleJa": "島の路地のゴミ箱の上",
+      "titleEn": "On the Trash Bin in the Island Alley",
+      "descriptionJa": "むぎちゃんが離島の路地の少し古びたクリーム色ゴミ箱の上に座り、下に集まる猫たちを見つめている。",
+      "descriptionEn": "Mugi sits gracefully on a worn cream trash bin in a quiet island alley, watching the cats gathered below.",
+      "tagsJa": [
+        "離島",
+        "路地裏",
+        "ゴミ箱",
+        "昼の自然光",
+        "の集まり",
+        "生活感",
+        "静寂"
+      ],
+      "tagsEn": [
+        "island",
+        "alley",
+        "trash bin",
+        "daylight",
+        "cat gathering",
+        "everyday life",
+        "quiet"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第4章 水辺と新緑",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "離島の静かな路地",
+        "自然光の柔らかさ",
+        "の集団の情景"
       ]
     }
   ]
