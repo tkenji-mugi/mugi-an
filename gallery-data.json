@@ -2969,7 +2969,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3747,6 +3747,60 @@
         "離島の静かな路地",
         "自然光の柔らかさ",
         "の集団の情景"
+      ]
+    },
+    {
+      "id": "20260606-conveyor-sushi-gaze-077",
+      "file": "images/20260606_conveyor-sushi-gaze_077_2x3.png",
+      "titleJa": "回転寿司の真剣な視線",
+      "titleEn": "Focused Gaze at Conveyor Sushi",
+      "descriptionJa": "むぎちゃんが回転寿司のレーンをじっと見つめ、興味津々の表情を浮かべている。",
+      "descriptionEn": "Mugi stares intently at the sushi conveyor, captivated by the flowing fish plates.",
+      "tagsJa": [
+        "回転寿司",
+        "店内",
+        "寿司レーン",
+        "注目",
+        "木目調",
+        "親しみやすい",
+        "和風"
+      ],
+      "tagsEn": [
+        "conveyor sushi",
+        "interior",
+        "sushi conveyor",
+        "focused",
+        "wood grain",
+        "friendly",
+        "Japanese style"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "回転寿司店の自然な雰囲気",
+        "の集中した表情",
+        "リアルな寿司の質感"
       ]
     }
   ]
