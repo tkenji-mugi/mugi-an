@@ -3021,7 +3021,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3801,6 +3801,54 @@
         "回転寿司店の自然な雰囲気",
         "の集中した表情",
         "リアルな寿司の質感"
+      ]
+    },
+    {
+      "id": "20260606-id-photo-expressions-078",
+      "file": "images/20260606_id-photo-expressions_078_2x3.png",
+      "titleJa": "証明写真の表情",
+      "titleEn": "ID Photo Expressions",
+      "descriptionJa": "むぎちゃんが証明写真機の横で4コマ写真と真顔で並ぶユーモラスな瞬間。",
+      "descriptionEn": "Mugi stands next to a strip of four passport-style photos, creating a funny contrast with her serious face.",
+      "tagsJa": [
+        "証明写真",
+        "茶トラ",
+        "室内",
+        "ユーモラス"
+      ],
+      "tagsEn": [
+        "ID photo",
+        "ginger tabby",
+        "indoor",
+        "humorou"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "証明写真機",
+        "4コマ写真",
+        "真顔の"
       ]
     }
   ]
