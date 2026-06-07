@@ -3075,7 +3075,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3849,6 +3849,60 @@
         "証明写真機",
         "4コマ写真",
         "真顔の"
+      ]
+    },
+    {
+      "id": "20260607-rakugo-stage-side-079",
+      "file": "images/20260607_rakugo-stage-side_079_2x3.png",
+      "titleJa": "寄席の袖で見学する",
+      "titleEn": "Watching from the Side of the Stage",
+      "descriptionJa": "むぎちゃんが寄席の袖から師匠の落語を真剣に見ている様子を捉えました。",
+      "descriptionEn": "Mugi is watching the Rakugo master attentively from the side of the stage.",
+      "tagsJa": [
+        "落語",
+        "寄席",
+        "和の舞台",
+        "春",
+        "和室",
+        "伝統",
+        "緊張感"
+      ],
+      "tagsEn": [
+        "rakugo",
+        "traditional-stage",
+        "spring",
+        "Japanese-room",
+        "performance",
+        "intense",
+        "cultural"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": "第3章 春の行事と暮らし",
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "寄席の情景",
+        "集中する",
+        "和の文化"
       ]
     }
   ]
