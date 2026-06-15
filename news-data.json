@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-06-15",
+    "label": "New",
+    "type": "gallery",
+    "textJa": "ランウェイを追加しました",
+    "textEn": "Added a new photo — Runway"
+  },
+  {
     "date": "2026-06-07",
     "label": "New",
     "type": "gallery",

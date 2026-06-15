@@ -3130,7 +3130,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3903,6 +3903,58 @@
         "寄席の情景",
         "集中する",
         "和の文化"
+      ]
+    },
+    {
+      "id": "20260615-runway-080",
+      "file": "images/20260615_runway_080_2x3.png",
+      "titleJa": "ランウェイ",
+      "titleEn": "Runway",
+      "descriptionJa": "むぎちゃんが東京のファッションショーで堂々と歩き、スポットライトを浴びています。",
+      "descriptionEn": "Mugi confidently walks the runway at a Tokyo fashion show under the spotlight.",
+      "tagsJa": [
+        "ファッションショー",
+        "ランウェイ",
+        "スポットライト",
+        "都会",
+        "夜",
+        "エレガント"
+      ],
+      "tagsEn": [
+        "fashion show",
+        "runway",
+        "spotlight",
+        "urban",
+        "night",
+        "elegant"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "東京ガールズコレクション風",
+        "ファッションモデル",
+        "ランウェイ照明"
       ]
     }
   ]
