@@ -3237,7 +3237,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -4009,6 +4009,56 @@
         "赤いバンダナ",
         "レザーチョーカー",
         "ライブステージ"
+      ]
+    },
+    {
+      "id": "20260617-yokozuna-dohyo-entrance-082",
+      "file": "images/20260617_yokozuna-dohyo-entrance_082_2x3.png",
+      "titleJa": "土俵入りの横綱",
+      "titleEn": "Yokozuna Dohyo Entrance",
+      "descriptionJa": "むぎちゃんが横綱の土俵入りで四股を踏む瞬間、厳かでかわいい姿。",
+      "descriptionEn": "Mugi solemnly performs a yokozuna dohyo entrance, stamping with grace and charm.",
+      "tagsJa": [
+        "大相撲",
+        "土俵",
+        "横綱",
+        "伝統文化",
+        "和風",
+        "儀式"
+      ],
+      "tagsEn": [
+        "sumo",
+        "dohyo",
+        "yokozuna",
+        "traditional culture",
+        "japanese style",
+        "ceremo"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "伝統文化"
       ]
     }
   ]
