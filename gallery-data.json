@@ -3183,7 +3183,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -3955,6 +3955,60 @@
         "東京ガールズコレクション風",
         "ファッションモデル",
         "ランウェイ照明"
+      ]
+    },
+    {
+      "id": "20260617-rock-style-081",
+      "file": "images/20260617_rock-style_081_2x3.png",
+      "titleJa": "ロッカースタイル",
+      "titleEn": "Rock Style",
+      "descriptionJa": "むぎちゃんが赤いバンダナと黒いレザーチョーカーでロッカースタイルに変身した写真",
+      "descriptionEn": "Mugi shows off a rocker look with a red bandana and black leather choker.",
+      "tagsJa": [
+        "ライブ",
+        "ロック",
+        "ステージ",
+        "赤いバンダナ",
+        "ギター",
+        "夜",
+        "音楽"
+      ],
+      "tagsEn": [
+        "live",
+        "rock",
+        "stage",
+        "red bandana",
+        "guitar",
+        "night",
+        "music"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "赤いバンダナ",
+        "レザーチョーカー",
+        "ライブステージ"
       ]
     }
   ]
