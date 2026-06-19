@@ -3291,7 +3291,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -4059,6 +4059,60 @@
       "status": "published",
       "featureCandidate": [
         "伝統文化"
+      ]
+    },
+    {
+      "id": "20260619-baby-elephant-back-083",
+      "file": "images/20260619_baby-elephant-back_083_2x3.png",
+      "titleJa": "子ゾウの背中",
+      "titleEn": "Baby Elephant Back",
+      "descriptionJa": "むぎちゃんは子ゾウの背中でリラックスしながら親ゾウの鼻に猫パンチ",
+      "descriptionEn": "Mugi relaxes on a baby elephant's back while playfully pawing the mother elephant’s trunk.",
+      "tagsJa": [
+        "動物園",
+        "ゾウ",
+        "子ゾウ",
+        "春",
+        "陽光",
+        "自然",
+        "ふれあい"
+      ],
+      "tagsEn": [
+        "zoo",
+        "elephant",
+        "baby elephant",
+        "spring",
+        "sunlight",
+        "nature",
+        "interaction"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "高精細",
+        "自然光"
       ]
     }
   ]
