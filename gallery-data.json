@@ -3347,7 +3347,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -4113,6 +4113,60 @@
         "フォトリアル",
         "高精細",
         "自然光"
+      ]
+    },
+    {
+      "id": "20260620-night-festival-cotton-candy-084",
+      "file": "images/20260620_night-festival-cotton-candy_084_2x3.png",
+      "titleJa": "夜祭りの綿菓子の中で",
+      "titleEn": "In the Cotton Candy at the Night Festival",
+      "descriptionJa": "むぎちゃんが夜の祭りの綿菓子機の中に入り込み、ふわふわの綿に包まれている様子です。",
+      "descriptionEn": "Mugi sits inside the cotton candy machine at the night festival, wrapped in fluffy cotton strands.",
+      "tagsJa": [
+        "夜祭り",
+        "綿菓子",
+        "屋台",
+        "暖色の灯り",
+        "縦構図",
+        "夜景",
+        "綿の質感"
+      ],
+      "tagsEn": [
+        "night festival",
+        "cotton candy",
+        "food stall",
+        "warm lighting",
+        "vertical composition",
+        "night scene",
+        "cotton texture"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "夜祭りの風景",
+        "綿菓子の質感",
+        "暖色の灯り"
       ]
     }
   ]
