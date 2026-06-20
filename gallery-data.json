@@ -3401,7 +3401,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery",
         "kindle"
@@ -4167,6 +4167,60 @@
         "夜祭りの風景",
         "綿菓子の質感",
         "暖色の灯り"
+      ]
+    },
+    {
+      "id": "20260620-asphalt-manhole-helmet-085",
+      "file": "images/20260620_asphalt-manhole-helmet_085_2x3.png",
+      "titleJa": "アスファルトの穴と工事帽子",
+      "titleEn": "Manhole and Construction Hat",
+      "descriptionJa": "むぎちゃんが黄色い工事用ヘルメットをかぶり、アスファルトの穴から顔を出している。",
+      "descriptionEn": "Mugi peeks out from a manhole wearing a bright yellow construction helmet.",
+      "tagsJa": [
+        "街中",
+        "昼間",
+        "工事用ヘルメット",
+        "アスファルト",
+        "マンホール",
+        "やさしい光",
+        "リアルフォト"
+      ],
+      "tagsEn": [
+        "urban",
+        "daytime",
+        "construction helmet",
+        "asphalt",
+        "manhole",
+        "soft light",
+        "photorealistic"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "昼間の自然光",
+        "高精細描写",
+        "暖色アクセント"
       ]
     }
   ]
