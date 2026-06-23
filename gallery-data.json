@@ -3456,7 +3456,7 @@
       "ratio": "v",
       "aspectHint": "2:3",
       "aspect": "2:3",
-      "isNew": true,
+      "isNew": false,
       "usage": [
         "gallery"
       ],
@@ -4221,6 +4221,58 @@
         "昼間の自然光",
         "高精細描写",
         "暖色アクセント"
+      ]
+    },
+    {
+      "id": "20260623-big-bubble-moment-086",
+      "file": "images/20260623_big-bubble-moment_086_2x3.png",
+      "titleJa": "大きなシャボン玉の前で",
+      "titleEn": "Big Bubble Moment",
+      "descriptionJa": "むぎちゃんが芝生の公園で、大きなシャボン玉に触れようとしています。興味津々な表情が印象的です。",
+      "descriptionEn": "Mugi reaches out to a big bubble in the grassy park, her curious expression capturing the scene.",
+      "tagsJa": [
+        "春",
+        "芝生",
+        "シャボン玉",
+        "緑の木々",
+        "自然光",
+        "花"
+      ],
+      "tagsEn": [
+        "spring",
+        "grass",
+        "bubble",
+        "green trees",
+        "natural light",
+        "flowers"
+      ],
+      "ratio": "v",
+      "aspectHint": "2:3",
+      "aspect": "2:3",
+      "isNew": true,
+      "usage": [
+        "gallery"
+      ],
+      "kindle": {
+        "eligible": false,
+        "volume": "spring-2026",
+        "chapterCandidateJa": null,
+        "order": null
+      },
+      "sns": true,
+      "download": true,
+      "series": [
+        "seasonal"
+      ],
+      "volume": "spring-2026",
+      "season": "spring",
+      "style": "ai-photo",
+      "world": "real-japan",
+      "status": "published",
+      "featureCandidate": [
+        "フォトリアル",
+        "暖かい光",
+        "虹色の薄膜"
       ]
     }
   ]
